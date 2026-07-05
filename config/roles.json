@@ -1,0 +1,100 @@
+{
+  "AIML Engineer": {
+    "job_titles": [
+  "Machine Learning Engineer",
+  "AI Engineer",
+  "Generative AI Engineer",
+  "Applied Scientist",
+  "Research Scientist",
+  "Research Engineer",
+  "LLM Engineer",
+  "NLP Engineer",
+  "Computer Vision Engineer"
+],
+    "skills": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Machine Learning",
+      "Deep Learning",
+      "NLP",
+      "Computer Vision",
+      "LangChain",
+      "RAG",
+      "LLMs"
+    ],
+    "positive_keywords": [
+      "machine learning",
+      "deep learning",
+      "python",
+      "tensorflow",
+      "pytorch",
+      "rag",
+      "llm",
+      "langchain"
+    ],
+    "negative_keywords": [
+      "content creator",
+      "sales",
+      "marketing",
+      "graphic designer"
+    ]
+  },
+
+  "Content Creator": {
+    "job_titles": [
+      "Content Creator",
+      "YouTube Creator",
+      "Video Creator",
+      "Content Strategist",
+      "Social Media Creator"
+    ],
+    "skills": [
+      "Video Editing",
+      "Content Strategy",
+      "YouTube",
+      "Canva",
+      "Storytelling",
+      "Social Media"
+    ],
+    "positive_keywords": [
+      "youtube",
+      "content creation",
+      "video editing",
+      "creator economy",
+      "social media"
+    ],
+    "negative_keywords": [
+      "machine learning",
+      "tensorflow",
+      "pytorch"
+    ]
+  },
+
+  "Digital Marketing": {
+    "job_titles": [
+      "Digital Marketing Executive",
+      "SEO Specialist",
+      "Performance Marketer",
+      "Growth Marketer"
+    ],
+    "skills": [
+      "SEO",
+      "Google Ads",
+      "PPC",
+      "Analytics",
+      "Campaign Management"
+    ],
+    "positive_keywords": [
+      "seo",
+      "google ads",
+      "ppc",
+      "campaign",
+      "marketing"
+    ],
+    "negative_keywords": [
+      "machine learning engineer",
+      "content creator"
+    ]
+  }
+}
