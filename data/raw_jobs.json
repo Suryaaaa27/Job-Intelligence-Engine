@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Machine Learning Engineer",
+    "company": "Google",
+    "description": "Python TensorFlow NLP experience required"
+  },
+  {
+    "title": "AI Content Creator",
+    "company": "Creator Hub",
+    "description": "Create AI videos for social media"
+  },
+  {
+    "title": "LLM Engineer",
+    "company": "OpenAI Labs",
+    "description": "LangChain RAG Vector Database experience"
+  }
+]

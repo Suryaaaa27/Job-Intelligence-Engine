@@ -1,0 +1,33 @@
+[2026-07-02 11:07:26,186] [INFO] Found 20 job cards
+[2026-07-02 11:11:46,586] [INFO] Found 20 job cards
+[2026-07-02 11:15:52,155] [INFO] Searching Hays : Machine Learning Engineer
+[2026-07-02 11:16:03,304] [INFO] Found 20 cards
+[2026-07-02 11:16:04,039] [INFO] Unique Jobs : 10
+[2026-07-02 11:22:54,962] [INFO] Searching Hays : Machine Learning Engineer
+[2026-07-02 11:23:05,730] [INFO] Found 20 cards
+[2026-07-02 11:23:06,538] [INFO] Unique Jobs : 10
+[2026-07-05 11:17:07,160] [INFO] Searching Hays : Machine Learning Engineer
+[2026-07-05 11:17:25,097] [INFO] Found 20 cards
+[2026-07-05 11:17:25,114] [ERROR] Job.__init__() got an unexpected keyword argument 'search_query'
+[2026-07-05 11:17:25,138] [ERROR] Job.__init__() got an unexpected keyword argument 'search_query'
+[2026-07-05 11:17:25,154] [ERROR] Job.__init__() got an unexpected keyword argument 'search_query'
+[2026-07-05 11:17:25,170] [ERROR] Job.__init__() got an unexpected keyword argument 'search_query'
+[2026-07-05 11:17:25,185] [ERROR] Job.__init__() got an unexpected keyword argument 'search_query'
+[2026-07-05 11:17:25,198] [ERROR] Job.__init__() got an unexpected keyword argument 'search_query'
+[2026-07-05 11:17:25,211] [ERROR] Job.__init__() got an unexpected keyword argument 'search_query'
+[2026-07-05 11:17:25,225] [ERROR] Job.__init__() got an unexpected keyword argument 'search_query'
+[2026-07-05 11:17:25,238] [ERROR] Job.__init__() got an unexpected keyword argument 'search_query'
+[2026-07-05 11:17:25,250] [ERROR] Job.__init__() got an unexpected keyword argument 'search_query'
+[2026-07-05 11:17:25,663] [INFO] Unique Jobs : 0
+[2026-07-05 11:19:15,489] [INFO] Searching Hays : Machine Learning Engineer
+[2026-07-05 11:19:24,167] [INFO] Found 20 cards
+[2026-07-05 11:19:24,581] [INFO] Unique Jobs : 10
+[2026-07-05 11:43:54,672] [INFO] Searching Greenhouse : AI
+[2026-07-05 11:44:04,874] [INFO] Found 2 elements
+[2026-07-05 11:44:05,211] [INFO] Unique Jobs : 0
+[2026-07-05 17:34:28,190] [INFO] Searching Hays : Machine Learning Engineer
+[2026-07-05 17:34:38,674] [INFO] Found 20 cards
+[2026-07-05 17:34:39,154] [INFO] Unique Jobs : 10
+[2026-07-05 17:52:27,963] [INFO] Searching Hays : Machine Learning Engineer
+[2026-07-05 17:52:42,085] [INFO] Found 20 cards
+[2026-07-05 17:52:42,663] [INFO] Unique Jobs : 10
