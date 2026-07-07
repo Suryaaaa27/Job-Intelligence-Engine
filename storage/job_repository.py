@@ -20,7 +20,7 @@ class JobRepository:
         return conn
 
     def _init_db(self):
-        conn = self._get_connection()
+        with self._get_connection() as conn:
         try:
             conn.execute("""
                 CREATE TABLE IF NOT EXISTS jobs (
