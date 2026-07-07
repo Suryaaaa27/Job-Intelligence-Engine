@@ -211,7 +211,7 @@ utils/
 
 ## Project Lead
 
-**Surya Srivastava**
+**Surya Kumar Srivastava**
 
 Responsible for:
 
