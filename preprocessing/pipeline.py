@@ -3,7 +3,8 @@ import os
 from preprocessing.cleaner import clean_job
 from preprocessing.deduplicator import remove_duplicates
 from schemas.job_schema import Job
-
+from utils.logger import JobLogger
+logger = JobLogger.get_logger()
 
 def run_preprocessing_pipeline(input_path, output_path):
     # 1. Load the raw JSON data
@@ -14,7 +15,7 @@ def run_preprocessing_pipeline(input_path, output_path):
     with open(input_path, 'r', encoding='utf-8') as f:
         raw_data = json.load(f)
 
-    print(f"Loaded {len(raw_data)} raw jobs.")
+    logger.info(f"Loaded {len(raw_data)} raw jobs.")
 
     # 2. Clean individual records & map them to your Job objects
     job_objects = []
@@ -39,7 +40,7 @@ def run_preprocessing_pipeline(input_path, output_path):
 
     # 3. Deduplicate using the updated structured list
     unique_jobs = remove_duplicates(job_objects)
-    print(f"Deduplication complete. Retained {len(unique_jobs)} unique jobs.")
+    logger.info(f"Deduplication complete. Retained {len(unique_jobs)} unique jobs.")
 
     # 4. Serialize back into standard dictionaries to save out
     output_data = [job.__dict__ for job in unique_jobs]
@@ -50,7 +51,7 @@ def run_preprocessing_pipeline(input_path, output_path):
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(output_data, f, indent=4, ensure_ascii=False)
 
-    print(f"Successfully saved clean & consistent data to {output_path}")
+    logger.info(f"Successfully saved clean & consistent data to {output_path}")
 
 
 if __name__ == "__main__":
