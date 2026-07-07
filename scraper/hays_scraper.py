@@ -6,9 +6,12 @@ from utils.logger import JobLogger
 
 class HaysScraper:
     BASE_URL = "https://www.hays.com/job-search"
+    MAX_JOBS_PER_QUERY = 15  # Configurable batch size per search query
 
-    def __init__(self):
+    def __init__(self, max_jobs_per_query=None):
         self.logger = JobLogger.get_logger()
+        if max_jobs_per_query is not None:
+            self.MAX_JOBS_PER_QUERY = max_jobs_per_query
 
     def build_search_url(self, query):
         return f"{self.BASE_URL}?q={quote_plus(query)}"
@@ -20,7 +23,7 @@ class HaysScraper:
         self.logger.info(f"Searching Hays Browser Engine for: {query}")
 
         with sync_playwright() as p:
-            browser = p.chromium.launch(headless=True)  # Changed to True for clean background processing
+            browser = p.chromium.launch(headless=True)
             page = browser.new_page()
 
             try:
@@ -37,7 +40,7 @@ class HaysScraper:
                 try:
                     card = cards.nth(i)
 
-                    # --- FIX 1: Prevent 30-Second Infinite Layout Hangs ---
+                    # Prevent 30-second infinite layout hangs
                     try:
                         card.scroll_into_view_if_needed(timeout=2000)
                     except Exception:
@@ -45,7 +48,7 @@ class HaysScraper:
 
                     page.wait_for_timeout(300)
 
-                    # --- FIX 2: Safe Text Extraction ---
+                    # Safe text extraction
                     title_loc = card.locator("h4")
                     loc_span = card.locator("li").first
 
@@ -53,20 +56,51 @@ class HaysScraper:
                         continue
 
                     title = title_loc.inner_text().strip()
-                    location = loc_span.inner_text().strip() if loc_span.count() > 0 else "Remote / Global"
+                    location = loc_span.inner_text().strip() if loc_span.count() > 0 else ""
 
                     key = (title.lower(), location.lower())
                     if key in seen:
                         continue
                     seen.add(key)
 
-                    # --- FIX 3: Force Click Shifting Panels Safely ---
+                    # Try to extract company name from the card DOM
+                    company = "Unknown Company"
+                    for company_sel in ["span.company-name", "p.company", "span.hays-company", ".company-name"]:
+                        try:
+                            comp_el = card.locator(company_sel).first
+                            if comp_el.count() > 0:
+                                comp_text = comp_el.inner_text().strip()
+                                if comp_text:
+                                    company = comp_text
+                                    break
+                        except Exception:
+                            continue
+
+                    # Try to extract the actual job detail URL from the card's link
+                    job_detail_url = ""
+                    try:
+                        link_el = card.locator("a[href]").first
+                        if link_el.count() > 0:
+                            href = link_el.get_attribute("href")
+                            if href:
+                                if href.startswith("/"):
+                                    job_detail_url = f"https://www.hays.com{href}"
+                                elif href.startswith("http"):
+                                    job_detail_url = href
+                    except Exception:
+                        pass
+
+                    # Force click shifting panels safely
                     try:
                         card.click(force=True, timeout=3000)
                         page.wait_for_timeout(1000)
                     except Exception as click_err:
                         self.logger.warning(f"Could not click card panel index {i}: {click_err}")
                         continue
+
+                    # If we didn't get URL from the card, use the current page URL after click
+                    if not job_detail_url:
+                        job_detail_url = page.url
 
                     description = ""
                     # Check both visible and structural DOM containers
@@ -79,27 +113,24 @@ class HaysScraper:
                                 if text:
                                     description = text
                                     break
-                        except:
+                        except Exception:
                             continue
-
-                    if not description:
-                        description = f"Position at {title}. View full details and apply directly on Hays portal."
 
                     job_obj = Job(
                         job_title=title,
-                        company_name="Hays Recruiting",
+                        company_name=company,
                         location=location,
-                        job_url=page.url,
-                        apply_url=page.url,
+                        job_url=job_detail_url,
+                        apply_url=job_detail_url,
                         source_platform="Hays"
                     )
                     job_obj.description = description
                     jobs.append(job_obj)
                     self.logger.info(f"[Hays] Successfully processed: {title}")
 
-                    # Break early to save memory resources if you hit a massive page
-                    if len(jobs) >= 15:
-                        self.logger.info("[Hays] Captured optimization sample batch. Proceeding.")
+                    # Configurable batch limit
+                    if len(jobs) >= self.MAX_JOBS_PER_QUERY:
+                        self.logger.info(f"[Hays] Reached batch limit ({self.MAX_JOBS_PER_QUERY}). Proceeding.")
                         break
 
                 except Exception as e:
