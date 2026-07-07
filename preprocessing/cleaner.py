@@ -9,7 +9,7 @@ def clean_text(text):
 def standardize_location(location):
     if not location or location.lower() in ["remote", "anywhere", "work from home", "wfh"]:
         return "Remote"
-    return ", ".join([p.strip().capitalize() for p in location.split(",")])
+    return ", ".join([p.strip().title() for part in location.split(",")])
 
 def standardize_date(date_str):
     if not date_str:
