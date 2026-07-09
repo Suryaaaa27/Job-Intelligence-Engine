@@ -1,6 +1,7 @@
 import sqlite3
 import os
 import hashlib
+import json
 from dataclasses import asdict, is_dataclass
 
 # Resolve project root from this file's location so DB path is always correct
@@ -20,7 +21,7 @@ class JobRepository:
         return conn
 
     def _init_db(self):
-        with self._get_connection() as conn:
+        conn = self._get_connection()
         try:
             conn.execute("""
                 CREATE TABLE IF NOT EXISTS jobs (
@@ -41,7 +42,106 @@ class JobRepository:
                     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                 )
             """)
+            conn.execute("""
+                CREATE TABLE IF NOT EXISTS job_analyses (
+                    job_id INTEGER PRIMARY KEY,
+                    extracted_skills TEXT,
+                    required_skills TEXT,
+                    preferred_skills TEXT,
+                    ats_keywords TEXT,
+                    required_experience TEXT,
+                    responsibilities TEXT,
+                    confidence REAL,
+                    reasoning TEXT,
+                    required_education TEXT,
+                    preferred_education TEXT,
+                    tools_and_technologies TEXT,
+                    suggested_certifications TEXT,
+                    work_setting TEXT,
+                    company_culture TEXT,
+                    ats_score_estimate REAL,
+                    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    FOREIGN KEY(job_id) REFERENCES jobs(id) ON DELETE CASCADE
+                )
+            """)
+            
+            # Dynamic Migration Check for existing databases
+            cursor = conn.cursor()
+            existing_columns = [row[1] for row in cursor.execute("PRAGMA table_info(job_analyses)").fetchall()]
+            
+            new_columns = {
+                "required_education": "TEXT",
+                "preferred_education": "TEXT",
+                "tools_and_technologies": "TEXT",
+                "suggested_certifications": "TEXT",
+                "work_setting": "TEXT",
+                "company_culture": "TEXT",
+                "ats_score_estimate": "REAL"
+            }
+            
+            for col, col_type in new_columns.items():
+                if col not in existing_columns:
+                    conn.execute(f"ALTER TABLE job_analyses ADD COLUMN {col} {col_type}")
+                    
             conn.commit()
+        finally:
+            conn.close()
+
+    def save_analysis(self, job_id, analysis):
+        """Save or update JD analysis for a job_id."""
+        conn = self._get_connection()
+        try:
+            conn.execute("""
+                INSERT OR REPLACE INTO job_analyses (
+                    job_id, extracted_skills, required_skills, preferred_skills, 
+                    ats_keywords, required_experience, responsibilities, 
+                    confidence, reasoning, required_education, preferred_education,
+                    tools_and_technologies, suggested_certifications, work_setting,
+                    company_culture, ats_score_estimate
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """, (
+                job_id,
+                json.dumps(analysis.get("extracted_skills", [])),
+                json.dumps(analysis.get("required_skills", [])),
+                json.dumps(analysis.get("preferred_skills", [])),
+                json.dumps(analysis.get("ats_keywords", [])),
+                analysis.get("required_experience", ""),
+                json.dumps(analysis.get("responsibilities", [])),
+                float(analysis.get("confidence", 0.0)),
+                json.dumps(analysis.get("reasoning", [])),
+                analysis.get("required_education", "Not specified"),
+                analysis.get("preferred_education", "Not specified"),
+                json.dumps(analysis.get("tools_and_technologies", [])),
+                json.dumps(analysis.get("suggested_certifications", [])),
+                analysis.get("work_setting", "Unknown"),
+                json.dumps(analysis.get("company_culture", [])),
+                float(analysis.get("ats_score_estimate", 0.0))
+            ))
+            conn.commit()
+        finally:
+            conn.close()
+
+    def get_analysis(self, job_id):
+        """Retrieve JD analysis for a job_id."""
+        conn = self._get_connection()
+        try:
+            cursor = conn.execute("SELECT * FROM job_analyses WHERE job_id = ?", (job_id,))
+            row = cursor.fetchone()
+            if not row:
+                return None
+            data = dict(row)
+            # Deserialize JSON fields
+            list_fields = [
+                "extracted_skills", "required_skills", "preferred_skills", 
+                "ats_keywords", "responsibilities", "reasoning", 
+                "tools_and_technologies", "suggested_certifications", "company_culture"
+            ]
+            for key in list_fields:
+                try:
+                    data[key] = json.loads(data[key]) if data.get(key) else []
+                except:
+                    data[key] = []
+            return data
         finally:
             conn.close()
 
