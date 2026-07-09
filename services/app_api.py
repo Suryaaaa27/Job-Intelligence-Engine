@@ -4,6 +4,9 @@ from typing import Optional, List, Dict, Any
 import uvicorn
 import os
 import sys
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Ensure root is visible
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -94,6 +97,8 @@ def trigger_pipeline(request: PipelineRunRequest, background_tasks: BackgroundTa
         "message": f"Pipeline execution started in background for role: {request.role}"
     }
 
+from analysis.analyzer import JDAnalyzer
+
 @app.get("/pipeline/status/{task_id}")
 def get_pipeline_status(task_id: str):
     """Check the execution status of a background pipeline run."""
@@ -101,6 +106,49 @@ def get_pipeline_status(task_id: str):
     if not status:
         raise HTTPException(status_code=404, detail="Task ID not found")
     return {"task_id": task_id, "status": status}
+
+@app.post("/jobs/{job_id}/analyze")
+def analyze_job(job_id: int):
+    """
+    Trigger AI-powered parsing for a specific job's description.
+    Extracts skills, experience, responsibilities, and ATS keywords.
+    """
+    job = repository.get_by_id(job_id)
+    if not job:
+        raise HTTPException(status_code=404, detail=f"Job with ID {job_id} not found")
+    
+    title = job.get("title") or ""
+    description = job.get("description") or ""
+    
+    if not description:
+        raise HTTPException(status_code=400, detail="Job description is empty. Cannot perform analysis.")
+
+    try:
+        analyzer = JDAnalyzer()
+        analysis = analyzer.analyze(title, description)
+        repository.save_analysis(job_id, analysis)
+        return {
+            "status": "SUCCESS",
+            "job_id": job_id,
+            "analysis": analysis
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Analysis failed: {str(e)}")
+
+@app.get("/jobs/{job_id}/analysis")
+def get_job_analysis(job_id: int):
+    """
+    Retrieve the structured AI job analysis (skills, responsibilities, experience) from the database.
+    """
+    job = repository.get_by_id(job_id)
+    if not job:
+        raise HTTPException(status_code=404, detail=f"Job with ID {job_id} not found")
+        
+    analysis = repository.get_analysis(job_id)
+    if not analysis:
+        raise HTTPException(status_code=404, detail=f"No analysis found for job ID {job_id}. Please call POST /jobs/{job_id}/analyze first.")
+    
+    return analysis
 
 if __name__ == "__main__":
     host = os.environ.get("API_HOST", "127.0.0.1")
