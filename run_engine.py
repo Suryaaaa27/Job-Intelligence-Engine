@@ -1,4 +1,4 @@
-from pipeline.scraping_pipeline import ScrapingPipeline
+from pipeline.scraper_pipeline import ScrapingPipeline
 
 
 if __name__ == "__main__":
