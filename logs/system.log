@@ -31,3 +31,469 @@
 [2026-07-05 17:52:27,963] [INFO] Searching Hays : Machine Learning Engineer
 [2026-07-05 17:52:42,085] [INFO] Found 20 cards
 [2026-07-05 17:52:42,663] [INFO] Unique Jobs : 10
+[2026-07-10 13:58:03,508] [INFO] Starting pipeline for Machine Learning Engineer
+[2026-07-10 13:58:03,508] [INFO] Collected 0 jobs
+[2026-07-10 13:58:03,512] [INFO] Pipeline Finished
+[2026-07-10 13:58:03,513] [INFO] Starting pipeline for Software Engineer
+[2026-07-10 13:58:03,513] [INFO] Collected 0 jobs
+[2026-07-10 13:58:03,513] [INFO] Pipeline Finished
+[2026-07-10 13:58:03,513] [INFO] Starting pipeline for Data Scientist
+[2026-07-10 13:58:03,514] [INFO] Collected 0 jobs
+[2026-07-10 13:58:03,514] [INFO] Pipeline Finished
+[2026-07-10 13:58:03,514] [INFO] Starting pipeline for Data Analyst
+[2026-07-10 13:58:03,514] [INFO] Collected 0 jobs
+[2026-07-10 13:58:03,515] [INFO] Pipeline Finished
+[2026-07-10 13:58:03,515] [INFO] Starting pipeline for DevOps Engineer
+[2026-07-10 13:58:03,515] [INFO] Collected 0 jobs
+[2026-07-10 13:58:03,515] [INFO] Pipeline Finished
+[2026-07-10 14:02:13,169] [INFO] Searching Hays Browser Engine for: Machine Learning Engineer
+[2026-07-10 14:02:33,820] [INFO] Found 20 layout cards on screen.
+[2026-07-10 14:02:35,297] [INFO] [Hays] Successfully processed: AI Engineer
+[2026-07-10 14:02:36,743] [INFO] [Hays] Successfully processed: Lead Software Engineer
+[2026-07-10 14:02:38,176] [INFO] [Hays] Successfully processed: SDET – QA Automation Engineer
+[2026-07-10 14:02:39,613] [INFO] [Hays] Successfully processed: Senior AI Software Engineer
+[2026-07-10 14:02:41,072] [INFO] [Hays] Successfully processed: Project Engineer
+[2026-07-10 14:02:42,505] [INFO] [Hays] Successfully processed: Senior Data Engineer
+[2026-07-10 14:02:43,934] [INFO] [Hays] Successfully processed: Sr Software Engineer
+[2026-07-10 14:02:45,332] [INFO] [Hays] Successfully processed: Senior Project Engineer — Multifamily Podium
+[2026-07-10 14:02:46,762] [INFO] [Hays] Successfully processed: Mobile Software Engineer
+[2026-07-10 14:02:48,196] [INFO] [Hays] Successfully processed: Sr. SRE
+[2026-07-10 14:02:49,629] [INFO] [Hays] Successfully processed: Sr System Engineer
+[2026-07-10 14:02:51,072] [INFO] [Hays] Successfully processed: Tech Product Analyst
+[2026-07-10 14:02:52,526] [INFO] [Hays] Successfully processed: Cloud Engineer
+[2026-07-10 14:02:53,951] [INFO] [Hays] Successfully processed: Oracle HCM Cloud Consultant
+[2026-07-10 14:02:55,382] [INFO] [Hays] Successfully processed: Software Engineer - .Net
+[2026-07-10 14:02:55,383] [INFO] [Hays] Reached batch limit (15). Proceeding.
+[2026-07-10 14:02:55,472] [INFO] Searching Greenhouse API across 9 companies...
+[2026-07-10 14:02:56,423] [INFO] [Greenhouse] Processed: Machine Learning Engineer, Community Support Engineering (Airbnb)
+[2026-07-10 14:02:56,425] [INFO] [Greenhouse] Processed: Machine Learning Engineer, Customer Support Engineering (Airbnb)
+[2026-07-10 14:02:56,426] [INFO] [Greenhouse] Processed: Principal Machine Learning Engineer- LLM Fine-tuning and Optimization  (Airbnb)
+[2026-07-10 14:02:56,426] [INFO] [Greenhouse] Processed: Senior Machine Learning Engineer, Customer Support Engineering (Airbnb)
+[2026-07-10 14:02:56,426] [INFO] [Greenhouse] Processed: Senior Machine Learning Engineer, Customer Support Engineering (Airbnb)
+[2026-07-10 14:02:56,427] [INFO] [Greenhouse] Processed: Senior Machine Learning Engineer, Relevance and Personalization (Airbnb)
+[2026-07-10 14:02:56,429] [INFO] [Greenhouse] Processed: Senior Staff Machine Learning Engineer, Data & Eval (Airbnb)
+[2026-07-10 14:02:56,429] [INFO] [Greenhouse] Processed: Senior Staff Machine Learning Engineer, Growth Platform Engineering (Airbnb)
+[2026-07-10 14:02:56,429] [INFO] [Greenhouse] Processed: Senior Staff Machine Learning Engineer, Guest & Host (Airbnb)
+[2026-07-10 14:02:56,430] [INFO] [Greenhouse] Processed: Senior Staff Machine Learning Engineer, Post Training (Airbnb)
+[2026-07-10 14:02:56,431] [INFO] [Greenhouse] Processed: Senior Staff Machine Learning Engineer, Trust (Airbnb)
+[2026-07-10 14:02:56,431] [INFO] [Greenhouse] Processed: Staff Machine Learning Engineer, Community Support Engineering (Airbnb)
+[2026-07-10 14:02:56,437] [INFO] [Greenhouse] Processed: Staff Machine Learning Engineer, Customer Support Engineering (Airbnb)
+[2026-07-10 14:02:56,438] [INFO] [Greenhouse] Processed: Staff Machine Learning Engineer, Listings and Host Tools Data and AI (Airbnb)
+[2026-07-10 14:02:57,819] [INFO] [Greenhouse] Processed: Machine Learning Engineer, Capital Underwriting (Stripe)
+[2026-07-10 14:02:57,820] [INFO] [Greenhouse] Processed: Machine Learning Engineer, Payment Intelligence (Stripe)
+[2026-07-10 14:02:59,893] [INFO] [Greenhouse] Processed: Ads Conversion Modeling, Machine Learning Engineering Manager (Reddit)
+[2026-07-10 14:02:59,896] [INFO] [Greenhouse] Processed: Machine Learning Engineer, Ads Optimization (Reddit)
+[2026-07-10 14:02:59,896] [INFO] [Greenhouse] Processed: Machine Learning Engineering Manager - Ads Engagement Modeling  (Reddit)
+[2026-07-10 14:02:59,896] [INFO] [Greenhouse] Processed: Senior Machine Learning Engineer (Reddit)
+[2026-07-10 14:02:59,897] [INFO] [Greenhouse] Processed: Senior Machine Learning Engineer (Reddit)
+[2026-07-10 14:02:59,898] [INFO] [Greenhouse] Processed: Senior Machine Learning Engineer, Ads Foundational Representations (Reddit)
+[2026-07-10 14:02:59,898] [INFO] [Greenhouse] Processed: Senior Machine Learning Engineer, Ads Foundational Representations (Reddit)
+[2026-07-10 14:02:59,899] [INFO] [Greenhouse] Processed: Senior Machine Learning Engineer, GenAI Security (Reddit)
+[2026-07-10 14:02:59,899] [INFO] [Greenhouse] Processed: Senior Staff Machine Learning Engineer, GenAI Platform (Reddit)
+[2026-07-10 14:02:59,900] [INFO] [Greenhouse] Processed: Senior Staff Machine Learning Engineer, ML Understanding (Reddit)
+[2026-07-10 14:02:59,901] [INFO] [Greenhouse] Processed: Senior Staff Machine Learning Engineer, Notifications (Reddit)
+[2026-07-10 14:02:59,901] [INFO] [Greenhouse] Processed: Staff Machine Learning Engineer, Ads Content Understanding (Reddit)
+[2026-07-10 14:02:59,902] [INFO] [Greenhouse] Processed: Staff Machine Learning Engineer, Ads Measurement Modeling (Reddit)
+[2026-07-10 14:02:59,902] [INFO] [Greenhouse] Processed: Staff Machine Learning Engineer, Consumer  (Reddit)
+[2026-07-10 14:02:59,903] [INFO] [Greenhouse] Processed: Staff Machine Learning Engineer, ML Efficiency  (Reddit)
+[2026-07-10 14:02:59,903] [INFO] [Greenhouse] Processed: Staff Machine Learning Engineer, ML Efficiency  (Reddit)
+[2026-07-10 14:02:59,904] [INFO] [Greenhouse] Processed: Staff Machine Learning Engineer, Notifications Relevance (Reddit)
+[2026-07-10 14:03:00,890] [INFO] Searching Indeed for: Machine Learning Engineer
+[2026-07-10 14:03:08,083] [WARNING] [Indeed] Cloudflare intercepted the data packet. Skipping to protect pipeline.
+[2026-07-10 14:03:08,382] [INFO] Searching LinkedIn Public Feed for: Machine Learning Engineer
+[2026-07-10 14:03:09,413] [INFO] [LinkedIn] Found 9 public job listings. Safely extracting data...
+[2026-07-10 14:03:12,974] [INFO] [LinkedIn] Successfully processed: Software Engineer, Early Career (AI) (Notion)
+[2026-07-10 14:03:16,565] [INFO] [LinkedIn] Successfully processed: Machine Learning Engineer I (CNN)
+[2026-07-10 14:03:20,367] [INFO] [LinkedIn] Successfully processed: Software Engineer, AI/ML, Google Research (Google)
+[2026-07-10 14:03:23,995] [INFO] [LinkedIn] Successfully processed: Machine Learning Engineer, Entry (Paramount)
+[2026-07-10 14:03:27,592] [INFO] [LinkedIn] Successfully processed: Machine Learning Engineer I (CNN)
+[2026-07-10 14:03:31,147] [INFO] [LinkedIn] Successfully processed: Software Engineer, Early Career (Notion)
+[2026-07-10 14:03:34,689] [INFO] [LinkedIn] Successfully processed: data scientist, Data & Analytics (Nashville, TN) (Starbucks)
+[2026-07-10 14:03:38,226] [INFO] [LinkedIn] Successfully processed: Machine Learning Engineer II (Tinder)
+[2026-07-10 14:03:41,809] [INFO] [LinkedIn] Successfully processed: Machine Learning Engineer (Twilio)
+[2026-07-10 21:27:24,123] [INFO] Searching Hays Browser Engine for: Machine Learning Engineer
+[2026-07-10 21:27:41,915] [INFO] Found 20 layout cards on screen.
+[2026-07-10 21:27:43,675] [INFO] [Hays] Successfully processed: AI Engineer
+[2026-07-10 21:27:45,164] [INFO] [Hays] Successfully processed: Lead Software Engineer
+[2026-07-10 21:27:46,630] [INFO] [Hays] Successfully processed: SDET – QA Automation Engineer
+[2026-07-10 21:27:48,094] [INFO] [Hays] Successfully processed: Senior AI Software Engineer
+[2026-07-10 21:27:49,585] [INFO] [Hays] Successfully processed: Project Engineer
+[2026-07-10 21:27:51,083] [INFO] [Hays] Successfully processed: Senior Data Engineer
+[2026-07-10 21:27:52,553] [INFO] [Hays] Successfully processed: Sr Software Engineer
+[2026-07-10 21:27:53,990] [INFO] [Hays] Successfully processed: Senior Project Engineer — Multifamily Podium
+[2026-07-10 21:27:55,469] [INFO] [Hays] Successfully processed: Mobile Software Engineer
+[2026-07-10 21:27:56,951] [INFO] [Hays] Successfully processed: Sr. SRE
+[2026-07-10 21:27:58,412] [INFO] [Hays] Successfully processed: Sr System Engineer
+[2026-07-10 21:27:59,851] [INFO] [Hays] Successfully processed: Tech Product Analyst
+[2026-07-10 21:28:01,314] [INFO] [Hays] Successfully processed: Cloud Engineer
+[2026-07-10 21:28:02,782] [INFO] [Hays] Successfully processed: Oracle HCM Cloud Consultant
+[2026-07-10 21:28:04,229] [INFO] [Hays] Successfully processed: Software Engineer - .Net
+[2026-07-10 21:28:04,229] [INFO] [Hays] Reached batch limit (15). Proceeding.
+[2026-07-10 21:28:04,333] [INFO] Searching Greenhouse API across 9 companies...
+[2026-07-10 21:28:06,142] [INFO] [Greenhouse] Processed: Machine Learning Engineer, Community Support Engineering (Airbnb)
+[2026-07-10 21:28:06,143] [INFO] [Greenhouse] Processed: Machine Learning Engineer, Customer Support Engineering (Airbnb)
+[2026-07-10 21:28:06,144] [INFO] [Greenhouse] Processed: Principal Machine Learning Engineer- LLM Fine-tuning and Optimization  (Airbnb)
+[2026-07-10 21:28:06,145] [INFO] [Greenhouse] Processed: Senior Machine Learning Engineer, Customer Support Engineering (Airbnb)
+[2026-07-10 21:28:06,145] [INFO] [Greenhouse] Processed: Senior Machine Learning Engineer, Customer Support Engineering (Airbnb)
+[2026-07-10 21:28:06,145] [INFO] [Greenhouse] Processed: Senior Machine Learning Engineer, Relevance and Personalization (Airbnb)
+[2026-07-10 21:28:06,146] [INFO] [Greenhouse] Processed: Senior Staff Machine Learning Engineer, Data & Eval (Airbnb)
+[2026-07-10 21:28:06,146] [INFO] [Greenhouse] Processed: Senior Staff Machine Learning Engineer, Growth Platform Engineering (Airbnb)
+[2026-07-10 21:28:06,146] [INFO] [Greenhouse] Processed: Senior Staff Machine Learning Engineer, Guest & Host (Airbnb)
+[2026-07-10 21:28:06,147] [INFO] [Greenhouse] Processed: Senior Staff Machine Learning Engineer, Post Training (Airbnb)
+[2026-07-10 21:28:06,147] [INFO] [Greenhouse] Processed: Senior Staff Machine Learning Engineer, Trust (Airbnb)
+[2026-07-10 21:28:06,147] [INFO] [Greenhouse] Processed: Staff Machine Learning Engineer, Community Support Engineering (Airbnb)
+[2026-07-10 21:28:06,148] [INFO] [Greenhouse] Processed: Staff Machine Learning Engineer, Customer Support Engineering (Airbnb)
+[2026-07-10 21:28:06,148] [INFO] [Greenhouse] Processed: Staff Machine Learning Engineer, Listings and Host Tools Data and AI (Airbnb)
+[2026-07-10 21:28:08,193] [INFO] [Greenhouse] Processed: Machine Learning Engineer, Capital Underwriting (Stripe)
+[2026-07-10 21:28:08,194] [INFO] [Greenhouse] Processed: Machine Learning Engineer, Payment Intelligence (Stripe)
+[2026-07-10 21:28:10,625] [INFO] [Greenhouse] Processed: Ads Conversion Modeling, Machine Learning Engineering Manager (Reddit)
+[2026-07-10 21:28:10,626] [INFO] [Greenhouse] Processed: Machine Learning Engineer, Ads Optimization (Reddit)
+[2026-07-10 21:28:10,627] [INFO] [Greenhouse] Processed: Machine Learning Engineering Manager - Ads Engagement Modeling  (Reddit)
+[2026-07-10 21:28:10,627] [INFO] [Greenhouse] Processed: Senior Machine Learning Engineer (Reddit)
+[2026-07-10 21:28:10,628] [INFO] [Greenhouse] Processed: Senior Machine Learning Engineer (Reddit)
+[2026-07-10 21:28:10,628] [INFO] [Greenhouse] Processed: Senior Machine Learning Engineer, Ads Foundational Representations (Reddit)
+[2026-07-10 21:28:10,628] [INFO] [Greenhouse] Processed: Senior Machine Learning Engineer, Ads Foundational Representations (Reddit)
+[2026-07-10 21:28:10,629] [INFO] [Greenhouse] Processed: Senior Machine Learning Engineer, GenAI Security (Reddit)
+[2026-07-10 21:28:10,629] [INFO] [Greenhouse] Processed: Senior Staff Machine Learning Engineer, GenAI Platform (Reddit)
+[2026-07-10 21:28:10,629] [INFO] [Greenhouse] Processed: Senior Staff Machine Learning Engineer, ML Understanding (Reddit)
+[2026-07-10 21:28:10,630] [INFO] [Greenhouse] Processed: Senior Staff Machine Learning Engineer, Notifications (Reddit)
+[2026-07-10 21:28:10,630] [INFO] [Greenhouse] Processed: Staff Machine Learning Engineer, Ads Content Understanding (Reddit)
+[2026-07-10 21:28:10,630] [INFO] [Greenhouse] Processed: Staff Machine Learning Engineer, Ads Measurement Modeling (Reddit)
+[2026-07-10 21:28:10,631] [INFO] [Greenhouse] Processed: Staff Machine Learning Engineer, Consumer  (Reddit)
+[2026-07-10 21:28:10,631] [INFO] [Greenhouse] Processed: Staff Machine Learning Engineer, ML Efficiency  (Reddit)
+[2026-07-10 21:28:10,631] [INFO] [Greenhouse] Processed: Staff Machine Learning Engineer, ML Efficiency  (Reddit)
+[2026-07-10 21:28:10,632] [INFO] [Greenhouse] Processed: Staff Machine Learning Engineer, Notifications Relevance (Reddit)
+[2026-07-10 21:28:11,947] [INFO] Searching Indeed for: Machine Learning Engineer
+[2026-07-10 21:28:25,363] [WARNING] [Indeed] Cloudflare intercepted the data packet. Skipping to protect pipeline.
+[2026-07-10 21:28:25,778] [INFO] Searching LinkedIn Public Feed for: Machine Learning Engineer
+[2026-07-10 21:28:26,817] [INFO] [LinkedIn] Found 10 public job listings. Safely extracting data...
+[2026-07-10 21:28:30,603] [INFO] [LinkedIn] Successfully processed: Software Engineer, Early Career (AI) (Notion)
+[2026-07-10 21:28:34,391] [INFO] [LinkedIn] Successfully processed: Machine Learning Engineer I (CNN)
+[2026-07-10 21:28:38,186] [INFO] [LinkedIn] Successfully processed: Software Engineer, AI/ML, Google Research (Google)
+[2026-07-10 21:28:41,963] [INFO] [LinkedIn] Successfully processed: Machine Learning Engineer, Entry (Paramount)
+[2026-07-10 21:28:45,865] [INFO] [LinkedIn] Successfully processed: Machine Learning Engineer I (CNN)
+[2026-07-10 21:28:49,648] [INFO] [LinkedIn] Successfully processed: data scientist, Data & Analytics (Nashville, TN) (Starbucks)
+[2026-07-10 21:28:53,652] [INFO] [LinkedIn] Successfully processed: Software Engineer, Early Career (Notion)
+[2026-07-10 21:28:57,439] [INFO] [LinkedIn] Successfully processed: Machine Learning Engineer II (Tinder)
+[2026-07-10 21:29:01,222] [INFO] [LinkedIn] Successfully processed: Machine Learning Engineer (Twilio)
+[2026-07-10 21:29:05,000] [INFO] [LinkedIn] Successfully processed: Machine learning Engineer (Tata Consultancy Services)
+[2026-07-10 21:29:05,255] [INFO] Searching Hays Browser Engine for: Software Engineer
+[2026-07-10 21:29:19,814] [INFO] Found 20 layout cards on screen.
+[2026-07-10 21:29:21,302] [INFO] [Hays] Successfully processed: Mobile Software Engineer
+[2026-07-10 21:29:22,781] [INFO] [Hays] Successfully processed: Sr Software Engineer
+[2026-07-10 21:29:24,249] [INFO] [Hays] Successfully processed: Lead Software Engineer
+[2026-07-10 21:29:25,735] [INFO] [Hays] Successfully processed: Software Engineer - .Net
+[2026-07-10 21:29:27,198] [INFO] [Hays] Successfully processed: Senior AI Software Engineer
+[2026-07-10 21:29:28,684] [INFO] [Hays] Successfully processed: SDET – QA Automation Engineer
+[2026-07-10 21:29:30,137] [INFO] [Hays] Successfully processed: TPA
+[2026-07-10 21:29:31,666] [INFO] [Hays] Successfully processed: Senior Data Engineer
+[2026-07-10 21:29:33,380] [INFO] [Hays] Successfully processed: QMS Manager
+[2026-07-10 21:29:35,114] [INFO] [Hays] Successfully processed: Sr System Engineer
+[2026-07-10 21:29:36,832] [INFO] [Hays] Successfully processed: Field Engineer
+[2026-07-10 21:29:38,650] [INFO] [Hays] Successfully processed: Cloud Engineer
+[2026-07-10 21:29:40,326] [INFO] [Hays] Successfully processed: Program Manager
+[2026-07-10 21:29:41,996] [INFO] [Hays] Successfully processed: Sr. .Net Apps Developer x 2
+[2026-07-10 21:29:43,659] [INFO] [Hays] Successfully processed: TPM - AI/ML
+[2026-07-10 21:29:43,659] [INFO] [Hays] Reached batch limit (15). Proceeding.
+[2026-07-10 21:29:43,825] [INFO] Searching Greenhouse API across 9 companies...
+[2026-07-10 21:29:45,372] [INFO] [Greenhouse] Processed: Android Software Engineer, Quality Platform (Airbnb)
+[2026-07-10 21:29:45,374] [INFO] [Greenhouse] Processed: Principal Software Engineer, Performance (Airbnb)
+[2026-07-10 21:29:45,376] [INFO] [Greenhouse] Processed: Senior iOS Software Engineer, Quality Platform (Airbnb)
+[2026-07-10 21:29:45,377] [INFO] [Greenhouse] Processed: Senior Software Engineer, Global Markets (Backend) (Airbnb)
+[2026-07-10 21:29:45,378] [INFO] [Greenhouse] Processed: Senior Software Engineer (Quality), Payments (Airbnb)
+[2026-07-10 21:29:45,380] [INFO] [Greenhouse] Processed: Senior Software Engineer, Quality Platform (Airbnb)
+[2026-07-10 21:29:45,381] [INFO] [Greenhouse] Processed: Senior Software Engineer, Reliability Engineering Team (Airbnb)
+[2026-07-10 21:29:45,382] [INFO] [Greenhouse] Processed: Senior Software Engineer, Reliability Experience Team (Airbnb)
+[2026-07-10 21:29:45,383] [INFO] [Greenhouse] Processed: Senior Software Engineer, Service Tools    (Airbnb)
+[2026-07-10 21:29:45,383] [INFO] [Greenhouse] Processed: Senior Staff Software Engineer, Host Pricing & Settings (Airbnb)
+[2026-07-10 21:29:45,385] [INFO] [Greenhouse] Processed: Senior Staff Software Engineer, Payments (Airbnb)
+[2026-07-10 21:29:45,386] [INFO] [Greenhouse] Processed: Senior Staff Software Engineer, Payments (Airbnb)
+[2026-07-10 21:29:45,387] [INFO] [Greenhouse] Processed: Senior Staff Software Engineer, Trust (Airbnb)
+[2026-07-10 21:29:45,389] [INFO] [Greenhouse] Processed: Software Engineer, Cloud Networking (Airbnb)
+[2026-07-10 21:29:45,389] [INFO] [Greenhouse] Processed: Software Engineer, Community Support Engineering (Airbnb)
+[2026-07-10 21:29:45,391] [INFO] [Greenhouse] Processed: Software Engineer, Dev Tools (Airbnb)
+[2026-07-10 21:29:45,393] [INFO] [Greenhouse] Processed: Software Engineer, Guest & Host - Notifications (Airbnb)
+[2026-07-10 21:29:45,394] [INFO] [Greenhouse] Processed: Software Engineer, Quality Platform (Airbnb)
+[2026-07-10 21:29:45,395] [INFO] [Greenhouse] Processed: Software Engineer, Reliability Engineering Team (Airbnb)
+[2026-07-10 21:29:45,396] [INFO] [Greenhouse] Processed: Software Engineer, Unified Data Store (Airbnb)
+[2026-07-10 21:29:45,397] [INFO] [Greenhouse] Processed: Staff Software Engineer, Build (Bazel) (Airbnb)
+[2026-07-10 21:29:45,399] [INFO] [Greenhouse] Processed: Staff Software Engineer, Community Support Engineering (Airbnb)
+[2026-07-10 21:29:45,399] [INFO] [Greenhouse] Processed: Staff Software Engineer, Community Support Engineering (Airbnb)
+[2026-07-10 21:29:45,400] [INFO] [Greenhouse] Processed: Staff Software Engineer, Event Logging  (Airbnb)
+[2026-07-10 21:29:45,401] [INFO] [Greenhouse] Processed: Staff Software Engineer, Global Markets (Backend) (Airbnb)
+[2026-07-10 21:29:45,402] [INFO] [Greenhouse] Processed: Staff Software Engineer, Guest & Host (Airbnb)
+[2026-07-10 21:29:45,403] [INFO] [Greenhouse] Processed: Staff Software Engineer, Marketplaces & Intelligence Data and AI (Airbnb)
+[2026-07-10 21:29:45,404] [INFO] [Greenhouse] Processed: Staff Software Engineer, Unified Data Store (Airbnb)
+[2026-07-10 21:29:46,490] [INFO] [Greenhouse] Processed: Manager, Software Engineering - AI Product  (Figma)
+[2026-07-10 21:29:46,492] [INFO] [Greenhouse] Processed: Manager, Software Engineering - AI Product (London, United Kingdom) (Figma)
+[2026-07-10 21:29:46,493] [INFO] [Greenhouse] Processed: Manager, Software Engineering - Billing (Figma)
+[2026-07-10 21:29:46,494] [INFO] [Greenhouse] Processed: Manager, Software Engineering - DevEx AI Tools (Figma)
+[2026-07-10 21:29:46,496] [INFO] [Greenhouse] Processed: Manager, Software Engineering - Figma Weave (Tel Aviv, Israel) (Figma)
+[2026-07-10 21:29:46,497] [INFO] [Greenhouse] Processed: Manager, Software Engineering - Growth Platform  (Figma)
+[2026-07-10 21:29:46,498] [INFO] [Greenhouse] Processed: Manager, Software Engineering - Interaction Design (Figma)
+[2026-07-10 21:29:46,499] [INFO] [Greenhouse] Processed: Manager, Software Engineering - Observability (Figma)
+[2026-07-10 21:29:46,500] [INFO] [Greenhouse] Processed: Manager, Software Engineering - Payload (Figma)
+[2026-07-10 21:29:46,501] [INFO] [Greenhouse] Processed: Manager, Software Engineering - Storage Platform (Figma)
+[2026-07-10 21:29:46,502] [INFO] [Greenhouse] Processed: Software Engineer, AI Platforms (Figma)
+[2026-07-10 21:29:46,503] [INFO] [Greenhouse] Processed: Software Engineer, AI Product (Figma)
+[2026-07-10 21:29:46,504] [INFO] [Greenhouse] Processed: Software Engineer, AI Product (London, United Kingdom) (Figma)
+[2026-07-10 21:29:46,505] [INFO] [Greenhouse] Processed: Software Engineer, C++ (Figma)
+[2026-07-10 21:29:46,506] [INFO] [Greenhouse] Processed: Software Engineer, Code Platform (Figma)
+[2026-07-10 21:29:46,507] [INFO] [Greenhouse] Processed: Software Engineer, Data Infrastructure (Figma)
+[2026-07-10 21:29:46,509] [INFO] [Greenhouse] Processed: Software Engineer, Developer Experience (Figma)
+[2026-07-10 21:29:46,511] [INFO] [Greenhouse] Processed: Software Engineer, Distributed Systems (Figma)
+[2026-07-10 21:29:46,511] [INFO] [Greenhouse] Processed: Software Engineer - Figma Weave (Tel Aviv, Israel)  (Figma)
+[2026-07-10 21:29:46,513] [INFO] [Greenhouse] Processed: Software Engineer, Full Stack (Figma)
+[2026-07-10 21:29:46,514] [INFO] [Greenhouse] Processed: Software Engineer, Graphics & Media (Figma)
+[2026-07-10 21:29:46,516] [INFO] [Greenhouse] Processed: Software Engineer, Growth & Monetization (Figma)
+[2026-07-10 21:29:46,517] [INFO] [Greenhouse] Processed: Software Engineer, Machine Learning (Figma)
+[2026-07-10 21:29:46,519] [INFO] [Greenhouse] Processed: Software Engineer, Mobile Web (Figma)
+[2026-07-10 21:29:46,520] [INFO] [Greenhouse] Processed: Software Engineer, Production Engineering (Figma)
+[2026-07-10 21:29:46,520] [INFO] [Greenhouse] Processed: Software Engineer, Production Engineering  (London, United Kingdom) (Figma)
+[2026-07-10 21:29:46,521] [INFO] [Greenhouse] Processed: Software Engineer, Traffic (Figma)
+[2026-07-10 21:29:47,936] [INFO] [Greenhouse] Processed: Senior Software Engineer (Stripe)
+[2026-07-10 21:29:47,937] [INFO] [Greenhouse] Processed: Senior Software Engineer (Stripe)
+[2026-07-10 21:29:47,939] [INFO] [Greenhouse] Processed: Software Engineer (Stripe)
+[2026-07-10 21:29:47,940] [INFO] [Greenhouse] Processed: Software Engineer (Stripe)
+[2026-07-10 21:29:47,941] [INFO] [Greenhouse] Processed: Software Engineer (Stripe)
+[2026-07-10 21:29:47,942] [INFO] [Greenhouse] Processed: Software Engineer (Stripe)
+[2026-07-10 21:29:47,942] [INFO] [Greenhouse] Processed: Software Engineer, Balance Abstraction (Stripe)
+[2026-07-10 21:29:47,943] [INFO] [Greenhouse] Processed: Software Engineer, Brazil (Stripe)
+[2026-07-10 21:29:47,943] [INFO] [Greenhouse] Processed: Software Engineer, Bridge (Stripe)
+[2026-07-10 21:29:47,944] [INFO] [Greenhouse] Processed: Software Engineer, Core Infrastructure (Stripe)
+[2026-07-10 21:29:47,946] [INFO] [Greenhouse] Processed: Software Engineer, Data & AI (Stripe)
+[2026-07-10 21:29:47,947] [INFO] [Greenhouse] Processed: Software Engineer, Data Orchestration (Stripe)
+[2026-07-10 21:29:47,949] [INFO] [Greenhouse] Processed: Software Engineer, Intern (Stripe)
+[2026-07-10 21:29:47,950] [INFO] [Greenhouse] Processed: Software Engineer, Internal Systems (Stripe)
+[2026-07-10 21:29:47,952] [INFO] [Greenhouse] Processed: Software Engineer, Money Movement  (Stripe)
+[2026-07-10 21:29:47,952] [INFO] [Greenhouse] Processed: Software Engineer, New Grad, Developer & End User Experience Platform (Stripe)
+[2026-07-10 21:29:47,953] [INFO] [Greenhouse] Processed: Software Engineer, Payments (Stripe)
+[2026-07-10 21:29:47,954] [INFO] [Greenhouse] Processed: Software Engineer, Payments, Risk, & Premium Merchant Experiences (Stripe)
+[2026-07-10 21:29:47,955] [INFO] [Greenhouse] Processed: Software Engineer, Product Security Data Platforms (Stripe)
+[2026-07-10 21:29:47,956] [INFO] [Greenhouse] Processed: Software Engineer, Product Security Data Platforms (Stripe)
+[2026-07-10 21:29:47,957] [INFO] [Greenhouse] Processed: Software Engineer, Secrets Infrastructure (Stripe)
+[2026-07-10 21:29:47,958] [INFO] [Greenhouse] Processed: Software Engineer, Security Analytics Infrastructure (Stripe)
+[2026-07-10 21:29:47,959] [INFO] [Greenhouse] Processed: Software Engineer - Smart Contract, Bridge (Stripe)
+[2026-07-10 21:29:47,960] [INFO] [Greenhouse] Processed: Staff Software Engineer - API Platform (Stripe)
+[2026-07-10 21:29:47,961] [INFO] [Greenhouse] Processed: Staff Software Engineer, Data Engineering Solutions (Stripe)
+[2026-07-10 21:29:47,962] [INFO] [Greenhouse] Processed: Staff Software Engineer, Datalake Platform (Stripe)
+[2026-07-10 21:29:47,964] [INFO] [Greenhouse] Processed: Staff Software Engineer, Machine Learning Platform (Stripe)
+[2026-07-10 21:29:47,966] [INFO] [Greenhouse] Processed: Staff Software Engineer, Machine Learning Platform (Stripe)
+[2026-07-10 21:29:47,966] [INFO] [Greenhouse] Processed: Staff Software Engineer - Service Platform (Stripe)
+[2026-07-10 21:29:47,968] [INFO] [Greenhouse] Processed: Staff Software Engineer, Stream Compute (Stripe)
+[2026-07-10 21:29:50,094] [INFO] [Greenhouse] Processed: Principal Software Engineer - Infrastructure (Discord)
+[2026-07-10 21:29:50,095] [INFO] [Greenhouse] Processed: Senior Full-Stack Software Engineer, Player Experience (Discord)
+[2026-07-10 21:29:50,096] [INFO] [Greenhouse] Processed: Senior Full-Stack Software Engineer, Quests Experience (Discord)
+[2026-07-10 21:29:50,097] [INFO] [Greenhouse] Processed: Senior Full-Stack Software Engineer, Social Commerce (Discord)
+[2026-07-10 21:29:50,098] [INFO] [Greenhouse] Processed: Senior Software Engineer, Ads Measurement & Targeting (Discord)
+[2026-07-10 21:29:50,099] [INFO] [Greenhouse] Processed: Senior Software Engineer, Consumer Revenue (Discord)
+[2026-07-10 21:29:50,100] [INFO] [Greenhouse] Processed: Senior Software Engineer- Database Infrastructure (Discord)
+[2026-07-10 21:29:50,101] [INFO] [Greenhouse] Processed: Senior Software Engineer, Enforce - Safety Processing (Discord)
+[2026-07-10 21:29:50,101] [INFO] [Greenhouse] Processed: Senior Software Engineer, Front-End Infrastructure (Discord)
+[2026-07-10 21:29:50,102] [INFO] [Greenhouse] Processed: Senior Software Engineer, Machine Learning (Ads) (Discord)
+[2026-07-10 21:29:50,103] [INFO] [Greenhouse] Processed: Senior Software Engineer - Safety Platform (Discord)
+[2026-07-10 21:29:50,104] [INFO] [Greenhouse] Processed: Senior Software Engineer - Safety Processing (Discord)
+[2026-07-10 21:29:50,104] [INFO] [Greenhouse] Processed: Senior Software Engineer - Web Platform (Discord)
+[2026-07-10 21:29:50,105] [INFO] [Greenhouse] Processed: Software Engineer- Database Infrastructure (Discord)
+[2026-07-10 21:29:50,106] [INFO] [Greenhouse] Processed: Software Engineer, Data Platform (Discord)
+[2026-07-10 21:29:50,107] [INFO] [Greenhouse] Processed: Software Engineer, Developer Success (Discord)
+[2026-07-10 21:29:50,107] [INFO] [Greenhouse] Processed: Software Engineer, Distributed Systems (Discord)
+[2026-07-10 21:29:50,108] [INFO] [Greenhouse] Processed: Staff Software Engineer - Consumer Revenue (Discord)
+[2026-07-10 21:29:50,111] [INFO] [Greenhouse] Processed: Staff Software Engineer, Data Platform (Discord)
+[2026-07-10 21:29:50,112] [INFO] [Greenhouse] Processed: Staff Software Engineer, Platform Security (Discord)
+[2026-07-10 21:29:50,112] [INFO] [Greenhouse] Processed: Staff Software Engineer - Safety Experience (Discord)
+[2026-07-10 21:29:50,113] [INFO] [Greenhouse] Processed: Staff Software Engineer, Safety Processing (Discord)
+[2026-07-10 21:29:52,148] [INFO] [Greenhouse] Processed: Fullstack Software Engineer, Notifications Lifecycle (Reddit)
+[2026-07-10 21:29:52,150] [INFO] [Greenhouse] Processed: Senior Frontend Software Engineer, Home Experience (Reddit)
+[2026-07-10 21:29:52,151] [INFO] [Greenhouse] Processed: Senior Software Engineer, Ads (Reddit)
+[2026-07-10 21:29:52,153] [INFO] [Greenhouse] Processed: Senior Software Engineer, Compute Platform (Reddit)
+[2026-07-10 21:29:52,154] [INFO] [Greenhouse] Processed: Senior Software Engineer, Core Platform (Reddit)
+[2026-07-10 21:29:52,155] [INFO] [Greenhouse] Processed: Senior Software Engineer, Core Platform (Reddit)
+[2026-07-10 21:29:52,156] [INFO] [Greenhouse] Processed: Senior Software Engineer, Core Platform (Reddit)
+[2026-07-10 21:29:52,159] [INFO] [Greenhouse] Processed: Senior Software Engineer, Core Platform (Reddit)
+[2026-07-10 21:29:52,160] [INFO] [Greenhouse] Processed: Senior Software Engineer, Core Platform (Reddit)
+[2026-07-10 21:29:52,162] [INFO] [Greenhouse] Processed: Senior Software Engineer - DevX (Reddit)
+[2026-07-10 21:29:52,163] [INFO] [Greenhouse] Processed: Senior Software Engineer - Full Stack Internal Tooling (Build and Deployment Platform) (Reddit)
+[2026-07-10 21:29:52,164] [INFO] [Greenhouse] Processed: Senior Software Engineer, GenAI Platform (Reddit)
+[2026-07-10 21:29:52,165] [INFO] [Greenhouse] Processed: Senior Software Engineer, GraphQL (Reddit)
+[2026-07-10 21:29:52,166] [INFO] [Greenhouse] Processed: Senior Software Engineer, Presence (Reddit)
+[2026-07-10 21:29:52,167] [INFO] [Greenhouse] Processed: Senior Software Engineer, Storage (Reddit)
+[2026-07-10 21:29:52,168] [INFO] [Greenhouse] Processed: Software Engineer (Reddit)
+[2026-07-10 21:29:52,169] [INFO] [Greenhouse] Processed: Software Engineer, Ads (Reddit)
+[2026-07-10 21:29:52,170] [INFO] [Greenhouse] Processed: Software Engineer, Ads (Reddit)
+[2026-07-10 21:29:52,171] [INFO] [Greenhouse] Processed: Software Engineer - Data Movement Platform (Reddit)
+[2026-07-10 21:29:52,173] [INFO] [Greenhouse] Processed: Staff Software Engineer, Community Builders (Reddit)
+[2026-07-10 21:29:52,174] [INFO] [Greenhouse] Processed: Staff Software Engineer - Content Platform (Reddit)
+[2026-07-10 21:29:52,175] [INFO] [Greenhouse] Processed: Staff Software Engineer, DevPlatform (Reddit)
+[2026-07-10 21:29:52,177] [INFO] [Greenhouse] Processed: Staff Software Engineer, Identity & Access Management (Reddit)
+[2026-07-10 21:29:52,178] [INFO] [Greenhouse] Processed: Staff Software Engineer, Media Experiences (Reddit)
+[2026-07-10 21:29:52,180] [INFO] [Greenhouse] Processed: Staff Software Engineer, Onboarding (Reddit)
+[2026-07-10 21:29:52,927] [INFO] [Greenhouse] Processed: Security Software Engineer, IAM (Vercel)
+[2026-07-10 21:29:52,929] [INFO] [Greenhouse] Processed: Senior Software Engineer, Trust & Safety (Vercel)
+[2026-07-10 21:29:52,931] [INFO] [Greenhouse] Processed: Software Engineer, Agent (Vercel)
+[2026-07-10 21:29:52,931] [INFO] [Greenhouse] Processed: Software Engineer, AI Gateway (Vercel)
+[2026-07-10 21:29:52,931] [INFO] [Greenhouse] Processed: Software Engineer, AI SDK (Vercel)
+[2026-07-10 21:29:52,932] [INFO] [Greenhouse] Processed: Software Engineer, Backend (Vercel)
+[2026-07-10 21:29:52,934] [INFO] [Greenhouse] Processed: Software Engineer, CDN (Vercel)
+[2026-07-10 21:29:52,935] [INFO] [Greenhouse] Processed: Software Engineer, CDN Content (Vercel)
+[2026-07-10 21:29:52,936] [INFO] [Greenhouse] Processed: Software Engineer, Compute (Vercel)
+[2026-07-10 21:29:52,937] [INFO] [Greenhouse] Processed: Software Engineer, Dashboard (Vercel)
+[2026-07-10 21:29:52,938] [INFO] [Greenhouse] Processed: Software Engineer, Deployment Infrastructure (Vercel)
+[2026-07-10 21:29:52,938] [INFO] [Greenhouse] Processed: Software Engineer, eve (Vercel)
+[2026-07-10 21:29:52,939] [INFO] [Greenhouse] Processed: Software Engineer, Growth (Vercel)
+[2026-07-10 21:29:52,940] [INFO] [Greenhouse] Processed: Software Engineer, Next.js (Vercel)
+[2026-07-10 21:29:52,941] [INFO] [Greenhouse] Processed: Software Engineer, Observability (Vercel)
+[2026-07-10 21:29:52,942] [INFO] [Greenhouse] Processed: Software Engineer, Workflows (Vercel)
+[2026-07-10 21:29:53,499] [INFO] Searching Indeed for: Software Engineer
+[2026-07-10 21:30:00,611] [WARNING] [Indeed] Cloudflare intercepted the data packet. Skipping to protect pipeline.
+[2026-07-10 21:30:01,137] [INFO] Searching LinkedIn Public Feed for: Software Engineer
+[2026-07-10 21:30:02,261] [INFO] [LinkedIn] Found 10 public job listings. Safely extracting data...
+[2026-07-10 21:30:06,384] [INFO] [LinkedIn] Successfully processed: Software Engineer, New Grad (Notion)
+[2026-07-10 21:30:10,047] [INFO] [LinkedIn] Successfully processed: Software Engineer, New Grad (AI) (Notion)
+[2026-07-10 21:30:13,749] [INFO] [LinkedIn] Successfully processed: Software Engineer, Early Career (Notion)
+[2026-07-10 21:30:17,693] [INFO] [LinkedIn] Successfully processed: Software Engineer, Early Career (AI) (Notion)
+[2026-07-10 21:30:21,311] [INFO] [LinkedIn] Successfully processed: Software Engineer I (Sony Interactive Entertainment)
+[2026-07-10 21:30:24,929] [INFO] [LinkedIn] Successfully processed: Software Engineer (New Grad) (Collective)
+[2026-07-10 21:30:28,521] [INFO] [LinkedIn] Successfully processed: Software Engineer I (Uber)
+[2026-07-10 21:30:32,120] [INFO] [LinkedIn] Successfully processed: Software Engineer I (Uber)
+[2026-07-10 21:30:35,917] [INFO] [LinkedIn] Successfully processed: Full Stack Software Engineer (Entry-Junior) (Revel)
+[2026-07-10 21:30:39,586] [INFO] [LinkedIn] Successfully processed: Software Engineer I (Uber)
+[2026-07-10 21:30:41,758] [INFO] Searching Hays Browser Engine for: Data Scientist
+[2026-07-10 21:31:11,768] [INFO] Found 20 layout cards on screen.
+[2026-07-10 21:31:13,536] [INFO] [Hays] Successfully processed: AI Engineer
+[2026-07-10 21:31:15,167] [INFO] [Hays] Successfully processed: Sr Data Developer
+[2026-07-10 21:31:16,795] [INFO] [Hays] Successfully processed: Associate Catastrophe Risk Analyst
+[2026-07-10 21:31:18,460] [INFO] [Hays] Successfully processed: Data Analyst
+[2026-07-10 21:31:20,124] [INFO] [Hays] Successfully processed: SDET – QA Automation Engineer
+[2026-07-10 21:31:21,715] [INFO] [Hays] Successfully processed: Lead Software Engineer
+[2026-07-10 21:31:23,269] [INFO] [Hays] Successfully processed: TPA
+[2026-07-10 21:31:24,790] [INFO] [Hays] Successfully processed: Software Engineer - .Net
+[2026-07-10 21:31:26,431] [INFO] [Hays] Successfully processed: Senior AI Software Engineer
+[2026-07-10 21:31:28,123] [INFO] [Hays] Successfully processed: Sr. .Net Apps Developer x 2
+[2026-07-10 21:31:29,680] [INFO] [Hays] Successfully processed: Full Stack Developer
+[2026-07-10 21:31:31,256] [INFO] [Hays] Successfully processed: Program Management
+[2026-07-10 21:31:32,851] [INFO] [Hays] Successfully processed: Sr Java Developer x 2
+[2026-07-10 21:31:34,506] [INFO] [Hays] Successfully processed: Lab Tech I
+[2026-07-10 21:31:36,094] [INFO] [Hays] Successfully processed: SNP Data Migration Specialist
+[2026-07-10 21:31:36,095] [INFO] [Hays] Reached batch limit (15). Proceeding.
+[2026-07-10 21:31:36,248] [INFO] Searching Greenhouse API across 9 companies...
+[2026-07-10 21:31:37,398] [INFO] [Greenhouse] Processed: (Contract) Senior Data Scientist, Platform Inference - MarTech DS Measurement (Airbnb)
+[2026-07-10 21:31:37,399] [INFO] [Greenhouse] Processed: Senior Data Scientist, Guest & Host (Airbnb)
+[2026-07-10 21:31:37,400] [INFO] [Greenhouse] Processed: Senior Data Scientist, Guest Travel Insurance (Algorithms) (Airbnb)
+[2026-07-10 21:31:37,400] [INFO] [Greenhouse] Processed: Senior Staff Data Scientist, Guest & Host Marketplace AI (Airbnb)
+[2026-07-10 21:31:37,401] [INFO] [Greenhouse] Processed: Staff Data Scientist, Guest & Host (Airbnb)
+[2026-07-10 21:31:37,402] [INFO] [Greenhouse] Processed: Staff Data Scientist - Long Term Impact (Airbnb)
+[2026-07-10 21:31:38,623] [INFO] [Greenhouse] Processed: Data Scientist   (Figma)
+[2026-07-10 21:31:38,625] [INFO] [Greenhouse] Processed: Data Scientist, Core Data -  PhD (2026) (Figma)
+[2026-07-10 21:31:38,626] [INFO] [Greenhouse] Processed: Data Scientist, Finance (Figma)
+[2026-07-10 21:31:38,627] [INFO] [Greenhouse] Processed: Data Scientist, Marketing (Figma)
+[2026-07-10 21:31:41,600] [INFO] [Greenhouse] Processed: Data Scientist (Stripe)
+[2026-07-10 21:31:41,602] [INFO] [Greenhouse] Processed: Data Scientist, Global Growth (Stripe)
+[2026-07-10 21:31:41,602] [INFO] [Greenhouse] Processed: Data Scientist, Payments (Stripe)
+[2026-07-10 21:31:41,603] [INFO] [Greenhouse] Processed: Staff Data Scientist, Growth (Stripe)
+[2026-07-10 21:31:41,604] [INFO] [Greenhouse] Processed: Staff Data Scientist, Security (Stripe)
+[2026-07-10 21:31:43,775] [INFO] [Greenhouse] Processed: Senior Data Scientist, Analytics (Discord)
+[2026-07-10 21:31:44,780] [INFO] [Greenhouse] Processed: Principal Data Scientist, Ads (Reddit)
+[2026-07-10 21:31:44,782] [INFO] [Greenhouse] Processed: Senior Data Scientist, Ads (Reddit)
+[2026-07-10 21:31:44,783] [INFO] [Greenhouse] Processed: Senior Data Scientist, Ads (Reddit)
+[2026-07-10 21:31:44,784] [INFO] [Greenhouse] Processed: Senior Data Scientist, Consumer (Reddit)
+[2026-07-10 21:31:44,785] [INFO] [Greenhouse] Processed: Senior Data Scientist, Consumer (Reddit)
+[2026-07-10 21:31:44,786] [INFO] [Greenhouse] Processed: Senior Staff Data Scientist - Consumer Experimentation (Reddit)
+[2026-07-10 21:31:44,788] [INFO] [Greenhouse] Processed: Senior Staff Data Scientist - Consumer Experimentation (Reddit)
+[2026-07-10 21:31:44,789] [INFO] [Greenhouse] Processed: Senior Staff Data Scientist - Consumer Relevance (Reddit)
+[2026-07-10 21:31:44,790] [INFO] [Greenhouse] Processed: Senior Staff Data Scientist - Consumer Relevance (Reddit)
+[2026-07-10 21:31:44,791] [INFO] [Greenhouse] Processed: Staff Data Scientist, Ads (Reddit)
+[2026-07-10 21:31:44,793] [INFO] [Greenhouse] Processed: Staff Data Scientist, Ads (Reddit)
+[2026-07-10 21:31:44,794] [INFO] [Greenhouse] Processed: Staff Data Scientist, Consumer (Reddit)
+[2026-07-10 21:31:44,795] [INFO] [Greenhouse] Processed: Staff Data Scientist, Consumer (Reddit)
+[2026-07-10 21:31:44,797] [INFO] [Greenhouse] Processed: Staff Data Scientist, Marketing (Reddit)
+[2026-07-10 21:31:44,798] [INFO] [Greenhouse] Processed: Staff Data Scientist, Marketing (Reddit)
+[2026-07-10 21:31:46,255] [INFO] Searching Indeed for: Data Scientist
+[2026-07-10 21:31:53,254] [WARNING] [Indeed] Cloudflare intercepted the data packet. Skipping to protect pipeline.
+[2026-07-10 21:31:53,818] [INFO] Searching LinkedIn Public Feed for: Data Scientist
+[2026-07-10 21:31:54,605] [INFO] [LinkedIn] Found 10 public job listings. Safely extracting data...
+[2026-07-10 21:31:58,273] [INFO] [LinkedIn] Successfully processed: Data Scientist 2 (GRVTY)
+[2026-07-10 21:32:01,931] [INFO] [LinkedIn] Successfully processed: Data Scientist (Agile Defense)
+[2026-07-10 21:32:05,652] [INFO] [LinkedIn] Successfully processed: Data Scientist - Mid-Level (Bluehawk LLC, Intelligence Services)
+[2026-07-10 21:32:09,470] [INFO] [LinkedIn] Successfully processed: Data Scientist (AI/ML Modeling, Forecasting and Algorithms) (Yum! Brands)
+[2026-07-10 21:32:13,038] [INFO] [LinkedIn] Successfully processed: Data Scientist (Rocket)
+[2026-07-10 21:32:17,232] [INFO] [LinkedIn] Successfully processed: Data Scientist (Kochava)
+[2026-07-10 21:32:20,952] [INFO] [LinkedIn] Successfully processed: Data Scientist (Booz Allen Hamilton)
+[2026-07-10 21:32:24,933] [INFO] [LinkedIn] Successfully processed: Data Scientist (Ulta Beauty)
+[2026-07-10 21:32:28,597] [INFO] [LinkedIn] Successfully processed: Data Scientist (GliaCell Technologies)
+[2026-07-10 21:32:32,582] [INFO] [LinkedIn] Successfully processed: Data Scientist - Space Intelligence (The Home Depot)
+[2026-07-10 21:32:33,334] [INFO] Searching Hays Browser Engine for: Data Analyst
+[2026-07-10 21:33:18,911] [WARNING] Bypassing slower analytic payloads: Page.goto: Timeout 45000ms exceeded.
+Call log:
+  - navigating to "https://www.hays.com/job-search?q=Data+Analyst", waiting until "domcontentloaded"
+
+[2026-07-10 21:33:25,989] [INFO] Found 20 layout cards on screen.
+[2026-07-10 21:33:27,834] [INFO] [Hays] Successfully processed: Sr Data Analyst
+[2026-07-10 21:33:29,431] [INFO] [Hays] Successfully processed: Mid Level Data Analyst
+[2026-07-10 21:33:31,062] [INFO] [Hays] Successfully processed: Data Analyst
+[2026-07-10 21:33:32,671] [INFO] [Hays] Successfully processed: Sr Data Developer
+[2026-07-10 21:33:34,317] [INFO] [Hays] Successfully processed: TPA
+[2026-07-10 21:33:35,963] [INFO] [Hays] Successfully processed: Supply Chain Analyst
+[2026-07-10 21:33:37,611] [INFO] [Hays] Successfully processed: Associate Catastrophe Risk Analyst
+[2026-07-10 21:33:39,143] [INFO] [Hays] Successfully processed: Solutions Analyst - Advanced Applications
+[2026-07-10 21:33:40,871] [INFO] [Hays] Successfully processed: Service Delivery Analyst
+[2026-07-10 21:33:42,559] [INFO] [Hays] Successfully processed: (4) Epic Cogito/ SQL Developers/Architects
+[2026-07-10 21:33:44,185] [INFO] [Hays] Successfully processed: Tech Product Analyst
+[2026-07-10 21:33:45,826] [INFO] [Hays] Successfully processed: Risk Analyst
+[2026-07-10 21:33:47,480] [INFO] [Hays] Successfully processed: Oracle HCM Cloud Consultant
+[2026-07-10 21:33:49,128] [INFO] [Hays] Successfully processed: Portfolio & AI Analyst
+[2026-07-10 21:33:50,772] [INFO] [Hays] Successfully processed: Product Analyst
+[2026-07-10 21:33:50,772] [INFO] [Hays] Reached batch limit (15). Proceeding.
+[2026-07-10 21:33:51,000] [INFO] Searching Greenhouse API across 9 companies...
+[2026-07-10 21:33:56,513] [INFO] [Greenhouse] Processed: Data Analyst (Stripe)
+[2026-07-10 21:33:56,514] [INFO] [Greenhouse] Processed: Data Analyst (Stripe)
+[2026-07-10 21:33:56,514] [INFO] [Greenhouse] Processed: Data Analyst - Economic Insights & Communications (Stripe)
+[2026-07-10 21:33:56,515] [INFO] [Greenhouse] Processed: Data Analyst, Macro Analytics (Stripe)
+[2026-07-10 21:33:56,517] [INFO] [Greenhouse] Processed: Staff Data Analyst (Stripe)
+[2026-07-10 21:34:00,688] [INFO] Searching Indeed for: Data Analyst
+[2026-07-10 21:34:07,486] [WARNING] [Indeed] Cloudflare intercepted the data packet. Skipping to protect pipeline.
+[2026-07-10 21:34:08,042] [INFO] Searching LinkedIn Public Feed for: Data Analyst
+[2026-07-10 21:34:08,784] [INFO] [LinkedIn] Found 10 public job listings. Safely extracting data...
+[2026-07-10 21:34:12,532] [INFO] [LinkedIn] Successfully processed: Business Data Analyst (Turner Supply)
+[2026-07-10 21:34:16,296] [INFO] [LinkedIn] Successfully processed: Data Analyst (Synechron)
+[2026-07-10 21:34:19,986] [INFO] [LinkedIn] Successfully processed: Product Analyst / Data Analyst (Flint Hills Resources)
+[2026-07-10 21:34:23,788] [INFO] [LinkedIn] Successfully processed: Data Analyst (Synechron)
+[2026-07-10 21:34:27,674] [INFO] [LinkedIn] Successfully processed: Data Analyst (HEICO)
+[2026-07-10 21:34:31,472] [INFO] [LinkedIn] Successfully processed: Data Analyst (Blue Bird Corporation)
+[2026-07-10 21:34:35,399] [INFO] [LinkedIn] Successfully processed: Data Analyst (DBD International)
+[2026-07-10 21:34:39,054] [INFO] [LinkedIn] Successfully processed: Data Analyst AS6462 (Oklahoma State University)
+[2026-07-10 21:34:42,834] [INFO] [LinkedIn] Successfully processed: Data Analyst (Vadilal Industries USA Inc.)
+[2026-07-10 21:34:46,640] [INFO] [LinkedIn] Successfully processed: AI Analyst (ONEOK)
+[2026-07-10 21:34:47,005] [INFO] Searching Hays Browser Engine for: DevOps Engineer
+[2026-07-10 21:35:37,169] [INFO] Found 20 layout cards on screen.
+[2026-07-10 21:35:38,839] [INFO] [Hays] Successfully processed: Cloud Engineer
+[2026-07-10 21:35:40,488] [INFO] [Hays] Successfully processed: QA Engineer
+[2026-07-10 21:35:42,137] [INFO] [Hays] Successfully processed: Sr System Engineer
+[2026-07-10 21:35:43,778] [INFO] [Hays] Successfully processed: QA Performance Engineer x 2
+[2026-07-10 21:35:45,413] [INFO] [Hays] Successfully processed: Senior Data Engineer
+[2026-07-10 21:35:47,030] [INFO] [Hays] Successfully processed: Mobile Software Engineer
+[2026-07-10 21:35:48,652] [INFO] [Hays] Successfully processed: TPA
+[2026-07-10 21:35:50,157] [INFO] [Hays] Successfully processed: Project Engineer
+[2026-07-10 21:35:51,911] [INFO] [Hays] Successfully processed: Sr Kubernetes Engineer
+[2026-07-10 21:35:53,648] [INFO] [Hays] Successfully processed: Sr. SRE
+[2026-07-10 21:35:55,301] [INFO] [Hays] Successfully processed: Tech Product Analyst
+[2026-07-10 21:35:56,984] [INFO] [Hays] Successfully processed: Sr Software Engineer
+[2026-07-10 21:35:58,648] [INFO] [Hays] Successfully processed: Quality Engineer
+[2026-07-10 21:36:00,155] [INFO] [Hays] Successfully processed: Lead Software Engineer
+[2026-07-10 21:36:01,650] [INFO] [Hays] Successfully processed: SDET – QA Automation Engineer
+[2026-07-10 21:36:01,651] [INFO] [Hays] Reached batch limit (15). Proceeding.
+[2026-07-10 21:36:01,862] [INFO] Searching Greenhouse API across 9 companies...
+[2026-07-10 21:36:08,923] [INFO] Searching Indeed for: DevOps Engineer
+[2026-07-10 21:36:15,705] [WARNING] [Indeed] Cloudflare intercepted the data packet. Skipping to protect pipeline.
+[2026-07-10 21:36:16,399] [INFO] Searching LinkedIn Public Feed for: DevOps Engineer
+[2026-07-10 21:36:17,350] [INFO] [LinkedIn] Found 10 public job listings. Safely extracting data...
+[2026-07-10 21:36:21,132] [INFO] [LinkedIn] Successfully processed: Devops Engineer (MedReview Inc.)
+[2026-07-10 21:36:24,813] [INFO] [LinkedIn] Successfully processed: Junior DevOps Engineer (D2 Consulting)
+[2026-07-10 21:36:28,636] [INFO] [LinkedIn] Successfully processed: AWS DevOps Engineer (Junior) (Devtal.co)
+[2026-07-10 21:36:32,406] [INFO] [LinkedIn] Successfully processed: DevOps Engineer (ITEAM Bulgaria Ltd.)
+[2026-07-10 21:36:36,172] [INFO] [LinkedIn] Successfully processed: DevOps Junior Engineer (The Clearing House)
+[2026-07-10 21:36:40,027] [INFO] [LinkedIn] Successfully processed: DevOps Engineer (ClassWallet)
+[2026-07-10 21:36:43,701] [INFO] [LinkedIn] Successfully processed: DevOps Engineer (Wildcore Games)
+[2026-07-10 21:36:47,413] [INFO] [LinkedIn] Successfully processed: DevOps Engineer (NexGen Tech Solutions)
+[2026-07-10 21:36:51,240] [INFO] [LinkedIn] Successfully processed: Junior DevOps Engineer (D2 Consulting)
+[2026-07-10 21:36:54,994] [INFO] [LinkedIn] Successfully processed: DevOps Engineer (EXPRESS)
