@@ -31,3 +31,7 @@
 [2026-07-05 17:52:27,963] [INFO] Searching Hays : Machine Learning Engineer
 [2026-07-05 17:52:42,085] [INFO] Found 20 cards
 [2026-07-05 17:52:42,663] [INFO] Unique Jobs : 10
+[2026-07-12 16:14:12,772] [INFO] Analyzing Job: Machine Learning Engineer using gemini...
+[2026-07-12 16:14:12,773] [WARNING] No LLM credentials found. Executing offline heuristic parsing.
+[2026-07-12 16:14:12,778] [INFO] Analyzing Job: LLM Engineer using gemini...
+[2026-07-12 16:14:12,779] [WARNING] No LLM credentials found. Executing offline heuristic parsing.

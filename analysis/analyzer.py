@@ -43,21 +43,27 @@ class JDAnalyzer:
             "the provided job title and job description and extract structured intelligence. "
             "You must return a valid JSON object matching the following structure:\n"
             "{\n"
-            '  "extracted_skills": ["list", "of", "all", "technical/soft", "skills", "found"],\n'
-            '  "required_skills": ["skills", "explicitly", "required", "or", "mandatory"],\n'
-            '  "preferred_skills": ["skills", "listed", "as", "plus", "nice-to-have", "preferred"],\n'
-            '  "ats_keywords": ["high-value", "keywords", "for", "ATS", "optimization"],\n'
-            '  "required_experience": "Summarized required experience level/years",\n'
-            '  "responsibilities": ["key", "duty", "or", "responsibility", "extracted"],\n'
-            '  "required_education": "Minimum education requirement (e.g. Bachelors degree)",\n'
-            '  "preferred_education": "Preferred education level (e.g. Masters or PhD)",\n'
-            '  "tools_and_technologies": ["specific", "tools", "like", "Git", "Jira", "Docker", "VS Code"],\n'
-            '  "suggested_certifications": ["relevant", "industry", "certifications", "e.g. AWS Solutions Architect"],\n'
-            '  "work_setting": "Remote, Hybrid, or On-site",\n'
-            '  "company_culture": ["organizational", "traits", "e.g. Fast-paced", "Collaborative"],\n'
+            '  "title": "Job Title",\n'
+            '  "location": "Job Location",\n'
+            '  "salary": "Salary or CTC if mentioned",\n'
+            '  "employment_type": "Full Time / Part Time / Internship / Contract",\n'
+            '  "required_experience": "Required experience",\n'
+            '  "required_education": "Minimum education",\n'
+            '  "preferred_education": "Preferred education",\n'
+            '  "seniority": "Intern / Fresher / Junior / Mid Level / Senior / Lead",\n'
+            '  "summary": "Short summary of the job",\n'
+            '  "extracted_skills": ["all", "skills"],\n'
+            '  "required_skills": ["mandatory", "skills"],\n'
+            '  "preferred_skills": ["preferred", "skills"],\n'
+            '  "ats_keywords": ["important", "ATS", "keywords"],\n'
+            '  "responsibilities": ["responsibility1", "responsibility2"],\n'
+            '  "tools_and_technologies": ["Git", "Docker", "Python"],\n'
+            '  "suggested_certifications": ["AWS", "PMP"],\n'
+            '  "work_setting": "Remote / Hybrid / On-site",\n'
+            '  "company_culture": ["Collaborative", "Fast-paced"],\n'
             '  "ats_score_estimate": 85.5,\n'
             '  "confidence": 0.95,\n'
-            '  "reasoning": ["brief", "points", "explaining", "the", "analysis"]\n'
+            '  "reasoning": ["reason1", "reason2"]\n'
             "}\n"
             "Ensure the output contains ONLY valid JSON. Do not include markdown code block formatting like ```json."
         )
@@ -146,6 +152,76 @@ class JDAnalyzer:
             }
             
         desc_lower = description.lower()
+        # ---------------- LOCATION ----------------
+
+        location = "Not specified"
+
+        location_patterns = [
+            r'location[:\s]+([A-Za-z ,]+)',
+            r'job location[:\s]+([A-Za-z ,]+)'
+        ]
+
+        for pattern in location_patterns:
+            match = re.search(pattern, description, re.IGNORECASE)
+            if match:
+                location = match.group(1).strip()
+                break
+
+        cities = [
+            "Mumbai",
+            "Pune",
+            "Bangalore",
+            "Hyderabad",
+            "Chennai",
+            "Delhi",
+            "Noida",
+            "Gurgaon",
+            "Ahmedabad",
+            "Kolkata"
+        ]
+
+        if location == "Not specified":
+            for city in cities:
+                if city.lower() in desc_lower:
+                    location = city
+                    break
+
+
+        # ---------------- SALARY ----------------
+
+        salary = "Not specified"
+
+        salary_patterns = [
+            r'₹\s?[\d,]+(?:\s*-\s*₹?[\d,]+)?\s*(?:LPA|lakhs?|per annum)?',
+            r'\$\s?[\d,]+',
+            r'CTC[:\s]+([^\n]+)',
+            r'Salary[:\s]+([^\n]+)'
+        ]
+
+        for pattern in salary_patterns:
+            match = re.search(pattern, description, re.IGNORECASE)
+            if match:
+                salary = match.group(0).strip()
+                break
+
+
+        # ---------------- EMPLOYMENT TYPE ----------------
+
+        employment_type = "Not specified"
+
+        employment_types = [
+            "Full Time",
+            "Part Time",
+            "Internship",
+            "Contract",
+            "Temporary",
+            "Freelance"
+        ]
+
+        for emp in employment_types:
+            if emp.lower() in desc_lower:
+                employment_type = emp
+                break
         extracted_skills = []
         for skill in all_possible_skills:
             if re.search(r'\b' + re.escape(skill.lower()) + r'\b', desc_lower):
@@ -181,31 +257,111 @@ class JDAnalyzer:
         preferred_skills = list(set(preferred_skills) - set(required_skills))
                 
         # Extract required experience using regex
-        experience_matches = re.findall(
-            r'(\d+\+?\s*(?:years?|yrs?)\s+(?:of\s+)?experience)',
-            desc_lower
-        )
-        required_exp = experience_matches[0].title() if experience_matches else "Not specified"
-        
-        # Extract education requirements
-        required_edu = "Not specified"
-        if "phd" in desc_lower or "ph.d" in desc_lower:
-            required_edu = "PhD"
-        elif "master" in desc_lower or "m.s." in desc_lower:
-            required_edu = "Master's Degree"
-        elif "bachelor" in desc_lower or "b.s." in desc_lower or "degree" in desc_lower:
-            required_edu = "Bachelor's Degree"
-            
-        preferred_edu = "Not specified"
-        if "master" in desc_lower and required_edu != "Master's Degree":
-            preferred_edu = "Master's Degree"
-        elif "phd" in desc_lower and required_edu != "PhD":
-            preferred_edu = "PhD"
+        # ---------------- EXPERIENCE ----------------
 
+        experience_patterns = [
+            r'\d+\+?\s*(?:years?|yrs?)',
+            r'\d+\s*-\s*\d+\s*(?:years?|yrs?)',
+            r'minimum\s+\d+\+?\s*(?:years?|yrs?)',
+            r'at least\s+\d+\+?\s*(?:years?|yrs?)',
+            r'\d+\+?\s*(?:years?|yrs?)\s+of\s+experience'
+        ]
+
+        required_exp = "Not specified"
+
+        for pattern in experience_patterns:
+            match = re.search(pattern, desc_lower, re.IGNORECASE)
+            if match:
+                required_exp = match.group(0).title()
+                break
+        # Extract education requirements
+        # ---------------- EDUCATION ----------------
+
+        education_keywords = {
+            "Bachelor's Degree": [
+                "bachelor",
+                "bachelors",
+                "b.tech",
+                "btech",
+                "b.e",
+                "be",
+                "bca",
+                "b.sc",
+                "bsc"
+            ],
+
+            "Master's Degree": [
+                "master",
+                "masters",
+                "m.tech",
+                "mtech",
+                "m.e",
+                "me",
+                "mca",
+                "mba",
+                "m.sc",
+                "msc"
+            ],
+
+            "PhD": [
+                "phd",
+                "ph.d"
+            ],
+
+            "Diploma": [
+                "diploma"
+            ]
+        }
+
+        required_edu = "Not specified"
+
+        for degree, keywords in education_keywords.items():
+            if any(keyword in desc_lower for keyword in keywords):
+                required_edu = degree
+                break
+
+        preferred_edu = "Not specified"
+
+        if required_edu == "Bachelor's Degree":
+            if any(k in desc_lower for k in ["master", "masters", "m.tech", "mba", "mca", "phd"]):
+                preferred_edu = "Master's Degree"
+
+        elif required_edu == "Master's Degree":
+            if "phd" in desc_lower or "ph.d" in desc_lower:
+                preferred_edu = "PhD"
         # Detect tools and technologies
-        potential_tools = ["Git", "Jira", "VS Code", "Slack", "Kubernetes", "Docker", "Linux", "GitHub", "GitLab"]
+        potential_tools = [
+            "Git",
+            "GitHub",
+            "GitLab",
+            "Docker",
+            "Kubernetes",
+            "Linux",
+            "VS Code",
+            "Jira",
+            "Slack",
+            "AWS",
+            "Azure",
+            "GCP",
+            "Jenkins",
+            "Terraform",
+            "Ansible",
+            "AutoCAD",
+            "Revit",
+            "STAAD Pro",
+            "SQL",
+            "MySQL",
+            "PostgreSQL",
+            "MongoDB",
+            "Redis",
+            "Kafka",
+            "React",
+            "Angular",
+            "Node.js",
+            "Spring Boot"
+        ]
         extracted_tools = [tool for tool in potential_tools if re.search(r'\b' + re.escape(tool.lower()) + r'\b', desc_lower)]
-        
+
         # Detect suggested certifications
         cert_matches = []
         if "aws" in desc_lower:
@@ -234,7 +390,51 @@ class JDAnalyzer:
         for trait, keys in culture_keywords.items():
             if any(k in desc_lower for k in keys):
                 extracted_culture.append(trait)
+        # ---------------- SENIORITY ----------------
 
+        seniority = "Not specified"
+
+        if "intern" in desc_lower:
+            seniority = "Intern"
+
+        elif "fresher" in desc_lower or "entry level" in desc_lower:
+            seniority = "Fresher"
+
+        elif "lead" in desc_lower:
+            seniority = "Lead"
+
+        elif "architect" in desc_lower:
+            seniority = "Architect"
+
+        elif required_exp != "Not specified":
+
+            years_match = re.search(r"\d+", required_exp)
+
+            if years_match:
+
+                years = int(years_match.group())
+
+                if years <= 1:
+                    seniority = "Junior"
+
+                elif years <= 4:
+                    seniority = "Mid Level"
+
+                elif years <= 8:
+                    seniority = "Senior"
+
+                else:
+                    seniority = "Expert"
+
+
+        # ---------------- SUMMARY ----------------
+
+        summary = (
+            f"{title} position requiring {required_exp}, "
+            f"{required_edu}, "
+            f"{employment_type}, "
+            f"located in {location}."
+        )
         # Estimate ATS Score rating based on keyword density
         base_score = 50.0
         if len(extracted_skills) > 3:
@@ -261,6 +461,15 @@ class JDAnalyzer:
             responsibilities = ["Analyze business requirements and collaborate with the engineering team."]
             
         return {
+            "title": title,
+            "location": location,
+            "salary": salary,
+            "employment_type": employment_type,
+            "required_experience": required_exp,
+            "required_education": required_edu,
+            "preferred_education": preferred_edu,
+            "seniority": seniority,
+            "summary": summary,
             "extracted_skills": sorted(list(set(extracted_skills))),
             "required_skills": sorted(list(set(required_skills))),
             "preferred_skills": sorted(list(set(preferred_skills))),

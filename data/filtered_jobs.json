@@ -1,0 +1,115 @@
+[
+    {
+        "title": "Machine Learning Engineer",
+        "company": "Google",
+        "description": "Python TensorFlow NLP experience required",
+        "source": "Unknown",
+        "url": "",
+        "location": "Remote",
+        "posted_date": "2026-07-12",
+        "role_predictions": [],
+        "extracted_skills": [],
+        "relevance_scores": {},
+        "min_salary": null,
+        "max_salary": null,
+        "currency": null,
+        "job_type": "Full-time",
+        "role": "AIML Engineer",
+        "match_score": 40.0,
+        "analysis": {
+            "title": "Machine Learning Engineer",
+            "location": "Not specified",
+            "salary": "Not specified",
+            "employment_type": "Not specified",
+            "required_experience": "Not specified",
+            "required_education": "Not specified",
+            "preferred_education": "Not specified",
+            "seniority": "Not specified",
+            "summary": "Machine Learning Engineer position requiring Not specified, Not specified, Not specified, located in Not specified.",
+            "extracted_skills": [
+                "NLP",
+                "Python",
+                "TensorFlow"
+            ],
+            "required_skills": [
+                "NLP",
+                "Python",
+                "TensorFlow"
+            ],
+            "preferred_skills": [],
+            "ats_keywords": [
+                "Machine Learning Engineer",
+                "NLP",
+                "Python",
+                "TensorFlow"
+            ],
+            "responsibilities": [
+                "Analyze business requirements and collaborate with the engineering team."
+            ],
+            "tools_and_technologies": [],
+            "suggested_certifications": [],
+            "work_setting": "On-site",
+            "company_culture": [],
+            "ats_score_estimate": 50.0,
+            "confidence": 0.5,
+            "reasoning": [
+                "Offline heuristic parser based on dictionary matching and regex rules."
+            ]
+        }
+    },
+    {
+        "title": "LLM Engineer",
+        "company": "OpenAI Labs",
+        "description": "LangChain RAG Vector Database experience",
+        "source": "Unknown",
+        "url": "",
+        "location": "Remote",
+        "posted_date": "2026-07-12",
+        "role_predictions": [],
+        "extracted_skills": [],
+        "relevance_scores": {},
+        "min_salary": null,
+        "max_salary": null,
+        "currency": null,
+        "job_type": "Full-time",
+        "role": "AIML Engineer",
+        "match_score": 20.0,
+        "analysis": {
+            "title": "LLM Engineer",
+            "location": "Not specified",
+            "salary": "Not specified",
+            "employment_type": "Not specified",
+            "required_experience": "Not specified",
+            "required_education": "Not specified",
+            "preferred_education": "Not specified",
+            "seniority": "Not specified",
+            "summary": "LLM Engineer position requiring Not specified, Not specified, Not specified, located in Not specified.",
+            "extracted_skills": [
+                "LangChain",
+                "RAG"
+            ],
+            "required_skills": [
+                "LangChain",
+                "RAG"
+            ],
+            "preferred_skills": [],
+            "ats_keywords": [
+                "LLM Engineer",
+                "LangChain",
+                "RAG"
+            ],
+            "responsibilities": [
+                "Analyze business requirements and collaborate with the engineering team."
+            ],
+            "tools_and_technologies": [],
+            "suggested_certifications": [],
+            "work_setting": "On-site",
+            "company_culture": [],
+            "ats_score_estimate": 50.0,
+            "confidence": 0.5,
+            "reasoning": [
+                "Offline heuristic parser based on dictionary matching and regex rules."
+            ]
+        }
+    }
+]

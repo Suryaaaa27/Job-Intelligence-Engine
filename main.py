@@ -6,6 +6,8 @@ from preprocessing.deduplicator import remove_duplicates
 from taxonomy.role_manager import RoleManager
 from filtering.keyword_filter import keyword_filter
 from filtering.scorer import relevance_score
+from analysis.analyzer import JDAnalyzer
+
 
 
 def load_jobs():
@@ -49,6 +51,7 @@ def main():
     jobs = remove_duplicates(jobs)
 
     shortlisted = []
+    analyzer = JDAnalyzer()
 
     for job in jobs:
 
@@ -67,6 +70,13 @@ def main():
 
         job["role"] = role
         job["match_score"] = match_score
+
+        analysis = analyzer.analyze(
+            job["title"],
+            job["description"]
+        )
+
+        job["analysis"] = analysis
 
         shortlisted.append(job)
 
