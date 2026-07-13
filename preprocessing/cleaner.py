@@ -22,6 +22,36 @@ def standardize_date(date_str):
     return " ".join(str(date_str).split()).strip()
 
 
+def clean_description(text):
+    """
+    Clean job descriptions while preserving section structure and line breaks.
+    """
+
+    if not text:
+        return ""
+
+    text = re.sub(
+        r"<[^>]+>",
+        "",
+        str(text)
+    )
+
+    lines = []
+
+    for line in text.splitlines():
+
+        line = re.sub(
+            r"\s+",
+            " ",
+            line
+        ).strip()
+
+        if line:
+            lines.append(line)
+
+    return "\n".join(lines)
+
+
 def clean_job(job_obj):
     # Safely extract from dictionary or object attributes, supporting both schemas
     def get_val(obj, keys, default=""):
@@ -34,7 +64,15 @@ def clean_job(job_obj):
                 return val
         return default
 
-    desc = clean_text(get_val(job_obj, "description", ""))
+    raw_description = get_val(
+        job_obj,
+        "description",
+        ""
+    )
+
+    desc = clean_description(
+        raw_description
+    )
     title = clean_text(get_val(job_obj, ["title", "job_title"], "Unknown Title"))
     
     salary_info = extract_salary(desc)

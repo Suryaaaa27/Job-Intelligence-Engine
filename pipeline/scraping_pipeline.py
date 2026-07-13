@@ -1,12 +1,18 @@
 import json
 import os
+
 from dataclasses import asdict, is_dataclass
 from datetime import datetime
 
 from scraper.unified_scraper import UnifiedScraper
+
 from preprocessing.cleaner import clean_job
+
 from services.classification_service import ClassificationService
+
 from storage.job_repository import JobRepository
+
+from analysis.job_detail_extractor import JobDetailExtractor
 
 
 class ScrapingPipeline:
@@ -18,6 +24,8 @@ class ScrapingPipeline:
         self.classifier = ClassificationService()
 
         self.repository = JobRepository()
+
+        self.detail_extractor = JobDetailExtractor()
 
         self.raw_data_directory = "data/raw"
 
@@ -88,11 +96,56 @@ class ScrapingPipeline:
 
         return filepath
 
+    def enrich_jobs(self, jobs):
+
+        enriched_jobs = []
+
+        enrichment_failures = 0
+
+        for index, job in enumerate(
+            jobs,
+            start=1
+        ):
+
+            try:
+
+                enriched_job = (
+                    self.detail_extractor.enrich(
+                        job
+                    )
+                )
+
+                enriched_jobs.append(
+                    enriched_job
+                )
+
+            except Exception as error:
+
+                enrichment_failures += 1
+
+                print(
+                    f"[Detail Extraction Warning] "
+                    f"Job {index} failed: {error}"
+                )
+
+                # Preserve cleaned job instead of
+                # losing the complete pipeline run
+                enriched_jobs.append(
+                    job
+                )
+
+        return (
+            enriched_jobs,
+            enrichment_failures
+        )
+
     def run_query(self, query):
 
         print("\n" + "=" * 70)
 
-        print(f"Searching : {query}")
+        print(
+            f"Searching : {query}"
+        )
 
         print("=" * 70)
 
@@ -100,12 +153,16 @@ class ScrapingPipeline:
         # STEP 1 — SCRAPE RAW JOBS
         # ==================================================
 
-        raw_jobs = self.scraper.scrape_jobs(
-            query
+        raw_jobs = (
+            self.scraper.scrape_jobs(
+                query
+            )
         )
 
+        print()
+
         print(
-            f"Raw Jobs : {len(raw_jobs)}"
+            f"Raw Jobs      : {len(raw_jobs)}"
         )
 
         # ==================================================
@@ -130,40 +187,73 @@ class ScrapingPipeline:
         ]
 
         print(
-            f"Cleaned Jobs : {len(cleaned_jobs)}"
+            f"Cleaned Jobs  : {len(cleaned_jobs)}"
         )
 
         # ==================================================
-        # STEP 4 — CLASSIFY JOBS
+        # STEP 4 — EXTRACT JOB DETAILS
         # ==================================================
 
-        classified_jobs = self.classifier.classify(
+        (
+            enriched_jobs,
+            enrichment_failures
+        ) = self.enrich_jobs(
             cleaned_jobs
         )
 
-        # ==================================================
-        # STEP 5 — STORE PROCESSED JOBS
-        # ==================================================
-
-        result = self.repository.save_jobs(
-            classified_jobs
+        print(
+            f"Enriched Jobs : {len(enriched_jobs)}"
         )
 
-        stats = self.repository.get_statistics()
+        print(
+            f"Extract Fails : {enrichment_failures}"
+        )
+
+        # ==================================================
+        # STEP 5 — CLASSIFY JOBS
+        # ==================================================
+
+        classified_jobs = (
+            self.classifier.classify(
+                enriched_jobs
+            )
+        )
+
+        print(
+            f"Classified    : {len(classified_jobs)}"
+        )
+
+        # ==================================================
+        # STEP 6 — STORE PROCESSED JOBS
+        # ==================================================
+
+        result = (
+            self.repository.save_jobs(
+                classified_jobs
+            )
+        )
+
+        stats = (
+            self.repository.get_statistics()
+        )
 
         print()
 
+        print("-" * 70)
+
         print(
-            f"Inserted   : {result['inserted']}"
+            f"Inserted      : {result['inserted']}"
         )
 
         print(
-            f"Duplicates : {result['duplicates']}"
+            f"Duplicates    : {result['duplicates']}"
         )
 
         print(
-            f"Database   : {stats['total_jobs']}"
+            f"Database      : {stats['total_jobs']}"
         )
+
+        print("-" * 70)
 
         print()
 
@@ -177,17 +267,35 @@ class ScrapingPipeline:
 
         for query in queries:
 
-            result = self.run_query(
-                query
-            )
+            try:
 
-            total_inserted += result[
-                "inserted"
-            ]
+                result = self.run_query(
+                    query
+                )
 
-            total_duplicates += result[
-                "duplicates"
-            ]
+                total_inserted += result[
+                    "inserted"
+                ]
+
+                total_duplicates += result[
+                    "duplicates"
+                ]
+
+            except Exception as error:
+
+                print()
+
+                print(
+                    f"[Pipeline Error] "
+                    f"Query '{query}' failed: "
+                    f"{error}"
+                )
+
+                print(
+                    "Continuing with next query..."
+                )
+
+                print()
 
         print("\n" + "=" * 70)
 
