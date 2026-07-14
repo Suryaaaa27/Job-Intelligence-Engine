@@ -96,6 +96,10 @@ class ScrapingPipeline:
 
         return filepath
 
+    # ==========================================================
+    # JOB DETAIL ENRICHMENT
+    # ==========================================================
+
     def enrich_jobs(self, jobs):
 
         enriched_jobs = []
@@ -138,6 +142,10 @@ class ScrapingPipeline:
             enriched_jobs,
             enrichment_failures
         )
+
+    # ==========================================================
+    # RUN SINGLE QUERY
+    # ==========================================================
 
     def run_query(self, query):
 
@@ -224,7 +232,7 @@ class ScrapingPipeline:
         )
 
         # ==================================================
-        # STEP 6 — STORE PROCESSED JOBS
+        # STEP 6 — STORE / ENRICH PROCESSED JOBS
         # ==================================================
 
         result = (
@@ -237,16 +245,35 @@ class ScrapingPipeline:
             self.repository.get_statistics()
         )
 
+        inserted = result.get(
+            "inserted",
+            0
+        )
+
+        updated = result.get(
+            "updated",
+            0
+        )
+
+        duplicates = result.get(
+            "duplicates",
+            0
+        )
+
         print()
 
         print("-" * 70)
 
         print(
-            f"Inserted      : {result['inserted']}"
+            f"Inserted      : {inserted}"
         )
 
         print(
-            f"Duplicates    : {result['duplicates']}"
+            f"Updated       : {updated}"
+        )
+
+        print(
+            f"Duplicates    : {duplicates}"
         )
 
         print(
@@ -257,13 +284,29 @@ class ScrapingPipeline:
 
         print()
 
-        return result
+        return {
+
+            "inserted": inserted,
+
+            "updated": updated,
+
+            "duplicates": duplicates
+
+        }
+
+    # ==========================================================
+    # RUN SCRAPING SESSION
+    # ==========================================================
 
     def run(self, queries):
 
         total_inserted = 0
 
+        total_updated = 0
+
         total_duplicates = 0
+
+        failed_queries = 0
 
         for query in queries:
 
@@ -273,15 +316,24 @@ class ScrapingPipeline:
                     query
                 )
 
-                total_inserted += result[
-                    "inserted"
-                ]
+                total_inserted += result.get(
+                    "inserted",
+                    0
+                )
 
-                total_duplicates += result[
-                    "duplicates"
-                ]
+                total_updated += result.get(
+                    "updated",
+                    0
+                )
+
+                total_duplicates += result.get(
+                    "duplicates",
+                    0
+                )
 
             except Exception as error:
+
+                failed_queries += 1
 
                 print()
 
@@ -297,6 +349,10 @@ class ScrapingPipeline:
 
                 print()
 
+        # ==================================================
+        # SESSION SUMMARY
+        # ==================================================
+
         print("\n" + "=" * 70)
 
         print(
@@ -306,11 +362,31 @@ class ScrapingPipeline:
         print("=" * 70)
 
         print(
-            f"Inserted   : {total_inserted}"
+            f"Inserted       : {total_inserted}"
         )
 
         print(
-            f"Duplicates : {total_duplicates}"
+            f"Updated        : {total_updated}"
+        )
+
+        print(
+            f"Duplicates     : {total_duplicates}"
+        )
+
+        print(
+            f"Failed Queries : {failed_queries}"
         )
 
         print("=" * 70)
+
+        return {
+
+            "inserted": total_inserted,
+
+            "updated": total_updated,
+
+            "duplicates": total_duplicates,
+
+            "failed_queries": failed_queries
+
+        }

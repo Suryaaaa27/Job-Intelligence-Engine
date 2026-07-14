@@ -1,33 +1,120 @@
 import re
 from datetime import datetime
 
+
+# ============================================================
+# BASIC TEXT CLEANING
+# ============================================================
+
 def clean_text(text):
-    if not text: return ""
-    text = re.sub(r"<.*?>", "", text)  # Strip HTML tags
-    return " ".join(text.split()).strip()
+
+    if text is None:
+
+        return ""
+
+    text = re.sub(
+        r"<.*?>",
+        "",
+        str(text)
+    )
+
+    return " ".join(
+        text.split()
+    ).strip()
+
+
+# ============================================================
+# LOCATION STANDARDIZATION
+# ============================================================
 
 def standardize_location(location):
-    if not location or location.lower() in ["remote", "anywhere", "work from home", "wfh"]:
+
+    if not location:
+
+        return ""
+
+    location = str(
+        location
+    ).strip()
+
+    if location.lower() in [
+        "remote",
+        "anywhere",
+        "work from home",
+        "wfh"
+    ]:
+
         return "Remote"
-    return ", ".join([part.strip().title() for part in location.split(",")])
+
+    return ", ".join(
+
+        part.strip().title()
+
+        for part in location.split(",")
+
+        if part.strip()
+
+    )
+
+
+# ============================================================
+# DATE STANDARDIZATION
+# ============================================================
 
 def standardize_date(date_str):
-    if not date_str:
-        return datetime.now().strftime("%Y-%m-%d")
-    for fmt in ("%Y-%m-%d", "%d/%m/%Y", "%m/%d/%Y", "%B %d, %Y"):
-        try:
-            return datetime.strptime(date_str.strip(), fmt).strftime("%Y-%m-%d")
-        except ValueError:
-            continue
-    return " ".join(str(date_str).split()).strip()
 
+    if not date_str:
+
+        return ""
+
+    date_str = str(
+        date_str
+    ).strip()
+
+    formats = (
+
+        "%Y-%m-%d",
+
+        "%d/%m/%Y",
+
+        "%m/%d/%Y",
+
+        "%B %d, %Y"
+
+    )
+
+    for fmt in formats:
+
+        try:
+
+            return datetime.strptime(
+                date_str,
+                fmt
+            ).strftime(
+                "%Y-%m-%d"
+            )
+
+        except ValueError:
+
+            continue
+
+    return " ".join(
+        date_str.split()
+    ).strip()
+
+
+# ============================================================
+# DESCRIPTION CLEANING
+# ============================================================
 
 def clean_description(text):
     """
-    Clean job descriptions while preserving section structure and line breaks.
+    Clean job descriptions while preserving section structure
+    and meaningful line breaks.
     """
 
     if not text:
+
         return ""
 
     text = re.sub(
@@ -47,117 +134,806 @@ def clean_description(text):
         ).strip()
 
         if line:
-            lines.append(line)
 
-    return "\n".join(lines)
+            lines.append(
+                line
+            )
 
-
-def clean_job(job_obj):
-    # Safely extract from dictionary or object attributes, supporting both schemas
-    def get_val(obj, keys, default=""):
-        if isinstance(keys, str):
-            keys = [keys]
-
-        for key in keys:
-            val = obj.get(key, None) if isinstance(obj, dict) else getattr(obj, key, None)
-            if val:  # Return the first truthy value found
-                return val
-        return default
-
-    raw_description = get_val(
-        job_obj,
-        "description",
-        ""
+    return "\n".join(
+        lines
     )
 
-    desc = clean_description(
-        raw_description
+
+# ============================================================
+# SAFE FIELD ACCESS
+# ============================================================
+
+def get_job_value(
+    job_obj,
+    keys,
+    default=None
+):
+
+    if isinstance(
+        keys,
+        str
+    ):
+
+        keys = [
+            keys
+        ]
+
+    for key in keys:
+
+        if isinstance(
+            job_obj,
+            dict
+        ):
+
+            value = job_obj.get(
+                key
+            )
+
+        else:
+
+            value = getattr(
+                job_obj,
+                key,
+                None
+            )
+
+        if value is not None:
+
+            if isinstance(
+                value,
+                str
+            ):
+
+                if value.strip():
+
+                    return value
+
+            else:
+
+                return value
+
+    return default
+
+
+# ============================================================
+# SALARY EXTRACTION
+# ============================================================
+
+def extract_salary(text):
+
+    if not text:
+
+        return {
+
+            "min_salary": None,
+
+            "max_salary": None,
+
+            "currency": None
+
+        }
+
+    currency_map = {
+
+        "$": "USD",
+
+        "£": "GBP",
+
+        "€": "EUR",
+
+        "usd": "USD",
+
+        "gbp": "GBP",
+
+        "eur": "EUR"
+
+    }
+
+    currency = None
+
+    text_lower = str(
+        text
+    ).lower()
+
+    for symbol, name in currency_map.items():
+
+        if symbol in text_lower:
+
+            currency = name
+
+            break
+
+    cleaned_text = re.sub(
+        r"(?<=\d),(?=\d)",
+        "",
+        str(text)
     )
-    title = clean_text(get_val(job_obj, ["title", "job_title"], "Unknown Title"))
-    
-    salary_info = extract_salary(desc)
-    job_type = standardize_job_type(title, desc)
+
+    range_regex = (
+        r"(?:[\$£€]|USD|GBP|EUR)?\s*"
+        r"(\d+(?:\.\d+)?)\s*"
+        r"(k|K)?\s*"
+        r"(?:-|to)\s*"
+        r"(?:[\$£€]|USD|GBP|EUR)?\s*"
+        r"(\d+(?:\.\d+)?)\s*"
+        r"(k|K)?\b"
+    )
+
+    match = re.search(
+        range_regex,
+        cleaned_text,
+        re.IGNORECASE
+    )
+
+    if match:
+
+        try:
+
+            min_value = float(
+                match.group(1)
+            )
+
+            max_value = float(
+                match.group(3)
+            )
+
+            if match.group(2):
+
+                min_value *= 1000
+
+            if match.group(4):
+
+                max_value *= 1000
+
+            if (
+                min_value > 0
+                and max_value > 0
+            ):
+
+                return {
+
+                    "min_salary": min_value,
+
+                    "max_salary": max_value,
+
+                    "currency": currency
+
+                }
+
+        except (
+            TypeError,
+            ValueError
+        ):
+
+            pass
+
+    single_regex = (
+        r"(?:[\$£€]|USD|GBP|EUR)\s*"
+        r"(\d+(?:\.\d+)?)\s*"
+        r"(k|K)?\b"
+    )
+
+    match = re.search(
+        single_regex,
+        cleaned_text,
+        re.IGNORECASE
+    )
+
+    if match:
+
+        try:
+
+            value = float(
+                match.group(1)
+            )
+
+            if match.group(2):
+
+                value *= 1000
+
+            if value > 0:
+
+                return {
+
+                    "min_salary": value,
+
+                    "max_salary": value,
+
+                    "currency": currency
+
+                }
+
+        except (
+            TypeError,
+            ValueError
+        ):
+
+            pass
 
     return {
-        # Check standard name first, then fallback to scraper alternate name
-        "title": title,
-        "company": clean_text(get_val(job_obj, ["company", "company_name"], "Unknown Company")),
-        "description": desc,
-        "source": clean_text(get_val(job_obj, ["source", "source_platform"], "Unknown")),
-        "url": clean_text(get_val(job_obj, ["url", "job_url"], "")),
-        "location": standardize_location(get_val(job_obj, "location", "")),
-        "posted_date": standardize_date(get_val(job_obj, "posted_date", "")),
-        "role_predictions": get_val(job_obj, "role_predictions", []),
-        "extracted_skills": get_val(job_obj, "extracted_skills", []),
-        "relevance_scores": get_val(job_obj, "relevance_scores", {}),
-        "min_salary": salary_info["min_salary"],
-        "max_salary": salary_info["max_salary"],
-        "currency": salary_info["currency"],
-        "job_type": job_type
+
+        "min_salary": None,
+
+        "max_salary": None,
+
+        "currency": currency
+
     }
 
 
-def extract_salary(text):
-    if not text:
-        return {"min_salary": None, "max_salary": None, "currency": None}
-    
-    currency_map = {"$": "USD", "£": "GBP", "€": "EUR", "usd": "USD", "gbp": "GBP", "eur": "EUR"}
-    currency = None
-    
-    for sym, name in currency_map.items():
-        if sym in text.lower():
-            currency = name
-            break
-            
-    # Clean commas in numeric substrings for easier matching (e.g. 100,000 -> 100000)
-    cleaned_text = re.sub(r'(?<=\d),(?=\d)', '', text)
-    
-    # Range check: e.g. $80k - $120k or 80000 - 120000
-    range_regex = r'(?:[\$£€]|USD|GBP|EUR)?\s*(\d+)\s*(k|K)?\s*(?:-|to)\s*(?:[\$£€]|USD|GBP|EUR)?\s*(\d+)\s*(k|K)?\b'
-    match = re.search(range_regex, cleaned_text)
-    if match:
-        try:
-            min_val = int(match.group(1))
-            max_val = int(match.group(3))
-            if match.group(2) and match.group(2).lower() == 'k':
-                min_val *= 1000
-            elif min_val < 1000:
-                if match.group(4) and match.group(4).lower() == 'k':
-                    min_val *= 1000
-            if match.group(4) and match.group(4).lower() == 'k':
-                max_val *= 1000
-                
-            if min_val > 1000:
-                return {"min_salary": min_val, "max_salary": max_val, "currency": currency}
-        except ValueError:
-            pass
+# ============================================================
+# JOB TYPE INFERENCE
+# ============================================================
 
-    # Single check: e.g. $120,000 or $120k
-    single_regex = r'(?:[\$£€]|USD|GBP|EUR)\s*(\d+)\s*(k|K)?\b'
-    match = re.search(single_regex, cleaned_text)
-    if match:
-        try:
-            val = int(match.group(1))
-            if match.group(2) and match.group(2).lower() == 'k':
-                val *= 1000
-            if val > 1000:
-                return {"min_salary": val, "max_salary": val, "currency": currency}
-        except ValueError:
-            pass
-            
-    return {"min_salary": None, "max_salary": None, "currency": currency}
+def standardize_job_type(
+    title,
+    description
+):
+    """
+    Infer employment type only when authoritative scraper
+    metadata is unavailable.
+    """
 
+    combined = (
+        f"{title} {description}"
+    ).lower()
 
-def standardize_job_type(title, description):
-    combined = f"{title} {description}".lower()
-    if "part-time" in combined or "part time" in combined:
+    if (
+        "part-time" in combined
+        or "part time" in combined
+    ):
+
         return "Part-time"
-    elif "contract" in combined or "contractor" in combined or "freelance" in combined:
-        return "Contract"
-    elif "intern" in combined or "internship" in combined:
-        return "Internship"
-    elif "remote" in combined or "work from home" in combined or "wfh" in combined:
-        return "Remote"
-    else:
-        return "Full-time"
 
+    if (
+        "contract" in combined
+        or "contractor" in combined
+        or "freelance" in combined
+    ):
+
+        return "Contract"
+
+    if (
+        "internship" in combined
+        or re.search(
+            r"\bintern\b",
+            combined
+        )
+    ):
+
+        return "Internship"
+
+    if (
+        "temporary" in combined
+        or re.search(
+            r"\btemp\b",
+            combined
+        )
+    ):
+
+        return "Temporary"
+
+    return ""
+
+
+# ============================================================
+# JOB CLEANING
+# ============================================================
+
+def clean_job(job_obj):
+    """
+    Normalize and clean a scraped job while preserving canonical
+    Job model fields.
+
+    Authoritative scraper metadata always takes precedence over
+    heuristic inference.
+    """
+
+    raw_description = get_job_value(
+
+        job_obj,
+
+        "description",
+
+        ""
+
+    )
+
+    description = clean_description(
+        raw_description
+    )
+
+    title = clean_text(
+
+        get_job_value(
+
+            job_obj,
+
+            [
+                "title",
+                "job_title"
+            ],
+
+            "Unknown Title"
+
+        )
+
+    )
+
+    company = clean_text(
+
+        get_job_value(
+
+            job_obj,
+
+            [
+                "company",
+                "company_name"
+            ],
+
+            "Unknown Company"
+
+        )
+
+    )
+
+    source = clean_text(
+
+        get_job_value(
+
+            job_obj,
+
+            [
+                "source",
+                "source_platform"
+            ],
+
+            "Unknown"
+
+        )
+
+    )
+
+    job_url = clean_text(
+
+        get_job_value(
+
+            job_obj,
+
+            [
+                "url",
+                "job_url"
+            ],
+
+            ""
+
+        )
+
+    )
+
+    application_url = clean_text(
+
+        get_job_value(
+
+            job_obj,
+
+            [
+                "application_url",
+                "apply_url"
+            ],
+
+            job_url
+
+        )
+
+    )
+
+    location = standardize_location(
+
+        get_job_value(
+
+            job_obj,
+
+            "location",
+
+            ""
+
+        )
+
+    )
+
+    # ========================================================
+    # AUTHORITATIVE SCRAPER METADATA
+    # ========================================================
+
+    employment_type = clean_text(
+
+        get_job_value(
+
+            job_obj,
+
+            [
+                "employment_type",
+                "job_type"
+            ],
+
+            ""
+
+        )
+
+    )
+
+    if not employment_type:
+
+        employment_type = standardize_job_type(
+
+            title,
+
+            description
+
+        )
+
+    workplace_type = clean_text(
+
+        get_job_value(
+
+            job_obj,
+
+            "workplace_type",
+
+            ""
+
+        )
+
+    )
+
+    salary = clean_text(
+
+        get_job_value(
+
+            job_obj,
+
+            "salary",
+
+            ""
+
+        )
+
+    )
+
+    existing_min_salary = get_job_value(
+
+        job_obj,
+
+        "min_salary",
+
+        None
+
+    )
+
+    existing_max_salary = get_job_value(
+
+        job_obj,
+
+        "max_salary",
+
+        None
+
+    )
+
+    existing_currency = get_job_value(
+
+        job_obj,
+
+        "currency",
+
+        None
+
+    )
+
+    salary_info = extract_salary(
+
+        salary
+        or description
+
+    )
+
+    min_salary = (
+
+        existing_min_salary
+
+        if existing_min_salary is not None
+
+        else salary_info[
+            "min_salary"
+        ]
+
+    )
+
+    max_salary = (
+
+        existing_max_salary
+
+        if existing_max_salary is not None
+
+        else salary_info[
+            "max_salary"
+        ]
+
+    )
+
+    currency = (
+
+        existing_currency
+
+        or salary_info[
+            "currency"
+        ]
+
+    )
+
+    # ========================================================
+    # CANONICAL JOB DOCUMENT
+    # ========================================================
+
+    return {
+
+        "job_id": clean_text(
+
+            get_job_value(
+
+                job_obj,
+
+                "job_id",
+
+                ""
+
+            )
+
+        ),
+
+        "title": title,
+
+        "company": company,
+
+        "company_website": clean_text(
+
+            get_job_value(
+
+                job_obj,
+
+                "company_website",
+
+                ""
+
+            )
+
+        ),
+
+        "description": description,
+
+        "source": source,
+
+        "url": job_url,
+
+        "application_url": application_url,
+
+        "location": location,
+
+        "country": clean_text(
+
+            get_job_value(
+
+                job_obj,
+
+                "country",
+
+                ""
+
+            )
+
+        ),
+
+        "state": clean_text(
+
+            get_job_value(
+
+                job_obj,
+
+                "state",
+
+                ""
+
+            )
+
+        ),
+
+        "city": clean_text(
+
+            get_job_value(
+
+                job_obj,
+
+                "city",
+
+                ""
+
+            )
+
+        ),
+
+        "workplace_type": workplace_type,
+
+        "employment_type": employment_type,
+
+        "job_type": employment_type,
+
+        "salary": salary,
+
+        "min_salary": min_salary,
+
+        "max_salary": max_salary,
+
+        "currency": currency,
+
+        "salary_period": clean_text(
+
+            get_job_value(
+
+                job_obj,
+
+                [
+                    "salary_period",
+                    "salary_frequency"
+                ],
+
+                ""
+
+            )
+
+        ),
+
+        "posted_date": standardize_date(
+
+            get_job_value(
+
+                job_obj,
+
+                "posted_date",
+
+                ""
+
+            )
+
+        ),
+
+        "skills": get_job_value(
+
+            job_obj,
+
+            "skills",
+
+            []
+
+        ),
+
+        "responsibilities": get_job_value(
+
+            job_obj,
+
+            "responsibilities",
+
+            []
+
+        ),
+
+        "experience": get_job_value(
+
+            job_obj,
+
+            "experience",
+
+            ""
+
+        ),
+
+        "education": get_job_value(
+
+            job_obj,
+
+            "education",
+
+            []
+
+        ),
+
+        "requirements": get_job_value(
+
+            job_obj,
+
+            "requirements",
+
+            []
+
+        ),
+
+        "benefits": get_job_value(
+
+            job_obj,
+
+            "benefits",
+
+            []
+
+        ),
+
+        "predicted_role": get_job_value(
+
+            job_obj,
+
+            "predicted_role",
+
+            None
+
+        ),
+
+        "role_predictions": get_job_value(
+
+            job_obj,
+
+            "role_predictions",
+
+            []
+
+        ),
+
+        "match_score": get_job_value(
+
+            job_obj,
+
+            "match_score",
+
+            None
+
+        ),
+
+        "extracted_skills": get_job_value(
+
+            job_obj,
+
+            "extracted_skills",
+
+            []
+
+        ),
+
+        "relevance_scores": get_job_value(
+
+            job_obj,
+
+            "relevance_scores",
+
+            {}
+
+        ),
+
+        "scrape_session": clean_text(
+
+            get_job_value(
+
+                job_obj,
+
+                "scrape_session",
+
+                ""
+
+            )
+
+        )
+
+    }
