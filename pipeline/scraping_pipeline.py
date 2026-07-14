@@ -14,6 +14,8 @@ from storage.job_repository import JobRepository
 
 from analysis.job_detail_extractor import JobDetailExtractor
 
+from analysis.analyzer import JDAnalyzer
+
 
 class ScrapingPipeline:
 
@@ -26,6 +28,8 @@ class ScrapingPipeline:
         self.repository = JobRepository()
 
         self.detail_extractor = JobDetailExtractor()
+
+        self.analyzer = JDAnalyzer()
 
         self.raw_data_directory = "data/raw"
 
@@ -144,6 +148,74 @@ class ScrapingPipeline:
         )
 
     # ==========================================================
+    # JOB DESCRIPTION INTELLIGENCE ANALYSIS
+    # ==========================================================
+
+    def analyze_jobs(self, jobs):
+
+        analyzed_jobs = []
+
+        analysis_failures = 0
+
+        for index, job in enumerate(
+            jobs,
+            start=1
+        ):
+
+            try:
+
+                analysis = (
+                    self.analyzer.analyze(
+                        job
+                    )
+                )
+
+                job_data = (
+                    self._job_to_dict(
+                        job
+                    )
+                )
+
+                job_data[
+                    "analysis"
+                ] = analysis
+
+                analyzed_jobs.append(
+                    job_data
+                )
+
+            except Exception as error:
+
+                analysis_failures += 1
+
+                print(
+                    f"[JD Analysis Warning] "
+                    f"Job {index} failed: {error}"
+                )
+
+                # Preserve the classified job so
+                # analyzer failure never kills the
+                # complete scraping pipeline.
+                job_data = (
+                    self._job_to_dict(
+                        job
+                    )
+                )
+
+                job_data[
+                    "analysis"
+                ] = {}
+
+                analyzed_jobs.append(
+                    job_data
+                )
+
+        return (
+            analyzed_jobs,
+            analysis_failures
+        )
+
+    # ==========================================================
     # RUN SINGLE QUERY
     # ==========================================================
 
@@ -170,7 +242,7 @@ class ScrapingPipeline:
         print()
 
         print(
-            f"Raw Jobs      : {len(raw_jobs)}"
+            f"Raw Jobs       : {len(raw_jobs)}"
         )
 
         # ==================================================
@@ -195,7 +267,7 @@ class ScrapingPipeline:
         ]
 
         print(
-            f"Cleaned Jobs  : {len(cleaned_jobs)}"
+            f"Cleaned Jobs   : {len(cleaned_jobs)}"
         )
 
         # ==================================================
@@ -210,11 +282,11 @@ class ScrapingPipeline:
         )
 
         print(
-            f"Enriched Jobs : {len(enriched_jobs)}"
+            f"Enriched Jobs  : {len(enriched_jobs)}"
         )
 
         print(
-            f"Extract Fails : {enrichment_failures}"
+            f"Extract Fails  : {enrichment_failures}"
         )
 
         # ==================================================
@@ -228,16 +300,47 @@ class ScrapingPipeline:
         )
 
         print(
-            f"Classified    : {len(classified_jobs)}"
+            f"Classified     : {len(classified_jobs)}"
         )
 
         # ==================================================
-        # STEP 6 — STORE / ENRICH PROCESSED JOBS
+        # STEP 6 — ANALYZE JOB DESCRIPTIONS
+        # ==================================================
+
+        (
+            analyzed_jobs,
+            analysis_failures
+        ) = self.analyze_jobs(
+            classified_jobs
+        )
+
+        analyzed_count = sum(
+
+            1
+
+            for job in analyzed_jobs
+
+            if job.get(
+                "analysis"
+            )
+
+        )
+
+        print(
+            f"Analyzed Jobs  : {analyzed_count}"
+        )
+
+        print(
+            f"Analysis Fails : {analysis_failures}"
+        )
+
+        # ==================================================
+        # STEP 7 — STORE / ENRICH PROCESSED JOBS
         # ==================================================
 
         result = (
             self.repository.save_jobs(
-                classified_jobs
+                analyzed_jobs
             )
         )
 
@@ -265,19 +368,23 @@ class ScrapingPipeline:
         print("-" * 70)
 
         print(
-            f"Inserted      : {inserted}"
+            f"Inserted       : {inserted}"
         )
 
         print(
-            f"Updated       : {updated}"
+            f"Updated        : {updated}"
         )
 
         print(
-            f"Duplicates    : {duplicates}"
+            f"Duplicates     : {duplicates}"
         )
 
         print(
-            f"Database      : {stats['total_jobs']}"
+            f"Database       : {stats['total_jobs']}"
+        )
+
+        print(
+            f"DB Analyzed    : {stats.get('analyzed_jobs', 0)}"
         )
 
         print("-" * 70)
@@ -290,7 +397,11 @@ class ScrapingPipeline:
 
             "updated": updated,
 
-            "duplicates": duplicates
+            "duplicates": duplicates,
+
+            "analyzed": analyzed_count,
+
+            "analysis_failures": analysis_failures
 
         }
 
@@ -305,6 +416,10 @@ class ScrapingPipeline:
         total_updated = 0
 
         total_duplicates = 0
+
+        total_analyzed = 0
+
+        total_analysis_failures = 0
 
         failed_queries = 0
 
@@ -328,6 +443,16 @@ class ScrapingPipeline:
 
                 total_duplicates += result.get(
                     "duplicates",
+                    0
+                )
+
+                total_analyzed += result.get(
+                    "analyzed",
+                    0
+                )
+
+                total_analysis_failures += result.get(
+                    "analysis_failures",
                     0
                 )
 
@@ -362,19 +487,27 @@ class ScrapingPipeline:
         print("=" * 70)
 
         print(
-            f"Inserted       : {total_inserted}"
+            f"Inserted          : {total_inserted}"
         )
 
         print(
-            f"Updated        : {total_updated}"
+            f"Updated           : {total_updated}"
         )
 
         print(
-            f"Duplicates     : {total_duplicates}"
+            f"Duplicates        : {total_duplicates}"
         )
 
         print(
-            f"Failed Queries : {failed_queries}"
+            f"Analyzed          : {total_analyzed}"
+        )
+
+        print(
+            f"Analysis Failures : {total_analysis_failures}"
+        )
+
+        print(
+            f"Failed Queries    : {failed_queries}"
         )
 
         print("=" * 70)
@@ -386,6 +519,12 @@ class ScrapingPipeline:
             "updated": total_updated,
 
             "duplicates": total_duplicates,
+
+            "analyzed": total_analyzed,
+
+            "analysis_failures": (
+                total_analysis_failures
+            ),
 
             "failed_queries": failed_queries
 

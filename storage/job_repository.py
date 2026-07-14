@@ -1,8 +1,11 @@
 import hashlib
+
 from dataclasses import asdict, is_dataclass
+
 from datetime import datetime
 
 from pymongo import MongoClient, ASCENDING
+
 from pymongo.errors import DuplicateKeyError
 
 
@@ -16,7 +19,9 @@ class JobRepository:
     ):
 
         self.mongo_uri = mongo_uri
+
         self.database_name = database_name
+
         self.collection_name = collection_name
 
         self.client = MongoClient(
@@ -33,6 +38,7 @@ class JobRepository:
         ]
 
         self._verify_connection()
+
         self._init_indexes()
 
     # ==========================================================
@@ -71,67 +77,132 @@ class JobRepository:
             indexed_fields[
                 key_definition
             ] = {
+
                 "name": index_name,
+
                 "unique": index_info.get(
                     "unique",
                     False
                 ),
+
                 "sparse": index_info.get(
                     "sparse",
                     False
                 )
+
             }
 
         required_indexes = [
 
             {
+
                 "keys": (
                     ("job_hash", ASCENDING),
                 ),
+
                 "name": "job_hash_index",
+
                 "unique": True
+
             },
 
             {
+
                 "keys": (
                     ("title", ASCENDING),
                 ),
+
                 "name": "title_1"
+
             },
 
             {
+
                 "keys": (
                     ("company", ASCENDING),
                 ),
+
                 "name": "company_1"
+
             },
 
             {
+
                 "keys": (
                     ("source", ASCENDING),
                 ),
+
                 "name": "source_1"
+
             },
 
             {
+
                 "keys": (
                     ("location", ASCENDING),
                 ),
+
                 "name": "location_1"
+
             },
 
             {
+
                 "keys": (
                     ("predicted_role", ASCENDING),
                 ),
+
                 "name": "predicted_role_1"
+
             },
 
             {
+
                 "keys": (
                     ("posted_date", ASCENDING),
                 ),
+
                 "name": "posted_date_index"
+
+            },
+
+            {
+
+                "keys": (
+                    (
+                        "analysis.seniority",
+                        ASCENDING
+                    ),
+                ),
+
+                "name": "analysis_seniority_index"
+
+            },
+
+            {
+
+                "keys": (
+                    (
+                        "analysis.required_skills",
+                        ASCENDING
+                    ),
+                ),
+
+                "name": "analysis_required_skills_index"
+
+            },
+
+            {
+
+                "keys": (
+                    (
+                        "analysis.ats_keywords",
+                        ASCENDING
+                    ),
+                ),
+
+                "name": "analysis_ats_keywords_index"
+
             }
 
         ]
@@ -143,12 +214,15 @@ class JobRepository:
             ]
 
             if keys in indexed_fields:
+
                 continue
 
             create_options = {
+
                 "name": index_config[
                     "name"
                 ]
+
             }
 
             if index_config.get(
@@ -179,6 +253,7 @@ class JobRepository:
 
         fingerprint = "|".join(
             [
+
                 str(title or "")
                 .strip()
                 .lower(),
@@ -198,6 +273,7 @@ class JobRepository:
                 str(url or "")
                 .strip()
                 .lower()
+
             ]
         )
 
@@ -211,25 +287,49 @@ class JobRepository:
     # SAFE LIST NORMALIZATION
     # ==========================================================
 
-    def _normalize_list(self, value):
+    def _normalize_list(
+        self,
+        value
+    ):
 
         if value is None:
+
             return []
 
-        if isinstance(value, list):
+        if isinstance(
+            value,
+            list
+        ):
+
             return value
 
-        if isinstance(value, tuple):
-            return list(value)
+        if isinstance(
+            value,
+            tuple
+        ):
 
-        if isinstance(value, set):
-            return list(value)
+            return list(
+                value
+            )
 
-        if isinstance(value, str):
+        if isinstance(
+            value,
+            set
+        ):
+
+            return list(
+                value
+            )
+
+        if isinstance(
+            value,
+            str
+        ):
 
             value = value.strip()
 
             if not value:
+
                 return []
 
             return [
@@ -241,104 +341,324 @@ class JobRepository:
         ]
 
     # ==========================================================
+    # ANALYSIS NORMALIZATION
+    # ==========================================================
+
+    def _normalize_analysis(
+        self,
+        analysis
+    ):
+
+        if not isinstance(
+            analysis,
+            dict
+        ):
+
+            return {}
+
+        normalized_analysis = {
+
+            "required_experience": (
+                analysis.get(
+                    "required_experience"
+                )
+                or "Not specified"
+            ),
+
+            "required_education": (
+                analysis.get(
+                    "required_education"
+                )
+                or "Not specified"
+            ),
+
+            "preferred_education": (
+                analysis.get(
+                    "preferred_education"
+                )
+                or "Not specified"
+            ),
+
+            "seniority": (
+                analysis.get(
+                    "seniority"
+                )
+                or "Unknown"
+            ),
+
+            "summary": (
+                analysis.get(
+                    "summary"
+                )
+                or ""
+            ),
+
+            "extracted_skills": (
+                self._normalize_list(
+                    analysis.get(
+                        "extracted_skills"
+                    )
+                )
+            ),
+
+            "required_skills": (
+                self._normalize_list(
+                    analysis.get(
+                        "required_skills"
+                    )
+                )
+            ),
+
+            "preferred_skills": (
+                self._normalize_list(
+                    analysis.get(
+                        "preferred_skills"
+                    )
+                )
+            ),
+
+            "ats_keywords": (
+                self._normalize_list(
+                    analysis.get(
+                        "ats_keywords"
+                    )
+                )
+            ),
+
+            "responsibilities": (
+                self._normalize_list(
+                    analysis.get(
+                        "responsibilities"
+                    )
+                )
+            ),
+
+            "tools_and_technologies": (
+                self._normalize_list(
+                    analysis.get(
+                        "tools_and_technologies"
+                    )
+                )
+            ),
+
+            "suggested_certifications": (
+                self._normalize_list(
+                    analysis.get(
+                        "suggested_certifications"
+                    )
+                )
+            ),
+
+            "company_culture": (
+                self._normalize_list(
+                    analysis.get(
+                        "company_culture"
+                    )
+                )
+            ),
+
+            "analysis_completeness_score": (
+                analysis.get(
+                    "analysis_completeness_score",
+                    0.0
+                )
+            ),
+
+            "confidence": (
+                analysis.get(
+                    "confidence",
+                    0.0
+                )
+            ),
+
+            "reasoning": (
+                self._normalize_list(
+                    analysis.get(
+                        "reasoning"
+                    )
+                )
+            )
+
+        }
+
+        return normalized_analysis
+
+    # ==========================================================
     # JOB NORMALIZATION
     # ==========================================================
 
-    def _normalize_job(self, job):
+    def _normalize_job(
+        self,
+        job
+    ):
 
-        if is_dataclass(job):
+        if is_dataclass(
+            job
+        ):
 
-            data = asdict(job)
+            data = asdict(
+                job
+            )
 
-        elif isinstance(job, dict):
+        elif isinstance(
+            job,
+            dict
+        ):
 
             data = job.copy()
 
         else:
 
-            data = job.__dict__.copy()
+            data = (
+                job.__dict__.copy()
+            )
 
         # ======================================================
         # DOMAIN MODEL → PERSISTENCE MODEL
         # ======================================================
 
         title = (
+
             data.get("title")
+
             or data.get("job_title")
+
             or ""
+
         )
 
         company = (
+
             data.get("company")
+
             or data.get("company_name")
+
             or ""
+
         )
 
         source = (
+
             data.get("source")
-            or data.get("source_platform")
+
+            or data.get(
+                "source_platform"
+            )
+
             or ""
+
         )
 
         url = (
+
             data.get("url")
+
             or data.get("job_url")
+
             or ""
+
         )
 
         application_url = (
-            data.get("application_url")
-            or data.get("apply_url")
+
+            data.get(
+                "application_url"
+            )
+
+            or data.get(
+                "apply_url"
+            )
+
             or url
+
         )
 
         location = (
+
             data.get("location")
+
             or ""
+
         )
 
         job_id = (
+
             data.get("job_id")
+
             or ""
+
         )
 
         employment_type = (
-            data.get("employment_type")
-            or data.get("job_type")
+
+            data.get(
+                "employment_type"
+            )
+
+            or data.get(
+                "job_type"
+            )
+
             or ""
+
         )
 
         salary_period = (
-            data.get("salary_period")
-            or data.get("salary_frequency")
+
+            data.get(
+                "salary_period"
+            )
+
+            or data.get(
+                "salary_frequency"
+            )
+
             or ""
+
         )
 
         skills = self._normalize_list(
+
             data.get("skills")
+
             or data.get(
                 "extracted_skills"
             )
+
         )
 
         responsibilities = (
             self._normalize_list(
+
                 data.get(
                     "responsibilities"
                 )
+
             )
         )
 
         education = self._normalize_list(
-            data.get("education")
+            data.get(
+                "education"
+            )
         )
 
         requirements = self._normalize_list(
-            data.get("requirements")
+            data.get(
+                "requirements"
+            )
         )
 
         benefits = self._normalize_list(
-            data.get("benefits")
+            data.get(
+                "benefits"
+            )
+        )
+
+        analysis = self._normalize_analysis(
+            data.get(
+                "analysis"
+            )
         )
 
         # ======================================================
@@ -346,14 +666,25 @@ class JobRepository:
         # ======================================================
 
         job_hash = (
-            data.get("job_hash")
-            or self._generate_job_hash(
-                title,
-                company,
-                location,
-                source,
-                url
+
+            data.get(
+                "job_hash"
             )
+
+            or self._generate_job_hash(
+
+                title,
+
+                company,
+
+                location,
+
+                source,
+
+                url
+
+            )
+
         )
 
         now = datetime.utcnow()
@@ -366,95 +697,156 @@ class JobRepository:
 
             "job_hash": job_hash,
 
-            "job_id": str(job_id),
+            "job_id": str(
+                job_id
+            ),
 
             "title": title,
 
             "company": company,
 
             "company_website": (
+
                 data.get(
                     "company_website"
                 )
+
                 or ""
+
             ),
 
             "description": (
-                data.get("description")
+
+                data.get(
+                    "description"
+                )
+
                 or ""
+
             ),
 
             "source": source,
 
             "url": url,
 
-            "application_url": application_url,
+            "application_url": (
+                application_url
+            ),
 
             "location": location,
 
             "country": (
-                data.get("country")
+
+                data.get(
+                    "country"
+                )
+
                 or ""
+
             ),
 
             "state": (
-                data.get("state")
+
+                data.get(
+                    "state"
+                )
+
                 or ""
+
             ),
 
             "city": (
-                data.get("city")
+
+                data.get(
+                    "city"
+                )
+
                 or ""
+
             ),
 
             "workplace_type": (
+
                 data.get(
                     "workplace_type"
                 )
+
                 or ""
+
             ),
 
-            "employment_type": employment_type,
+            "employment_type": (
+                employment_type
+            ),
 
             # Backward compatibility
-            "job_type": employment_type,
+            "job_type": (
+                employment_type
+            ),
 
             "salary": (
-                data.get("salary")
+
+                data.get(
+                    "salary"
+                )
+
                 or ""
+
             ),
 
             "min_salary": (
-                data.get("min_salary")
+                data.get(
+                    "min_salary"
+                )
             ),
 
             "max_salary": (
-                data.get("max_salary")
+                data.get(
+                    "max_salary"
+                )
             ),
 
             "currency": (
-                data.get("currency")
+                data.get(
+                    "currency"
+                )
             ),
 
-            "salary_period": salary_period,
+            "salary_period": (
+                salary_period
+            ),
 
             "posted_date": (
-                data.get("posted_date")
+
+                data.get(
+                    "posted_date"
+                )
+
                 or ""
+
             ),
 
             "skills": skills,
 
-            "responsibilities": responsibilities,
+            "responsibilities": (
+                responsibilities
+            ),
 
             "experience": (
-                data.get("experience")
+
+                data.get(
+                    "experience"
+                )
+
                 or ""
+
             ),
 
             "education": education,
 
-            "requirements": requirements,
+            "requirements": (
+                requirements
+            ),
 
             "benefits": benefits,
 
@@ -466,33 +858,50 @@ class JobRepository:
 
             "role_predictions": (
                 self._normalize_list(
+
                     data.get(
                         "role_predictions"
                     )
+
                 )
             ),
 
             "match_score": (
-                data.get("match_score")
+                data.get(
+                    "match_score"
+                )
             ),
 
             "relevance_scores": (
+
                 data.get(
                     "relevance_scores"
                 )
+
                 or {}
+
             ),
 
+            "analysis": analysis,
+
             "scrape_session": (
+
                 data.get(
                     "scrape_session"
                 )
+
                 or ""
+
             ),
 
             "created_at": (
-                data.get("created_at")
+
+                data.get(
+                    "created_at"
+                )
+
                 or now
+
             ),
 
             "updated_at": now
@@ -503,12 +912,19 @@ class JobRepository:
     # VALUE QUALITY CHECK
     # ==========================================================
 
-    def _has_meaningful_value(self, value):
+    def _has_meaningful_value(
+        self,
+        value
+    ):
 
         if value is None:
+
             return False
 
-        if isinstance(value, str):
+        if isinstance(
+            value,
+            str
+        ):
 
             return bool(
                 value.strip()
@@ -524,7 +940,9 @@ class JobRepository:
             )
         ):
 
-            return bool(value)
+            return bool(
+                value
+            )
 
         return True
 
@@ -541,9 +959,13 @@ class JobRepository:
         update_fields = {}
 
         protected_fields = {
+
             "_id",
+
             "job_hash",
+
             "created_at"
+
         }
 
         for field, incoming_value in (
@@ -551,13 +973,17 @@ class JobRepository:
         ):
 
             if field in protected_fields:
+
                 continue
 
             if field == "updated_at":
+
                 continue
 
             existing_value = (
-                existing_job.get(field)
+                existing_job.get(
+                    field
+                )
             )
 
             incoming_has_value = (
@@ -572,8 +998,10 @@ class JobRepository:
                 )
             )
 
-            # Never overwrite useful data with empty data.
+            # Never overwrite useful data
+            # with empty data.
             if not incoming_has_value:
+
                 continue
 
             # Fill missing fields.
@@ -585,7 +1013,8 @@ class JobRepository:
 
                 continue
 
-            # Replace changed scalar values with fresher data.
+            # Replace changed scalar values
+            # with fresher data.
             if isinstance(
                 incoming_value,
                 (
@@ -596,7 +1025,10 @@ class JobRepository:
                 )
             ):
 
-                if incoming_value != existing_value:
+                if (
+                    incoming_value
+                    != existing_value
+                ):
 
                     update_fields[
                         field
@@ -604,29 +1036,40 @@ class JobRepository:
 
                 continue
 
-            # Merge list values instead of destroying existing data.
+            # Merge list values instead of
+            # destroying existing data.
             if isinstance(
                 incoming_value,
                 list
             ):
 
                 existing_list = (
+
                     existing_value
+
                     if isinstance(
                         existing_value,
                         list
                     )
+
                     else []
+
                 )
 
                 merged_values = list(
                     dict.fromkeys(
+
                         existing_list
+
                         + incoming_value
+
                     )
                 )
 
-                if merged_values != existing_list:
+                if (
+                    merged_values
+                    != existing_list
+                ):
 
                     update_fields[
                         field
@@ -634,27 +1077,37 @@ class JobRepository:
 
                 continue
 
-            # Update dictionaries only when the incoming dictionary differs.
+            # Merge dictionaries.
             if isinstance(
                 incoming_value,
                 dict
             ):
 
                 existing_dict = (
+
                     existing_value
+
                     if isinstance(
                         existing_value,
                         dict
                     )
+
                     else {}
+
                 )
 
                 merged_dict = {
+
                     **existing_dict,
+
                     **incoming_value
+
                 }
 
-                if merged_dict != existing_dict:
+                if (
+                    merged_dict
+                    != existing_dict
+                ):
 
                     update_fields[
                         field
@@ -666,26 +1119,39 @@ class JobRepository:
     # SAVE JOBS
     # ==========================================================
 
-    def save_jobs(self, jobs):
+    def save_jobs(
+        self,
+        jobs
+    ):
 
         inserted = 0
+
         updated = 0
+
         duplicates = 0
 
         for job in jobs:
 
             normalized_job = (
-                self._normalize_job(job)
+                self._normalize_job(
+                    job
+                )
             )
 
-            job_hash = normalized_job[
-                "job_hash"
-            ]
+            job_hash = (
+                normalized_job[
+                    "job_hash"
+                ]
+            )
 
             existing_job = (
                 self.collection.find_one(
                     {
-                        "job_hash": job_hash
+
+                        "job_hash": (
+                            job_hash
+                        )
+
                     }
                 )
             )
@@ -706,12 +1172,14 @@ class JobRepository:
 
                 except DuplicateKeyError:
 
-                    # Another process may have inserted the job
-                    # between find_one() and insert_one().
                     existing_job = (
                         self.collection.find_one(
                             {
-                                "job_hash": job_hash
+
+                                "job_hash": (
+                                    job_hash
+                                )
+
                             }
                         )
                     )
@@ -719,12 +1187,16 @@ class JobRepository:
                     if existing_job is None:
 
                         duplicates += 1
+
                         continue
 
                     update_fields = (
                         self._build_enrichment_update(
+
                             existing_job,
+
                             normalized_job
+
                         )
                     )
 
@@ -736,12 +1208,18 @@ class JobRepository:
 
                         self.collection.update_one(
                             {
+
                                 "_id": existing_job[
                                     "_id"
                                 ]
+
                             },
                             {
-                                "$set": update_fields
+
+                                "$set": (
+                                    update_fields
+                                )
+
                             }
                         )
 
@@ -759,14 +1237,18 @@ class JobRepository:
 
             update_fields = (
                 self._build_enrichment_update(
+
                     existing_job,
+
                     normalized_job
+
                 )
             )
 
             if not update_fields:
 
                 duplicates += 1
+
                 continue
 
             update_fields[
@@ -775,16 +1257,25 @@ class JobRepository:
 
             result = self.collection.update_one(
                 {
+
                     "_id": existing_job[
                         "_id"
                     ]
+
                 },
                 {
-                    "$set": update_fields
+
+                    "$set": (
+                        update_fields
+                    )
+
                 }
             )
 
-            if result.modified_count > 0:
+            if (
+                result.modified_count
+                > 0
+            ):
 
                 updated += 1
 
@@ -803,12 +1294,58 @@ class JobRepository:
         }
 
     # ==========================================================
+    # ANALYSIS RETRIEVAL
+    # ==========================================================
+
+    def get_analysis(
+        self,
+        job_id
+    ):
+
+        job = self.collection.find_one(
+            {
+
+                "job_id": str(
+                    job_id
+                )
+
+            },
+            {
+
+                "_id": 0,
+
+                "analysis": 1
+
+            }
+        )
+
+        if not job:
+
+            return None
+
+        analysis = job.get(
+            "analysis"
+        )
+
+        if not analysis:
+
+            return None
+
+        return analysis
+
+    # ==========================================================
     # BACKWARD COMPATIBILITY
     # ==========================================================
 
-    def save(self, jobs):
+    def save(
+        self,
+        jobs
+    ):
 
-        if isinstance(jobs, list):
+        if isinstance(
+            jobs,
+            list
+        ):
 
             return self.save_jobs(
                 jobs
@@ -824,17 +1361,42 @@ class JobRepository:
     # STATISTICS
     # ==========================================================
 
-    def get_statistics(self):
+    def get_statistics(
+        self
+    ):
 
         total_jobs = (
-            self.collection.count_documents({})
+            self.collection.count_documents(
+                {}
+            )
+        )
+
+        analyzed_jobs = (
+            self.collection.count_documents(
+                {
+
+                    "analysis": {
+                        "$exists": True,
+                        "$ne": {}
+                    }
+
+                }
+            )
         )
 
         return {
-            "total_jobs": total_jobs
+
+            "total_jobs": total_jobs,
+
+            "analyzed_jobs": (
+                analyzed_jobs
+            )
+
         }
 
-    def get_stats(self):
+    def get_stats(
+        self
+    ):
 
         return self.get_statistics()
 
@@ -842,11 +1404,18 @@ class JobRepository:
     # JOB RETRIEVAL
     # ==========================================================
 
-    def get_by_id(self, job_id):
+    def get_by_id(
+        self,
+        job_id
+    ):
 
         job = self.collection.find_one(
             {
-                "job_id": str(job_id)
+
+                "job_id": str(
+                    job_id
+                )
+
             }
         )
 
@@ -858,11 +1427,17 @@ class JobRepository:
 
         return job
 
-    def load(self):
+    def load(
+        self
+    ):
 
         jobs = []
 
-        cursor = self.collection.find({})
+        cursor = (
+            self.collection.find(
+                {}
+            )
+        )
 
         for job in cursor:
 
@@ -870,7 +1445,9 @@ class JobRepository:
                 job["_id"]
             )
 
-            jobs.append(job)
+            jobs.append(
+                job
+            )
 
         return jobs
 
@@ -878,11 +1455,15 @@ class JobRepository:
     # CLEANUP
     # ==========================================================
 
-    def close(self):
+    def close(
+        self
+    ):
 
         self.client.close()
 
-    def __del__(self):
+    def __del__(
+        self
+    ):
 
         try:
 
