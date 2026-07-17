@@ -294,7 +294,7 @@ Responsible for:
 
 ## Team B – AI Intelligence 🚧
 
-### Manasvi Vaity & Koushick Mondal
+### Manasvi Vaity
 
 - Job Description Intelligence
 - Information Extraction
