@@ -844,6 +844,46 @@ class JobRepository:
 
             "education": education,
 
+            "recruiter_name": (
+
+                data.get(
+                    "recruiter_name"
+                )
+
+                or ""
+
+            ),
+
+            "recruiter_email": (
+
+                data.get(
+                    "recruiter_email"
+                )
+
+                or ""
+
+            ),
+
+            "recruiter_phone": (
+
+                data.get(
+                    "recruiter_phone"
+                )
+
+                or ""
+
+            ),
+
+            "recruiter_office": (
+
+                data.get(
+                    "recruiter_office"
+                )
+
+                or ""
+
+            ),
+
             "requirements": (
                 requirements
             ),

@@ -852,6 +852,48 @@ def clean_job(job_obj):
 
         ),
 
+        "recruiter_name": clean_text(
+
+            get_job_value(
+
+                job_obj,
+
+                "recruiter_name",
+
+                ""
+
+            )
+
+        ),
+
+        "recruiter_phone": clean_text(
+
+            get_job_value(
+
+                job_obj,
+
+                "recruiter_phone",
+
+                ""
+
+            )
+
+        ),
+
+        "recruiter_office": clean_text(
+
+            get_job_value(
+
+                job_obj,
+
+                "recruiter_office",
+
+                ""
+
+            )
+
+        ),
+
         "requirements": get_job_value(
 
             job_obj,
@@ -869,6 +911,46 @@ def clean_job(job_obj):
             "benefits",
 
             []
+
+        ),
+
+        "recruiter_name": get_job_value(
+
+            job_obj,
+
+            "recruiter_name",
+
+            ""
+
+        ),
+
+        "recruiter_email": get_job_value(
+
+            job_obj,
+
+            "recruiter_email",
+
+            ""
+
+        ),
+
+        "recruiter_phone": get_job_value(
+
+            job_obj,
+
+            "recruiter_phone",
+
+            ""
+
+        ),
+
+        "recruiter_office": get_job_value(
+
+            job_obj,
+
+            "recruiter_office",
+
+            ""
 
         ),
 

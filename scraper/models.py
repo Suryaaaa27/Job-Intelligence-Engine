@@ -63,11 +63,11 @@ class Job:
 
     salary: str = ""
 
-    salary_min: Optional[float] = None
+    min_salary: Optional[float] = None
 
-    salary_max: Optional[float] = None
+    max_salary: Optional[float] = None
 
-    salary_currency: str = ""
+    currency: str = ""
 
     salary_period: str = ""
 
@@ -81,6 +81,14 @@ class Job:
     responsibilities: List[str] = field(default_factory=list)
 
     skills: List[str] = field(default_factory=list)
+
+    recruiter_name: str = ""
+
+    recruiter_email: str = ""
+    
+    recruiter_phone: str = ""
+
+    recruiter_office: str = ""
 
     benefits: List[str] = field(default_factory=list)
 

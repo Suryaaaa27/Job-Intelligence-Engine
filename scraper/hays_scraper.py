@@ -6,7 +6,11 @@ from playwright.sync_api import sync_playwright
 from scraper.models import Job
 from utils.logger import JobLogger
 
+import requests
 
+from bs4 import BeautifulSoup
+
+import xml.etree.ElementTree as ET
 class HaysScraper:
 
     BASE_URL = "https://www.hays.co.uk/job-search"
@@ -28,6 +32,18 @@ class HaysScraper:
             if max_pages is not None
             else self.MAX_PAGES
         )
+
+        self.session = requests.Session()
+
+        self.session.headers.update({
+
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/138.0 Safari/537.36"
+            )
+
+        })
 
     def build_search_url(self, query):
 
@@ -939,6 +955,97 @@ class HaysScraper:
             )
         )
 
+    def _extract_consultant_information(
+        self,
+        api_job
+    ):
+        """
+        Extract recruiter information directly from the Hays API response.
+        No page navigation required.
+        """
+
+        recruiter_name = ""
+        recruiter_email = ""
+        recruiter_phone = ""
+        recruiter_office = ""
+
+        try:
+
+            recruiter_name = self._get_any_custom_field(
+                api_job,
+                "JobOwnerName"
+            )
+
+            recruiter_email = self._get_any_custom_field(
+                api_job,
+                "ConsultantEmail"
+            )
+
+            job_owner = (
+                api_job
+                .get("JobOwner", {})
+                .get("values", [])
+            )
+
+            if job_owner:
+
+                xml_string = job_owner[0]
+
+                root = ET.fromstring(
+                    xml_string
+                )
+
+                phone = root.findtext(
+                    "tel",
+                    default=""
+                )
+
+                location = root.findtext(
+                    "location",
+                    default=""
+                )
+
+                address = root.findtext(
+                    "address",
+                    default=""
+                )
+
+                recruiter_phone = phone.strip()
+
+                office_parts = []
+
+                if location:
+                    office_parts.append(
+                        location.strip()
+                    )
+
+                if address:
+                    office_parts.append(
+                        address.strip()
+                    )
+
+                recruiter_office = ", ".join(
+                    office_parts
+                )
+
+        except Exception as e:
+
+            self.logger.warning(
+                f"[Hays] Recruiter parsing failed: {e}"
+            )
+
+        return (
+
+            recruiter_name,
+
+            recruiter_email,
+
+            recruiter_phone,
+
+            recruiter_office
+
+        )
+
     def _create_job(
         self,
         api_job
@@ -1029,6 +1136,15 @@ class HaysScraper:
             api_job
         )
 
+        (
+            recruiter_name,
+            recruiter_email,
+            recruiter_phone,
+            recruiter_office
+        ) = self._extract_consultant_information(
+            api_job
+        )
+
         job = Job(
 
             job_id=job_id,
@@ -1098,6 +1214,18 @@ class HaysScraper:
             api_job.get("summary")
             or ""
         )
+
+        # ==========================================================
+        # Recruiter Information
+        # ==========================================================
+
+        job.recruiter_name = recruiter_name
+
+        job.recruiter_email = recruiter_email
+
+        job.recruiter_phone = recruiter_phone
+
+        job.recruiter_office = recruiter_office
 
         job.salary_frequency = (
             self._get_any_custom_field(
