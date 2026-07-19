@@ -1,0 +1,3257 @@
+[
+  {
+    "match_score": 84.4,
+    "matched_required_skills": [
+      "typescript",
+      "postgres",
+      "react",
+      "node.js"
+    ],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "mysql"
+    ],
+    "missing_preferred_skills": [],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 85.0,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 11.2,
+    "skill_gaps": [
+      {
+        "skill": "mysql",
+        "importance": "required",
+        "present_in_resume": false
+      }
+    ],
+    "index": 33,
+    "job_title": "Software Engineer, Early Career (AI)",
+    "company": "Notion",
+    "location": "San Francisco, CA",
+    "job_url": "https://www.linkedin.com/jobs/view/software-engineer-early-career-ai-at-notion-4437472369",
+    "description": "Who We Are Notion is the collaborative AI workspace where teams and agents think together. We're building one place where your knowledge, projects, meetings, and AI tools live side by side, so work is faster, clearer, and less fragmented. Millions of individuals, small teams, and large companies run",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "mysql"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 84.4,
+    "matched_required_skills": [
+      "typescript",
+      "postgres",
+      "react",
+      "node.js"
+    ],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "data science"
+    ],
+    "missing_preferred_skills": [],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 85.0,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 11.6,
+    "skill_gaps": [
+      {
+        "skill": "data science",
+        "importance": "required",
+        "present_in_resume": false
+      }
+    ],
+    "index": 37,
+    "job_title": "Software Engineer, Early Career",
+    "company": "Notion",
+    "location": "San Francisco, CA",
+    "job_url": "https://www.linkedin.com/jobs/view/software-engineer-early-career-at-notion-4437461678",
+    "description": "Who We Are Notion is the collaborative AI workspace where teams and agents think together. We're building one place where your knowledge, projects, meetings, and AI tools live side by side, so work is faster, clearer, and less fragmented. Millions of individuals, small teams, and large companies run",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "data science"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 82.5,
+    "matched_required_skills": [
+      "python",
+      "go",
+      "sql"
+    ],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "data science"
+    ],
+    "missing_preferred_skills": [],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 81.2,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 9.5,
+    "skill_gaps": [
+      {
+        "skill": "data science",
+        "importance": "required",
+        "present_in_resume": false
+      }
+    ],
+    "index": 41,
+    "job_title": "data scientist, Data & Analytics (Nashville, TN)",
+    "company": "Starbucks",
+    "location": "Nashville, TN",
+    "job_url": "https://www.linkedin.com/jobs/view/data-scientist-data-analytics-nashville-tn-at-starbucks-4411473326",
+    "description": "Now Brewing – Data Scientist! #tobeapartner From the beginning, Starbucks set out to be a different kind of company. One that not only celebrated coffee and rich tradition, but also brought a feeling of connection. We are known for developing extraordinary leaders who share this passion and are guid",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "data science"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 80.1,
+    "matched_required_skills": [
+      "python",
+      "go",
+      "kubernetes",
+      "terraform",
+      "aws",
+      "google cloud"
+    ],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "machine learning",
+      "ci/cd",
+      "mlops"
+    ],
+    "missing_preferred_skills": [],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 75.0,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 13.7,
+    "skill_gaps": [
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "ci/cd",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "mlops",
+        "importance": "required",
+        "present_in_resume": false
+      }
+    ],
+    "index": 24,
+    "job_title": "Senior Staff Machine Learning Engineer, GenAI Platform",
+    "company": "Reddit",
+    "location": "Remote - United States",
+    "job_url": "https://boards.greenhouse.io/reddit/jobs/7772274",
+    "description": "Reddit is a community of communities. It’s built on shared interests, passion, and trust, and is home to the most open and authentic conversations on the internet. Every day, Reddit users submit, vote, and comment on the topics they care most about. With 100,000+ active communities and approximately",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "machine learning",
+        "mlops"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 74.4,
+    "matched_required_skills": [
+      "python",
+      "java",
+      "gcp"
+    ],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "machine learning",
+      "tensorflow",
+      "pytorch"
+    ],
+    "missing_preferred_skills": [],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 62.5,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 12.9,
+    "skill_gaps": [
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "tensorflow",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "pytorch",
+        "importance": "required",
+        "present_in_resume": false
+      }
+    ],
+    "index": 42,
+    "job_title": "Machine Learning Engineer",
+    "company": "Spotify",
+    "location": "New York, NY",
+    "job_url": "https://www.linkedin.com/jobs/view/machine-learning-engineer-at-spotify-4393512984",
+    "description": "The Music Promotion team is building products that allow creators to promote their work to reach new audiences and create lasting connections with their fans. We’re looking for a Machine Learning Engineer to help us build systems that more accurately understand the performance that promotion can hav",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "machine learning",
+        "tensorflow",
+        "pytorch"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 73.2,
+    "matched_required_skills": [
+      "python",
+      "sql",
+      "docker",
+      "kubernetes",
+      "aws",
+      "gcp",
+      "git",
+      "rest"
+    ],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "azure",
+      "machine learning"
+    ],
+    "missing_preferred_skills": [
+      "nlp",
+      "scikit-learn",
+      "ci/cd",
+      "mlops"
+    ],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 60.0,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 11.8,
+    "skill_gaps": [
+      {
+        "skill": "azure",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "nlp",
+        "importance": "preferred",
+        "present_in_resume": false
+      },
+      {
+        "skill": "scikit-learn",
+        "importance": "preferred",
+        "present_in_resume": false
+      },
+      {
+        "skill": "ci/cd",
+        "importance": "preferred",
+        "present_in_resume": false
+      },
+      {
+        "skill": "mlops",
+        "importance": "preferred",
+        "present_in_resume": false
+      }
+    ],
+    "index": 34,
+    "job_title": "Machine Learning Engineer I",
+    "company": "CNN",
+    "location": "New York, NY",
+    "job_url": "https://www.linkedin.com/jobs/view/machine-learning-engineer-i-at-cnn-4417399632",
+    "description": "Welcome to Warner Bros. Discovery… the stuff dreams are made of. Who We Are… When we say, “the stuff dreams are made of,” we’re not just referring to the world of wizards, dragons and superheroes, or even to the wonders of Planet Earth. Behind WBD’s vast portfolio of iconic content and beloved brand",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "azure",
+        "machine learning",
+        "nlp",
+        "scikit-learn",
+        "mlops"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 73.2,
+    "matched_required_skills": [
+      "python",
+      "sql",
+      "docker",
+      "kubernetes",
+      "aws",
+      "gcp",
+      "git",
+      "rest"
+    ],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "azure",
+      "machine learning"
+    ],
+    "missing_preferred_skills": [
+      "nlp",
+      "scikit-learn",
+      "ci/cd",
+      "mlops"
+    ],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 60.0,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 11.8,
+    "skill_gaps": [
+      {
+        "skill": "azure",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "nlp",
+        "importance": "preferred",
+        "present_in_resume": false
+      },
+      {
+        "skill": "scikit-learn",
+        "importance": "preferred",
+        "present_in_resume": false
+      },
+      {
+        "skill": "ci/cd",
+        "importance": "preferred",
+        "present_in_resume": false
+      },
+      {
+        "skill": "mlops",
+        "importance": "preferred",
+        "present_in_resume": false
+      }
+    ],
+    "index": 36,
+    "job_title": "Machine Learning Engineer I",
+    "company": "CNN",
+    "location": "Atlanta, GA",
+    "job_url": "https://www.linkedin.com/jobs/view/machine-learning-engineer-i-at-cnn-4417399631",
+    "description": "Welcome to Warner Bros. Discovery… the stuff dreams are made of. Who We Are… When we say, “the stuff dreams are made of,” we’re not just referring to the world of wizards, dragons and superheroes, or even to the wonders of Planet Earth. Behind WBD’s vast portfolio of iconic content and beloved brand",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "azure",
+        "machine learning",
+        "nlp",
+        "scikit-learn",
+        "mlops"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 72.3,
+    "matched_required_skills": [
+      "python",
+      "java",
+      "go"
+    ],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "spark",
+      "machine learning",
+      "tensorflow",
+      "pytorch"
+    ],
+    "missing_preferred_skills": [],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 57.1,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 15.8,
+    "skill_gaps": [
+      {
+        "skill": "spark",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "tensorflow",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "pytorch",
+        "importance": "required",
+        "present_in_resume": false
+      }
+    ],
+    "index": 30,
+    "job_title": "Staff Machine Learning Engineer, ML Efficiency ",
+    "company": "Reddit",
+    "location": "Remote - United Kingdom",
+    "job_url": "https://boards.greenhouse.io/reddit/jobs/8018527",
+    "description": "Reddit is a community of communities. It’s built on shared interests, passion, and trust, and is home to the most open and authentic conversations on the internet. Every day, Reddit users submit, vote, and comment on the topics they care most about. With 100,000+ active communities and approximately",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "spark",
+        "machine learning",
+        "tensorflow",
+        "pytorch"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 72.3,
+    "matched_required_skills": [
+      "python",
+      "java",
+      "go"
+    ],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "spark",
+      "machine learning",
+      "tensorflow",
+      "pytorch"
+    ],
+    "missing_preferred_skills": [],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 57.1,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 15.8,
+    "skill_gaps": [
+      {
+        "skill": "spark",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "tensorflow",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "pytorch",
+        "importance": "required",
+        "present_in_resume": false
+      }
+    ],
+    "index": 31,
+    "job_title": "Staff Machine Learning Engineer, ML Efficiency ",
+    "company": "Reddit",
+    "location": "Remote - The Netherlands",
+    "job_url": "https://boards.greenhouse.io/reddit/jobs/8018532",
+    "description": "Reddit is a community of communities. It’s built on shared interests, passion, and trust, and is home to the most open and authentic conversations on the internet. Every day, Reddit users submit, vote, and comment on the topics they care most about. With 100,000+ active communities and approximately",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "spark",
+        "machine learning",
+        "tensorflow",
+        "pytorch"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 70.9,
+    "matched_required_skills": [
+      "python",
+      "golang"
+    ],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "machine learning",
+      "tensorflow",
+      "pytorch"
+    ],
+    "missing_preferred_skills": [],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 55.0,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 11.5,
+    "skill_gaps": [
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "tensorflow",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "pytorch",
+        "importance": "required",
+        "present_in_resume": false
+      }
+    ],
+    "index": 26,
+    "job_title": "Senior Staff Machine Learning Engineer, Notifications",
+    "company": "Reddit",
+    "location": "Remote - United States",
+    "job_url": "https://boards.greenhouse.io/reddit/jobs/7979933",
+    "description": "Reddit is a community of communities. It’s built on shared interests, passion, and trust, and is home to the most open and authentic conversations on the internet. Every day, Reddit users submit, vote, and comment on the topics they care most about. With 100,000+ active communities and approximately",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "machine learning",
+        "tensorflow",
+        "pytorch"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 70.9,
+    "matched_required_skills": [
+      "python",
+      "golang"
+    ],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "machine learning",
+      "tensorflow",
+      "pytorch"
+    ],
+    "missing_preferred_skills": [],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 55.0,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 11.3,
+    "skill_gaps": [
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "tensorflow",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "pytorch",
+        "importance": "required",
+        "present_in_resume": false
+      }
+    ],
+    "index": 32,
+    "job_title": "Staff Machine Learning Engineer, Notifications Relevance",
+    "company": "Reddit",
+    "location": "Remote - United States",
+    "job_url": "https://boards.greenhouse.io/reddit/jobs/7992035",
+    "description": "Reddit is a community of communities. It’s built on shared interests, passion, and trust, and is home to the most open and authentic conversations on the internet. Every day, Reddit users submit, vote, and comment on the topics they care most about. With 100,000+ active communities and approximately",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "machine learning",
+        "tensorflow",
+        "pytorch"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 70.6,
+    "matched_required_skills": [
+      "gcp",
+      "rest"
+    ],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "machine learning",
+      "tensorflow",
+      "pytorch"
+    ],
+    "missing_preferred_skills": [],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 55.0,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 8.8,
+    "skill_gaps": [
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "tensorflow",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "pytorch",
+        "importance": "required",
+        "present_in_resume": false
+      }
+    ],
+    "index": 39,
+    "job_title": "Machine Learning Engineer, Entry",
+    "company": "Paramount",
+    "location": "New York, NY",
+    "job_url": "https://www.linkedin.com/jobs/view/machine-learning-engineer-entry-at-paramount-4412418474",
+    "description": "#WeAreParamount on a mission to unleash the power of content… you in? We’ve got the brands, we’ve got the stars, we’ve got the power to achieve our mission to entertain the planet – now all we’re missing is… YOU! Becoming a part of Paramount means joining a team of passionate people who not only rec",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "machine learning",
+        "tensorflow",
+        "pytorch"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 70.0,
+    "matched_required_skills": [
+      "python",
+      "java",
+      "go"
+    ],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "machine learning",
+      "nlp",
+      "tensorflow",
+      "pytorch",
+      "mlops"
+    ],
+    "missing_preferred_skills": [],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 53.1,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 11.3,
+    "skill_gaps": [
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "nlp",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "tensorflow",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "pytorch",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "mlops",
+        "importance": "required",
+        "present_in_resume": false
+      }
+    ],
+    "index": 27,
+    "job_title": "Staff Machine Learning Engineer, Ads Content Understanding",
+    "company": "Reddit",
+    "location": "Remote - United States",
+    "job_url": "https://boards.greenhouse.io/reddit/jobs/7851761",
+    "description": "Reddit is a community of communities. It’s built on shared interests, passion, and trust, and is home to the most open and authentic conversations on the internet. Every day, Reddit users submit, vote, and comment on the topics they care most about. With 100,000+ active communities and approximately",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "machine learning",
+        "nlp",
+        "tensorflow",
+        "pytorch",
+        "mlops"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 68.8,
+    "matched_required_skills": [
+      "react"
+    ],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "machine learning",
+      "mlops"
+    ],
+    "missing_preferred_skills": [],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 50.0,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 13.2,
+    "skill_gaps": [
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "mlops",
+        "importance": "required",
+        "present_in_resume": false
+      }
+    ],
+    "index": 1,
+    "job_title": "Machine Learning Engineer, Community Support Engineering",
+    "company": "Airbnb",
+    "location": "San Francisco, CA",
+    "job_url": "https://boards.greenhouse.io/airbnb/jobs/8024267",
+    "description": "Airbnb was born in 2007 when two hosts welcomed three guests to their San Francisco home, and has since grown to over 5 million hosts who have welcomed over 2 billion guest arrivals in almost every country across the globe. Every day, hosts offer unique stays and experiences that make it possible fo",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "machine learning",
+        "mlops"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 68.8,
+    "matched_required_skills": [
+      "react"
+    ],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "machine learning",
+      "mlops"
+    ],
+    "missing_preferred_skills": [],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 50.0,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 13.3,
+    "skill_gaps": [
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "mlops",
+        "importance": "required",
+        "present_in_resume": false
+      }
+    ],
+    "index": 4,
+    "job_title": "Senior Machine Learning Engineer, Customer Support Engineering",
+    "company": "Airbnb",
+    "location": "Remote-USA",
+    "job_url": "https://boards.greenhouse.io/airbnb/jobs/8014904",
+    "description": "Airbnb was born in 2007 when two hosts welcomed three guests to their San Francisco home, and has since grown to over 5 million hosts who have welcomed over 2 billion guest arrivals in almost every country across the globe. Every day, hosts offer unique stays and experiences that make it possible fo",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "machine learning",
+        "mlops"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 68.8,
+    "matched_required_skills": [
+      "python"
+    ],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "machine learning",
+      "pytorch"
+    ],
+    "missing_preferred_skills": [],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 50.0,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 12.6,
+    "skill_gaps": [
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "pytorch",
+        "importance": "required",
+        "present_in_resume": false
+      }
+    ],
+    "index": 9,
+    "job_title": "Senior Staff Machine Learning Engineer, Post Training",
+    "company": "Airbnb",
+    "location": "Remote - USA",
+    "job_url": "https://boards.greenhouse.io/airbnb/jobs/7858738",
+    "description": "Airbnb was born in 2007 when two hosts welcomed three guests to their San Francisco home, and has since grown to over 5 million hosts who have welcomed over 2 billion guest arrivals in almost every country across the globe. Every day, hosts offer unique stays and experiences that make it possible fo",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "machine learning",
+        "pytorch"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 67.7,
+    "matched_required_skills": [
+      "python",
+      "java",
+      "kubernetes"
+    ],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "machine learning",
+      "deep learning",
+      "natural language processing",
+      "computer vision",
+      "tensorflow",
+      "pytorch",
+      "data engineering"
+    ],
+    "missing_preferred_skills": [],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 47.5,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 13.1,
+    "skill_gaps": [
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "deep learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "natural language processing",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "computer vision",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "tensorflow",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "pytorch",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "data engineering",
+        "importance": "required",
+        "present_in_resume": false
+      }
+    ],
+    "index": 10,
+    "job_title": "Senior Staff Machine Learning Engineer, Trust",
+    "company": "Airbnb",
+    "location": "Remote - USA",
+    "job_url": "https://boards.greenhouse.io/airbnb/jobs/7592146",
+    "description": "Airbnb was born in 2007 when two hosts welcomed three guests to their San Francisco home, and has since grown to over 5 million hosts who have welcomed over 2 billion guest arrivals in almost every country across the globe. Every day, hosts offer unique stays and experiences that make it possible fo",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "machine learning",
+        "deep learning",
+        "natural language processing",
+        "computer vision",
+        "tensorflow",
+        "pytorch",
+        "data engineering"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 67.5,
+    "matched_required_skills": [
+      "python",
+      "java"
+    ],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "spark",
+      "machine learning",
+      "data science",
+      "tensorflow",
+      "pytorch"
+    ],
+    "missing_preferred_skills": [],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 46.4,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 16.4,
+    "skill_gaps": [
+      {
+        "skill": "spark",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "data science",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "tensorflow",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "pytorch",
+        "importance": "required",
+        "present_in_resume": false
+      }
+    ],
+    "index": 16,
+    "job_title": "Machine Learning Engineer, Payment Intelligence",
+    "company": "Stripe",
+    "location": "Seattle",
+    "job_url": "https://boards.greenhouse.io/stripe/jobs/7983456",
+    "description": "About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies - from the world’s largest enterprises to the most ambitious startups - use Stripe to accept payments, grow their revenue, and accelerate new business opportunities. Our mission is to increase the GDP of",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "spark",
+        "machine learning",
+        "data science",
+        "tensorflow",
+        "pytorch"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 67.5,
+    "matched_required_skills": [
+      "python",
+      "go",
+      "kubernetes"
+    ],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "machine learning",
+      "deep learning",
+      "tensorflow",
+      "pytorch",
+      "transformers",
+      "airflow",
+      "mlops"
+    ],
+    "missing_preferred_skills": [],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 47.5,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 11.3,
+    "skill_gaps": [
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "deep learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "tensorflow",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "pytorch",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "transformers",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "airflow",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "mlops",
+        "importance": "required",
+        "present_in_resume": false
+      }
+    ],
+    "index": 23,
+    "job_title": "Senior Machine Learning Engineer, GenAI Security",
+    "company": "Reddit",
+    "location": "Remote - United States",
+    "job_url": "https://boards.greenhouse.io/reddit/jobs/7891887",
+    "description": "Reddit is a community of communities. It’s built on shared interests, passion, and trust, and is home to the most open and authentic conversations on the internet. Every day, Reddit users submit, vote, and comment on the topics they care most about. With 100,000+ active communities and approximately",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "machine learning",
+        "deep learning",
+        "tensorflow",
+        "pytorch",
+        "transformers",
+        "airflow",
+        "mlops"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 65.9,
+    "matched_required_skills": [
+      "python"
+    ],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "machine learning",
+      "data science",
+      "pytorch"
+    ],
+    "missing_preferred_skills": [],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 43.8,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 12.6,
+    "skill_gaps": [
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "data science",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "pytorch",
+        "importance": "required",
+        "present_in_resume": false
+      }
+    ],
+    "index": 3,
+    "job_title": "Principal Machine Learning Engineer- LLM Fine-tuning and Optimization ",
+    "company": "Airbnb",
+    "location": "United States",
+    "job_url": "https://boards.greenhouse.io/airbnb/jobs/7955579",
+    "description": "Airbnb was born in 2007 when two hosts welcomed three guests to their San Francisco home, and has since grown to over 5 million hosts who have welcomed over 2 billion guest arrivals in almost every country across the globe. Every day, hosts offer unique stays and experiences that make it possible fo",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "machine learning",
+        "data science",
+        "pytorch"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 65.9,
+    "matched_required_skills": [
+      "python",
+      "gcp"
+    ],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "machine learning",
+      "data science",
+      "nlp",
+      "tensorflow",
+      "pytorch",
+      "airflow"
+    ],
+    "missing_preferred_skills": [],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 43.8,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 11.7,
+    "skill_gaps": [
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "data science",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "nlp",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "tensorflow",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "pytorch",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "airflow",
+        "importance": "required",
+        "present_in_resume": false
+      }
+    ],
+    "index": 21,
+    "job_title": "Senior Machine Learning Engineer, Ads Foundational Representations",
+    "company": "Reddit",
+    "location": "Remote - United Kingdom",
+    "job_url": "https://boards.greenhouse.io/reddit/jobs/8018513",
+    "description": "Reddit is a community of communities. It’s built on shared interests, passion, and trust, and is home to the most open and authentic conversations on the internet. Every day, Reddit users submit, vote, and comment on the topics they care most about. With 100,000+ active communities and approximately",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "machine learning",
+        "data science",
+        "nlp",
+        "tensorflow",
+        "pytorch",
+        "airflow"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 65.9,
+    "matched_required_skills": [
+      "python",
+      "gcp"
+    ],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "machine learning",
+      "data science",
+      "nlp",
+      "tensorflow",
+      "pytorch",
+      "airflow"
+    ],
+    "missing_preferred_skills": [],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 43.8,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 11.7,
+    "skill_gaps": [
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "data science",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "nlp",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "tensorflow",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "pytorch",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "airflow",
+        "importance": "required",
+        "present_in_resume": false
+      }
+    ],
+    "index": 22,
+    "job_title": "Senior Machine Learning Engineer, Ads Foundational Representations",
+    "company": "Reddit",
+    "location": "Remote - The Netherlands",
+    "job_url": "https://boards.greenhouse.io/reddit/jobs/8018517",
+    "description": "Reddit is a community of communities. It’s built on shared interests, passion, and trust, and is home to the most open and authentic conversations on the internet. Every day, Reddit users submit, vote, and comment on the topics they care most about. With 100,000+ active communities and approximately",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "machine learning",
+        "data science",
+        "nlp",
+        "tensorflow",
+        "pytorch",
+        "airflow"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 64.1,
+    "matched_required_skills": [
+      "rest"
+    ],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "machine learning",
+      "deep learning",
+      "tensorflow",
+      "pytorch"
+    ],
+    "missing_preferred_skills": [],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 40.0,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 11.4,
+    "skill_gaps": [
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "deep learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "tensorflow",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "pytorch",
+        "importance": "required",
+        "present_in_resume": false
+      }
+    ],
+    "index": 17,
+    "job_title": "Ads Conversion Modeling, Machine Learning Engineering Manager",
+    "company": "Reddit",
+    "location": "Remote - United States",
+    "job_url": "https://boards.greenhouse.io/reddit/jobs/7792848",
+    "description": "Reddit is a community of communities. It’s built on shared interests, passion, and trust, and is home to the most open and authentic conversations on the internet. Every day, Reddit users submit, vote, and comment on the topics they care most about. With 100,000+ active communities and approximately",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "machine learning",
+        "deep learning",
+        "tensorflow",
+        "pytorch"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 63.0,
+    "matched_required_skills": [
+      "python",
+      "java",
+      "go",
+      "kubernetes",
+      "aws"
+    ],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "spark",
+      "machine learning",
+      "data science",
+      "tensorflow",
+      "airflow"
+    ],
+    "missing_preferred_skills": [
+      "ci/cd",
+      "mlops",
+      "big data"
+    ],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 37.5,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 11.6,
+    "skill_gaps": [
+      {
+        "skill": "spark",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "data science",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "tensorflow",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "airflow",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "ci/cd",
+        "importance": "preferred",
+        "present_in_resume": false
+      },
+      {
+        "skill": "mlops",
+        "importance": "preferred",
+        "present_in_resume": false
+      },
+      {
+        "skill": "big data",
+        "importance": "preferred",
+        "present_in_resume": false
+      }
+    ],
+    "index": 38,
+    "job_title": "Machine Learning Engineer II",
+    "company": "Tinder",
+    "location": "Palo Alto, CA",
+    "job_url": "https://www.linkedin.com/jobs/view/machine-learning-engineer-ii-at-tinder-4423983801",
+    "description": "Our Mission As humans, there are few things more exciting than meeting someone new. At Tinder, we’re inspired by the challenge of keeping the magic of human connection alive. With tens of millions of users, hundreds of millions of downloads, 2+ billion swipes per day, 20+ million matches per day, an",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "spark",
+        "machine learning",
+        "data science",
+        "tensorflow",
+        "airflow",
+        "mlops",
+        "big data"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 63.0,
+    "matched_required_skills": [
+      "python",
+      "docker",
+      "kubernetes",
+      "aws",
+      "gcp"
+    ],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "spark",
+      "azure",
+      "machine learning",
+      "deep learning",
+      "data science"
+    ],
+    "missing_preferred_skills": [
+      "tensorflow",
+      "pytorch",
+      "scikit-learn",
+      "pandas",
+      "numpy",
+      "transformers",
+      "airflow",
+      "ci/cd",
+      "mlops"
+    ],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 37.5,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 11.3,
+    "skill_gaps": [
+      {
+        "skill": "spark",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "azure",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "deep learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "data science",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "tensorflow",
+        "importance": "preferred",
+        "present_in_resume": false
+      },
+      {
+        "skill": "pytorch",
+        "importance": "preferred",
+        "present_in_resume": false
+      },
+      {
+        "skill": "scikit-learn",
+        "importance": "preferred",
+        "present_in_resume": false
+      },
+      {
+        "skill": "pandas",
+        "importance": "preferred",
+        "present_in_resume": false
+      },
+      {
+        "skill": "numpy",
+        "importance": "preferred",
+        "present_in_resume": false
+      },
+      {
+        "skill": "transformers",
+        "importance": "preferred",
+        "present_in_resume": false
+      },
+      {
+        "skill": "airflow",
+        "importance": "preferred",
+        "present_in_resume": false
+      },
+      {
+        "skill": "ci/cd",
+        "importance": "preferred",
+        "present_in_resume": false
+      },
+      {
+        "skill": "mlops",
+        "importance": "preferred",
+        "present_in_resume": false
+      }
+    ],
+    "index": 40,
+    "job_title": "Machine learning Engineer",
+    "company": "Tata Consultancy Services",
+    "location": "Pennington, NJ",
+    "job_url": "https://www.linkedin.com/jobs/view/machine-learning-engineer-at-tata-consultancy-services-4431280225",
+    "description": "Job Description Must Have Technical/Functional Skills MLOps & Deployment CI/CD for ML, MLflow/Kubeflow/SageMaker/Azure ML Model versioning, monitoring, retraining workflows Docker, Kubernetes for deployment Programming & Cloud Strong Python (NumPy, pandas, scikit-learn, PyTorch/TensorFlow) Experienc",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "spark",
+        "azure",
+        "machine learning",
+        "deep learning",
+        "data science",
+        "tensorflow",
+        "pytorch",
+        "scikit-learn",
+        "pandas",
+        "numpy",
+        "transformers",
+        "airflow",
+        "mlops"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 59.8,
+    "matched_required_skills": [
+      "python",
+      "java",
+      "kubernetes",
+      "rest"
+    ],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "machine learning",
+      "deep learning",
+      "natural language processing",
+      "computer vision",
+      "tensorflow",
+      "pytorch"
+    ],
+    "missing_preferred_skills": [
+      "airflow",
+      "data engineering"
+    ],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 30.0,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 12.7,
+    "skill_gaps": [
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "deep learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "natural language processing",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "computer vision",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "tensorflow",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "pytorch",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "airflow",
+        "importance": "preferred",
+        "present_in_resume": false
+      },
+      {
+        "skill": "data engineering",
+        "importance": "preferred",
+        "present_in_resume": false
+      }
+    ],
+    "index": 7,
+    "job_title": "Senior Staff Machine Learning Engineer, Growth Platform Engineering",
+    "company": "Airbnb",
+    "location": "Remote - USA",
+    "job_url": "https://boards.greenhouse.io/airbnb/jobs/7747259",
+    "description": "Airbnb was born in 2007 when two hosts welcomed three guests to their San Francisco home, and has since grown to over 5 million hosts who have welcomed over 2 billion guest arrivals in almost every country across the globe. Every day, hosts offer unique stays and experiences that make it possible fo",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "machine learning",
+        "deep learning",
+        "natural language processing",
+        "computer vision",
+        "tensorflow",
+        "pytorch",
+        "airflow",
+        "data engineering"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 59.8,
+    "matched_required_skills": [
+      "python",
+      "java",
+      "go",
+      "redis"
+    ],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "spark",
+      "machine learning",
+      "deep learning",
+      "data science",
+      "tensorflow",
+      "pytorch"
+    ],
+    "missing_preferred_skills": [
+      "transformers",
+      "airflow"
+    ],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 30.0,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 12.6,
+    "skill_gaps": [
+      {
+        "skill": "spark",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "deep learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "data science",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "tensorflow",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "pytorch",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "transformers",
+        "importance": "preferred",
+        "present_in_resume": false
+      },
+      {
+        "skill": "airflow",
+        "importance": "preferred",
+        "present_in_resume": false
+      }
+    ],
+    "index": 19,
+    "job_title": "Senior Machine Learning Engineer",
+    "company": "Reddit",
+    "location": "Remote - Ontario, Canada",
+    "job_url": "https://boards.greenhouse.io/reddit/jobs/6960833",
+    "description": "Reddit is a community of communities. It’s built on shared interests, passion, and trust, and is home to the most open and authentic conversations on the internet. Every day, Reddit users submit, vote, and comment on the topics they care most about. With 100,000+ active communities and approximately",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "spark",
+        "machine learning",
+        "deep learning",
+        "data science",
+        "tensorflow",
+        "pytorch",
+        "transformers",
+        "airflow"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 59.7,
+    "matched_required_skills": [
+      "python",
+      "java",
+      "go",
+      "redis"
+    ],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "spark",
+      "machine learning",
+      "deep learning",
+      "data science",
+      "tensorflow",
+      "pytorch"
+    ],
+    "missing_preferred_skills": [
+      "transformers",
+      "airflow"
+    ],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 30.0,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 11.8,
+    "skill_gaps": [
+      {
+        "skill": "spark",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "deep learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "data science",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "tensorflow",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "pytorch",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "transformers",
+        "importance": "preferred",
+        "present_in_resume": false
+      },
+      {
+        "skill": "airflow",
+        "importance": "preferred",
+        "present_in_resume": false
+      }
+    ],
+    "index": 20,
+    "job_title": "Senior Machine Learning Engineer",
+    "company": "Reddit",
+    "location": "Remote - United States",
+    "job_url": "https://boards.greenhouse.io/reddit/jobs/6960831",
+    "description": "Reddit is a community of communities. It’s built on shared interests, passion, and trust, and is home to the most open and authentic conversations on the internet. Every day, Reddit users submit, vote, and comment on the topics they care most about. With 100,000+ active communities and approximately",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "spark",
+        "machine learning",
+        "deep learning",
+        "data science",
+        "tensorflow",
+        "pytorch",
+        "transformers",
+        "airflow"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 57.8,
+    "matched_required_skills": [],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "machine learning"
+    ],
+    "missing_preferred_skills": [],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 25.0,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 15.3,
+    "skill_gaps": [
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      }
+    ],
+    "index": 14,
+    "job_title": "Machine Learning Engineer",
+    "company": "Stripe",
+    "location": "Toronto",
+    "job_url": "https://boards.greenhouse.io/stripe/jobs/8014859",
+    "description": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities. Our mission is to increase the",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "machine learning"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 57.7,
+    "matched_required_skills": [],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "machine learning"
+    ],
+    "missing_preferred_skills": [],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 25.0,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 14.5,
+    "skill_gaps": [
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      }
+    ],
+    "index": 2,
+    "job_title": "Machine Learning Engineer, Customer Support Engineering",
+    "company": "Airbnb",
+    "location": "China",
+    "job_url": "https://boards.greenhouse.io/airbnb/jobs/7716341",
+    "description": "Airbnb was born in 2007 when two hosts welcomed three guests to their San Francisco home, and has since grown to over 5 million hosts who have welcomed over 2 billion guest arrivals in almost every country across the globe. Every day, hosts offer unique stays and experiences that make it possible fo",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "machine learning"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 57.7,
+    "matched_required_skills": [],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "machine learning"
+    ],
+    "missing_preferred_skills": [],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 25.0,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 14.5,
+    "skill_gaps": [
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      }
+    ],
+    "index": 5,
+    "job_title": "Senior Machine Learning Engineer, Customer Support Engineering",
+    "company": "Airbnb",
+    "location": "China",
+    "job_url": "https://boards.greenhouse.io/airbnb/jobs/7975743",
+    "description": "Airbnb was born in 2007 when two hosts welcomed three guests to their San Francisco home, and has since grown to over 5 million hosts who have welcomed over 2 billion guest arrivals in almost every country across the globe. Every day, hosts offer unique stays and experiences that make it possible fo",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "machine learning"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 57.7,
+    "matched_required_skills": [],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "machine learning"
+    ],
+    "missing_preferred_skills": [],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 25.0,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 14.3,
+    "skill_gaps": [
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      }
+    ],
+    "index": 12,
+    "job_title": "Staff Machine Learning Engineer, Customer Support Engineering",
+    "company": "Airbnb",
+    "location": "China",
+    "job_url": "https://boards.greenhouse.io/airbnb/jobs/7693033",
+    "description": "Airbnb was born in 2007 when two hosts welcomed three guests to their San Francisco home, and has since grown to over 5 million hosts who have welcomed over 2 billion guest arrivals in almost every country across the globe. Every day, hosts offer unique stays and experiences that make it possible fo",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "machine learning"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 57.7,
+    "matched_required_skills": [],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "spark",
+      "machine learning",
+      "deep learning",
+      "tensorflow",
+      "pytorch",
+      "transformers"
+    ],
+    "missing_preferred_skills": [],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 25.0,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 14.3,
+    "skill_gaps": [
+      {
+        "skill": "spark",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "deep learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "tensorflow",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "pytorch",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "transformers",
+        "importance": "required",
+        "present_in_resume": false
+      }
+    ],
+    "index": 15,
+    "job_title": "Machine Learning Engineer, Capital Underwriting",
+    "company": "Stripe",
+    "location": "US",
+    "job_url": "https://boards.greenhouse.io/stripe/jobs/7952048",
+    "description": "Who we are About Stripe Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities. Our mission is to increase the",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "spark",
+        "machine learning",
+        "deep learning",
+        "tensorflow",
+        "pytorch",
+        "transformers"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 57.7,
+    "matched_required_skills": [],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "natural language processing"
+    ],
+    "missing_preferred_skills": [],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 25.0,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 14.7,
+    "skill_gaps": [
+      {
+        "skill": "natural language processing",
+        "importance": "required",
+        "present_in_resume": false
+      }
+    ],
+    "index": 35,
+    "job_title": "Software Engineer, AI/ML, Google Research",
+    "company": "Google",
+    "location": "Mountain View, CA",
+    "job_url": "https://www.linkedin.com/jobs/view/software-engineer-ai-ml-google-research-at-google-4432254692",
+    "description": "Minimum qualifications: Bachelor’s degree or equivalent practical experience. 2 years of experience with software development in one or more programming languages, or 1 year of experience with an advanced degree. 1 year of experience with one or more of the following: Speech/audio (e.g., technology ",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "natural language processing"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 57.5,
+    "matched_required_skills": [],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "machine learning"
+    ],
+    "missing_preferred_skills": [],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 25.0,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 12.5,
+    "skill_gaps": [
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      }
+    ],
+    "index": 11,
+    "job_title": "Staff Machine Learning Engineer, Community Support Engineering",
+    "company": "Airbnb",
+    "location": "San Francisco, CA",
+    "job_url": "https://boards.greenhouse.io/airbnb/jobs/8024316",
+    "description": "Airbnb was born in 2007 when two hosts welcomed three guests to their San Francisco home, and has since grown to over 5 million hosts who have welcomed over 2 billion guest arrivals in almost every country across the globe. Every day, hosts offer unique stays and experiences that make it possible fo",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "machine learning"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 57.5,
+    "matched_required_skills": [],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "spark",
+      "machine learning",
+      "data science",
+      "tensorflow",
+      "pytorch"
+    ],
+    "missing_preferred_skills": [],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 25.0,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 12.3,
+    "skill_gaps": [
+      {
+        "skill": "spark",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "data science",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "tensorflow",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "pytorch",
+        "importance": "required",
+        "present_in_resume": false
+      }
+    ],
+    "index": 28,
+    "job_title": "Staff Machine Learning Engineer, Ads Measurement Modeling",
+    "company": "Reddit",
+    "location": "Remote - United States",
+    "job_url": "https://boards.greenhouse.io/reddit/jobs/7890096",
+    "description": "Reddit is a community of communities. It’s built on shared interests, passion, and trust, and is home to the most open and authentic conversations on the internet. Every day, Reddit users submit, vote, and comment on the topics they care most about. With 100,000+ active communities and approximately",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "spark",
+        "machine learning",
+        "data science",
+        "tensorflow",
+        "pytorch"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 57.4,
+    "matched_required_skills": [],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "machine learning"
+    ],
+    "missing_preferred_skills": [],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 25.0,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 11.6,
+    "skill_gaps": [
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      }
+    ],
+    "index": 8,
+    "job_title": "Senior Staff Machine Learning Engineer, Guest & Host",
+    "company": "Airbnb",
+    "location": "Remote - USA",
+    "job_url": "https://boards.greenhouse.io/airbnb/jobs/7005605",
+    "description": "Airbnb was born in 2007 when two hosts welcomed three guests to their San Francisco home, and has since grown to over 5 million hosts who have welcomed over 2 billion guest arrivals in almost every country across the globe. Every day, hosts offer unique stays and experiences that make it possible fo",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "machine learning"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 57.4,
+    "matched_required_skills": [],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "machine learning",
+      "deep learning",
+      "tensorflow",
+      "pytorch"
+    ],
+    "missing_preferred_skills": [],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 25.0,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 11.9,
+    "skill_gaps": [
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "deep learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "tensorflow",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "pytorch",
+        "importance": "required",
+        "present_in_resume": false
+      }
+    ],
+    "index": 18,
+    "job_title": "Machine Learning Engineering Manager - Ads Engagement Modeling ",
+    "company": "Reddit",
+    "location": "Remote - United States",
+    "job_url": "https://boards.greenhouse.io/reddit/jobs/7993514",
+    "description": "Reddit is a community of communities. It’s built on shared interests, passion, and trust, and is home to the most open and authentic conversations on the internet. Every day, Reddit users submit, vote, and comment on the topics they care most about. With 100,000+ active communities and approximately",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "machine learning",
+        "deep learning",
+        "tensorflow",
+        "pytorch"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 57.3,
+    "matched_required_skills": [],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "machine learning",
+      "mlops"
+    ],
+    "missing_preferred_skills": [],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 25.0,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 10.2,
+    "skill_gaps": [
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "mlops",
+        "importance": "required",
+        "present_in_resume": false
+      }
+    ],
+    "index": 25,
+    "job_title": "Senior Staff Machine Learning Engineer, ML Understanding",
+    "company": "Reddit",
+    "location": "Remote - United States",
+    "job_url": "https://boards.greenhouse.io/reddit/jobs/7847148",
+    "description": "Reddit is a community of communities. It’s built on shared interests, passion, and trust, and is home to the most open and authentic conversations on the internet. Every day, Reddit users submit, vote, and comment on the topics they care most about. With 100,000+ active communities and approximately",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "machine learning",
+        "mlops"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 56.5,
+    "matched_required_skills": [
+      "python",
+      "java",
+      "kubernetes"
+    ],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "spark",
+      "machine learning",
+      "deep learning",
+      "natural language processing",
+      "nlp",
+      "computer vision",
+      "tensorflow"
+    ],
+    "missing_preferred_skills": [
+      "pytorch",
+      "airflow",
+      "data engineering"
+    ],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 22.5,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 13.9,
+    "skill_gaps": [
+      {
+        "skill": "spark",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "deep learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "natural language processing",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "nlp",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "computer vision",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "tensorflow",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "pytorch",
+        "importance": "preferred",
+        "present_in_resume": false
+      },
+      {
+        "skill": "airflow",
+        "importance": "preferred",
+        "present_in_resume": false
+      },
+      {
+        "skill": "data engineering",
+        "importance": "preferred",
+        "present_in_resume": false
+      }
+    ],
+    "index": 6,
+    "job_title": "Senior Machine Learning Engineer, Relevance and Personalization",
+    "company": "Airbnb",
+    "location": "United States",
+    "job_url": "https://boards.greenhouse.io/airbnb/jobs/7258033",
+    "description": "Airbnb was born in 2007 when two hosts welcomed three guests to their San Francisco home, and has since grown to over 5 million hosts who have welcomed over 2 billion guest arrivals in almost every country across the globe. Every day, hosts offer unique stays and experiences that make it possible fo",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "spark",
+        "machine learning",
+        "deep learning",
+        "natural language processing",
+        "nlp",
+        "computer vision",
+        "tensorflow",
+        "pytorch",
+        "airflow",
+        "data engineering"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 56.5,
+    "matched_required_skills": [
+      "python",
+      "java",
+      "kubernetes"
+    ],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "spark",
+      "machine learning",
+      "deep learning",
+      "data science",
+      "natural language processing",
+      "nlp",
+      "computer vision"
+    ],
+    "missing_preferred_skills": [
+      "tensorflow",
+      "pytorch",
+      "airflow",
+      "data engineering"
+    ],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 22.5,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 13.8,
+    "skill_gaps": [
+      {
+        "skill": "spark",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "deep learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "data science",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "natural language processing",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "nlp",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "computer vision",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "tensorflow",
+        "importance": "preferred",
+        "present_in_resume": false
+      },
+      {
+        "skill": "pytorch",
+        "importance": "preferred",
+        "present_in_resume": false
+      },
+      {
+        "skill": "airflow",
+        "importance": "preferred",
+        "present_in_resume": false
+      },
+      {
+        "skill": "data engineering",
+        "importance": "preferred",
+        "present_in_resume": false
+      }
+    ],
+    "index": 13,
+    "job_title": "Staff Machine Learning Engineer, Listings and Host Tools Data and AI",
+    "company": "Airbnb",
+    "location": "Remote-USA",
+    "job_url": "https://boards.greenhouse.io/airbnb/jobs/7454348",
+    "description": "Airbnb was born in 2007 when two hosts welcomed three guests to their San Francisco home, and has since grown to over 5 million hosts who have welcomed over 2 billion guest arrivals in almost every country across the globe. Every day, hosts offer unique stays and experiences that make it possible fo",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "spark",
+        "machine learning",
+        "deep learning",
+        "data science",
+        "natural language processing",
+        "nlp",
+        "computer vision",
+        "tensorflow",
+        "pytorch",
+        "airflow",
+        "data engineering"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 56.1,
+    "matched_required_skills": [
+      "python",
+      "golang",
+      "redis"
+    ],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "spark",
+      "machine learning",
+      "deep learning",
+      "data science",
+      "nlp",
+      "tensorflow",
+      "pytorch"
+    ],
+    "missing_preferred_skills": [
+      "transformers",
+      "airflow"
+    ],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 22.5,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 10.2,
+    "skill_gaps": [
+      {
+        "skill": "spark",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "deep learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "data science",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "nlp",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "tensorflow",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "pytorch",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "transformers",
+        "importance": "preferred",
+        "present_in_resume": false
+      },
+      {
+        "skill": "airflow",
+        "importance": "preferred",
+        "present_in_resume": false
+      }
+    ],
+    "index": 29,
+    "job_title": "Staff Machine Learning Engineer, Consumer ",
+    "company": "Reddit",
+    "location": "Remote - United States",
+    "job_url": "https://boards.greenhouse.io/reddit/jobs/7747244",
+    "description": "Reddit is a community of communities. It’s built on shared interests, passion, and trust, and is home to the most open and authentic conversations on the internet. Every day, Reddit users submit, vote, and comment on the topics they care most about. With 100,000+ active communities and approximately",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "spark",
+        "machine learning",
+        "deep learning",
+        "data science",
+        "nlp",
+        "tensorflow",
+        "pytorch",
+        "transformers",
+        "airflow"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  },
+  {
+    "match_score": 46.1,
+    "matched_required_skills": [],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "azure",
+      "machine learning",
+      "deep learning",
+      "data science",
+      "natural language processing",
+      "nlp",
+      "computer vision",
+      "tensorflow",
+      "pytorch",
+      "ci/cd"
+    ],
+    "missing_preferred_skills": [
+      "mlops",
+      "statistical modeling",
+      "cloud computing"
+    ],
+    "missing_education": [],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 0.0,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 10.9,
+    "skill_gaps": [
+      {
+        "skill": "azure",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "deep learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "data science",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "natural language processing",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "nlp",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "computer vision",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "tensorflow",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "pytorch",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "ci/cd",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "mlops",
+        "importance": "preferred",
+        "present_in_resume": false
+      },
+      {
+        "skill": "statistical modeling",
+        "importance": "preferred",
+        "present_in_resume": false
+      },
+      {
+        "skill": "cloud computing",
+        "importance": "preferred",
+        "present_in_resume": false
+      }
+    ],
+    "index": 0,
+    "job_title": "AI Engineer",
+    "company": "Unknown Company",
+    "location": "Virginia",
+    "job_url": "https://www.hays.com/job-search/machine-learning-engineer-jobs?q=Machine%20Learning%20Engineer&location=&specialismId=&subSpecialismId=&locationf=&industryf=&sortType=0&jobType=-1&flexiWorkType=-1&payTypefacet=-1&minPay=-1&maxPay=-1&jobSource=HaysGCJ&searchPageTitle=Machine%20Learning%20Engineer%20Jobs%20in%20US%20%7C%20Hays%20Recruitment%20US&searchPageDesc=Explore%20Machine%20Learning%20Engineer%20job%20opportunities%20with%20Hays%20Recruitment%20US.%20Compare%20salaries%20and%20apply%20for%20a%20role%20online%20today!",
+    "description": "The final salary or hourly wage, as applicable, paid to each candidate/applicant for this position is ultimately dependent on a variety of factors, including, but not limited to, the candidate’s/applicant’s qualifications, skills, and level of experience as well as the geographical location of the p",
+    "ats_report": {
+      "overall_score": 100.0,
+      "skills_score": 100.0,
+      "experience_score": 100.0,
+      "project_score": 100.0,
+      "education_score": 100.0,
+      "certification_score": 100.0,
+      "missing_skills": [
+        "azure",
+        "machine learning",
+        "deep learning",
+        "data science",
+        "natural language processing",
+        "nlp",
+        "computer vision",
+        "tensorflow",
+        "pytorch",
+        "mlops",
+        "statistical modeling",
+        "cloud computing"
+      ],
+      "missing_keywords": [],
+      "weak_sections": [
+        "projects"
+      ],
+      "formatting_issues": []
+    }
+  }
+]
