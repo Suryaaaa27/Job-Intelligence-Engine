@@ -1,0 +1,225 @@
+{
+  "contact_info": {
+    "full_name": "KARAN PRATAP SINGH",
+    "email": "contact@karanpratapsingh.com",
+    "phone": "(415) 602-9452",
+    "location": null,
+    "linkedin": "linkedin.com/karan99",
+    "github": "github.com/karanpratapsingh",
+    "portfolio": null
+  },
+  "summary": "(415) 602-9452 | San Francisco, CA | contact@karanpratapsingh.com",
+  "skills": [
+    "Programming Golang",
+    "Python",
+    "TypeScript",
+    "JavaScript",
+    "Java",
+    "PostgreSQL",
+    "Redis",
+    "GraphQL",
+    "Frameworks Express.js",
+    "Django",
+    "Flask",
+    "FastAPI",
+    "Spring Boot",
+    "React.js",
+    "Next.js",
+    "DevOps Docker",
+    "Kubernetes",
+    "Terraform",
+    "Pulumi",
+    "Jenkins",
+    "Google Cloud Platform (GCP)",
+    "google cloud",
+    "express",
+    "spring",
+    "golang",
+    "docker",
+    "react",
+    "gcp",
+    "aws"
+  ],
+  "experience": [
+    {
+      "job_title": "Software Engineer 02/",
+      "company": null,
+      "location": null,
+      "start_date": "05/2024",
+      "end_date": "Present",
+      "is_current": true,
+      "bullets": [],
+      "raw_text": "Software Engineer 02/05/2024 - Present"
+    },
+    {
+      "job_title": "Apple Inc. Cupertino",
+      "company": "CA",
+      "location": null,
+      "start_date": null,
+      "end_date": null,
+      "is_current": false,
+      "bullets": [],
+      "raw_text": "Apple Inc. Cupertino, CA"
+    },
+    {
+      "job_title": "Senior Software Engineer 05/03/2023",
+      "company": "01/26/2024",
+      "location": null,
+      "start_date": null,
+      "end_date": null,
+      "is_current": false,
+      "bullets": [
+        "The Guardian Life Insurance Company of America Holmdel, NJ",
+        "Developed features for Guardian Anytime web app leveraging React.js and Node.js serving over 4M users.",
+        "Migrated legacy Java SOAP APIs to RESTful APIs using Spring Boot ensuring robust code quality.",
+        "Improved reliability and maintainability of React.js application by increasing test coverage by 12%."
+      ],
+      "raw_text": "Senior Software Engineer 05/03/2023 - 01/26/2024\nThe Guardian Life Insurance Company of America Holmdel, NJ\n• Developed features for Guardian Anytime web app leveraging React.js and Node.js serving over 4M users.\n• Migrated legacy Java SOAP APIs to RESTful APIs using Spring Boot ensuring robust code quality.\n• Improved reliability and maintainability of React.js application by increasing test coverage by 12%."
+    },
+    {
+      "job_title": "Senior Engineer 12/07/2020",
+      "company": "05/13/2023",
+      "location": null,
+      "start_date": null,
+      "end_date": null,
+      "is_current": false,
+      "bullets": [],
+      "raw_text": "Senior Engineer 12/07/2020 - 05/13/2023"
+    },
+    {
+      "job_title": "Curebase San Francisco",
+      "company": "CA",
+      "location": null,
+      "start_date": null,
+      "end_date": null,
+      "is_current": false,
+      "bullets": [
+        "Designed scalable REST and GraphQL APIs using TypeScript, Node.js, Redis, and PostgreSQL.",
+        "Led initiative for codebase migration to TypeScript, reducing cost and API latency by 50%.",
+        "Builtfault-tolerant, horizontallyscalablemulti-tenancyforcoreSaaSproductleveragingAWS(ALB,",
+        "ECS, S3, RDS, SQS, DynamoDB) with a focus on security, GDPR, and HIPAA compliance.",
+        "Utilized Golang, Python, and Terraform to develop business-critical internal tools and simplify SDLC."
+      ],
+      "raw_text": "Curebase San Francisco, CA\n• Designed scalable REST and GraphQL APIs using TypeScript, Node.js, Redis, and PostgreSQL.\n• Led initiative for codebase migration to TypeScript, reducing cost and API latency by 50%.\n• Builtfault-tolerant, horizontallyscalablemulti-tenancyforcoreSaaSproductleveragingAWS(ALB,\nECS, S3, RDS, SQS, DynamoDB) with a focus on security, GDPR, and HIPAA compliance.\n• Utilized Golang, Python, and Terraform to develop business-critical internal tools and simplify SDLC."
+    },
+    {
+      "job_title": "Software Developer 05/26/2020",
+      "company": "01/31/2021",
+      "location": null,
+      "start_date": null,
+      "end_date": null,
+      "is_current": false,
+      "bullets": [],
+      "raw_text": "Software Developer 05/26/2020 - 01/31/2021"
+    },
+    {
+      "job_title": "Quotient Inc. Maryland",
+      "company": "USA (Remote)",
+      "location": null,
+      "start_date": null,
+      "end_date": null,
+      "is_current": false,
+      "bullets": [
+        "Created a digital asset management platform using React, TypeScript, Node.js, and GraphQL.",
+        "Implementedterabyte-scaledataingestionandstreamingwithNode.jsforover150millionartifacts.",
+        "Designed end-to-end GraphQL data layer and client-side enterprise search solution with React.",
+        "Optimized production CI/CD pipeline using Docker multi-stage builds, reducing container size by 80%."
+      ],
+      "raw_text": "Quotient Inc. Maryland, USA (Remote)\n• Created a digital asset management platform using React, TypeScript, Node.js, and GraphQL.\n• Implementedterabyte-scaledataingestionandstreamingwithNode.jsforover150millionartifacts.\n• Designed end-to-end GraphQL data layer and client-side enterprise search solution with React.\n• Optimized production CI/CD pipeline using Docker multi-stage builds, reducing container size by 80%."
+    },
+    {
+      "job_title": "Software Developer 08/17/2019",
+      "company": "06/07/2020",
+      "location": null,
+      "start_date": null,
+      "end_date": null,
+      "is_current": false,
+      "bullets": [],
+      "raw_text": "Software Developer 08/17/2019 - 06/07/2020"
+    },
+    {
+      "job_title": "Stewards London",
+      "company": "UK (Remote)",
+      "location": null,
+      "start_date": null,
+      "end_date": null,
+      "is_current": false,
+      "bullets": [
+        "Implemented event-driven food delivery mobile application with React Native.",
+        "Consolidated internal sales and custom B2B integrations with React and Node.js.",
+        "Edge-optimized GraphQL API utilizing Google Cloud CDN, increasing customer retention by 60%.",
+        "PUBLICATIONS",
+        "Manas Singh, Karan Pratap Singh et al. “System and method for defense in depth of one or more",
+        "software delivery pipelines”. US Patent Application No. 18373596. Filed September 27, 2023.",
+        "Manas Singh, Karan Pratap Singh et al. “System and method for continuous automated threat"
+      ],
+      "raw_text": "Stewards London, UK (Remote)\n• Implemented event-driven food delivery mobile application with React Native.\n• Consolidated internal sales and custom B2B integrations with React and Node.js.\n• Edge-optimized GraphQL API utilizing Google Cloud CDN, increasing customer retention by 60%.\nPUBLICATIONS\n• Manas Singh, Karan Pratap Singh et al. “System and method for defense in depth of one or more\nsoftware delivery pipelines”. US Patent Application No. 18373596. Filed September 27, 2023.\n• Manas Singh, Karan Pratap Singh et al. “System and method for continuous automated threat"
+    },
+    {
+      "job_title": "modeling”. US Patent Application No. 18230253. Filed August 4",
+      "company": "2023.",
+      "location": null,
+      "start_date": null,
+      "end_date": null,
+      "is_current": false,
+      "bullets": [
+        "“Learn Go”, Published Jan 2023, ISBN 979-8-9883975-4-0.",
+        "“System Design”, Published Aug 2022, ISBN 979-8-9883975-8-8.",
+        "ACHIEVEMENTS",
+        "Co-authored U.S. patents, contributing novel solutions in software security and delivery pipelines.",
+        "Author and maintainer of “System Design”, ranked amongst GitHub’s top 500 global repositories with",
+        "over 38K stars and 40K monthly views.",
+        "Published 50+ technical articles on software engineering topics such as distributed systems, microservices,",
+        "software architecture, and DevOps on Medium and Dev.to, reaching over 2 million views.",
+        "Created and managed a YouTube channel on software engineering, producing educational tutorials",
+        "that have reached 70K+ developers globally.",
+        "Published technical books on “System Design” and “Learn Go”, contributing practical guidance and",
+        "insights to the software engineering community.",
+        "Contributed to open-source projects, acknowledged in React Native v0.60 by Meta."
+      ],
+      "raw_text": "modeling”. US Patent Application No. 18230253. Filed August 4, 2023.\n• “Learn Go”, Published Jan 2023, ISBN 979-8-9883975-4-0.\n• “System Design”, Published Aug 2022, ISBN 979-8-9883975-8-8.\nACHIEVEMENTS\n• Co-authored U.S. patents, contributing novel solutions in software security and delivery pipelines.\n• Author and maintainer of “System Design”, ranked amongst GitHub’s top 500 global repositories with\nover 38K stars and 40K monthly views.\n• Published 50+ technical articles on software engineering topics such as distributed systems, microservices,\nsoftware architecture, and DevOps on Medium and Dev.to, reaching over 2 million views.\n• Created and managed a YouTube channel on software engineering, producing educational tutorials\nthat have reached 70K+ developers globally.\n• Published technical books on “System Design” and “Learn Go”, contributing practical guidance and\ninsights to the software engineering community.\n• Contributed to open-source projects, acknowledged in React Native v0.60 by Meta."
+    }
+  ],
+  "projects": [
+    {
+      "name": "• ScaleETL - High-performance CLI for partitioning, transforming, loading, and searching CSV datasets up",
+      "description": "to 1 billion rows. Preview Environments - On-demand ephemeral, secure, and isolated AWS infrastructure to accelerate early Product and QA collaboration and improve cross-team visibility. HyperTrade - Distributed system for automated cryptocurrency trading across multiple exchanges. Full Stack Starter Kit - Scalable, GraphQL first template used by 1200+ developers. Proximity - Privacy-focused, open-source social media platform with over 10,000 users.",
+      "technologies": [
+        "graphql",
+        "aws"
+      ],
+      "bullets": [
+        "to 1 billion rows.",
+        "Preview Environments - On-demand ephemeral, secure, and isolated AWS infrastructure to accelerate",
+        "early Product and QA collaboration and improve cross-team visibility.",
+        "HyperTrade - Distributed system for automated cryptocurrency trading across multiple exchanges.",
+        "Full Stack Starter Kit - Scalable, GraphQL first template used by 1200+ developers.",
+        "Proximity - Privacy-focused, open-source social media platform with over 10,000 users."
+      ],
+      "link": null,
+      "raw_text": "• ScaleETL - High-performance CLI for partitioning, transforming, loading, and searching CSV datasets up\nto 1 billion rows.\n• Preview Environments - On-demand ephemeral, secure, and isolated AWS infrastructure to accelerate\nearly Product and QA collaboration and improve cross-team visibility.\n• HyperTrade - Distributed system for automated cryptocurrency trading across multiple exchanges.\n• Full Stack Starter Kit - Scalable, GraphQL first template used by 1200+ developers.\n• Proximity - Privacy-focused, open-source social media platform with over 10,000 users."
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelors of Technology",
+      "institution": "Computer Science and En",
+      "location": null,
+      "start_date": "gineering 2017",
+      "end_date": "2021",
+      "gpa": null,
+      "raw_text": "Bachelors of Technology, Computer Science and Engineering 2017 - 2021\nSRM Institute of Science and Technology Delhi NCR, India"
+    }
+  ],
+  "certifications": [],
+  "raw_sections": {
+    "preamble": "KARAN PRATAP SINGH\n(415) 602-9452 | San Francisco, CA | contact@karanpratapsingh.com\nkaranpratapsingh.com | linkedin.com/karan99 | github.com/karanpratapsingh",
+    "skills": "Programming Golang, Python, TypeScript, JavaScript, Java, PostgreSQL, Redis, GraphQL\nFrameworks Express.js, Django, Flask, FastAPI, Spring Boot, React.js, Next.js\nDevOps Docker, Kubernetes, Terraform, Pulumi, Jenkins\nCloud Providers Amazon Web Services (AWS), Google Cloud Platform (GCP)",
+    "experience": "Software Engineer 02/05/2024 - Present\nApple Inc. Cupertino, CA\nSenior Software Engineer 05/03/2023 - 01/26/2024\nThe Guardian Life Insurance Company of America Holmdel, NJ\n• Developed features for Guardian Anytime web app leveraging React.js and Node.js serving over 4M users.\n• Migrated legacy Java SOAP APIs to RESTful APIs using Spring Boot ensuring robust code quality.\n• Improved reliability and maintainability of React.js application by increasing test coverage by 12%.\nSenior Engineer 12/07/2020 - 05/13/2023\nCurebase San Francisco, CA\n• Designed scalable REST and GraphQL APIs using TypeScript, Node.js, Redis, and PostgreSQL.\n• Led initiative for codebase migration to TypeScript, reducing cost and API latency by 50%.\n• Builtfault-tolerant, horizontallyscalablemulti-tenancyforcoreSaaSproductleveragingAWS(ALB,\nECS, S3, RDS, SQS, DynamoDB) with a focus on security, GDPR, and HIPAA compliance.\n• Utilized Golang, Python, and Terraform to develop business-critical internal tools and simplify SDLC.\nSoftware Developer 05/26/2020 - 01/31/2021\nQuotient Inc. Maryland, USA (Remote)\n• Created a digital asset management platform using React, TypeScript, Node.js, and GraphQL.\n• Implementedterabyte-scaledataingestionandstreamingwithNode.jsforover150millionartifacts.\n• Designed end-to-end GraphQL data layer and client-side enterprise search solution with React.\n• Optimized production CI/CD pipeline using Docker multi-stage builds, reducing container size by 80%.\nSoftware Developer 08/17/2019 - 06/07/2020\nStewards London, UK (Remote)\n• Implemented event-driven food delivery mobile application with React Native.\n• Consolidated internal sales and custom B2B integrations with React and Node.js.\n• Edge-optimized GraphQL API utilizing Google Cloud CDN, increasing customer retention by 60%.\nPUBLICATIONS\n• Manas Singh, Karan Pratap Singh et al. “System and method for defense in depth of one or more\nsoftware delivery pipelines”. US Patent Application No. 18373596. Filed September 27, 2023.\n• Manas Singh, Karan Pratap Singh et al. “System and method for continuous automated threat\nmodeling”. US Patent Application No. 18230253. Filed August 4, 2023.\n• “Learn Go”, Published Jan 2023, ISBN 979-8-9883975-4-0.\n• “System Design”, Published Aug 2022, ISBN 979-8-9883975-8-8.\nACHIEVEMENTS\n• Co-authored U.S. patents, contributing novel solutions in software security and delivery pipelines.\n• Author and maintainer of “System Design”, ranked amongst GitHub’s top 500 global repositories with\nover 38K stars and 40K monthly views.\n• Published 50+ technical articles on software engineering topics such as distributed systems, microservices,\nsoftware architecture, and DevOps on Medium and Dev.to, reaching over 2 million views.\n• Created and managed a YouTube channel on software engineering, producing educational tutorials\nthat have reached 70K+ developers globally.\n• Published technical books on “System Design” and “Learn Go”, contributing practical guidance and\ninsights to the software engineering community.\n• Contributed to open-source projects, acknowledged in React Native v0.60 by Meta.",
+    "projects": "• ScaleETL - High-performance CLI for partitioning, transforming, loading, and searching CSV datasets up\nto 1 billion rows.\n• Preview Environments - On-demand ephemeral, secure, and isolated AWS infrastructure to accelerate\nearly Product and QA collaboration and improve cross-team visibility.\n• HyperTrade - Distributed system for automated cryptocurrency trading across multiple exchanges.\n• Full Stack Starter Kit - Scalable, GraphQL first template used by 1200+ developers.\n• Proximity - Privacy-focused, open-source social media platform with over 10,000 users.",
+    "education": "Bachelors of Technology, Computer Science and Engineering 2017 - 2021\nSRM Institute of Science and Technology Delhi NCR, India"
+  },
+  "warnings": [],
+  "source_file": "karan_resume.pdf",
+  "source_file_type": "pdf"
+}

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!--
+  ATS TEMPLATE: MODERN
+  ----------------------------------------------------------------
+  Same ATS-safety rules as the classic template (single column, no
+  tables/images/text-boxes, real headings and list tags) but with a
+  restrained accent color and a two-part header. Colors do not hurt
+  ATS parsing — only layout structure (columns, tables, images) does.
+
+  Uses the SAME data shape as ats_template_classic.html (see the comment
+  at the top of that file, or render_resume.py, for the schema).
+
+  Change the accent color by editing the --accent variable below.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>{{ name }} - Resume</title>
+<style>
+  :root { --accent: #1a4d7a; --text: #1a1a1a; --muted: #555555; }
+  @page { size: letter; margin: 0.6in; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Calibri', Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    line-height: 1.45;
+    color: var(--text);
+    max-width: 8.5in;
+    margin: 0 auto;
+    padding: 0.6in 0.75in;
+    background: #ffffff;
+  }
+  h1 {
+    font-size: 22pt;
+    margin: 0;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .headline {
+    font-size: 12pt;
+    font-weight: bold;
+    color: var(--muted);
+    margin: 2px 0 4px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .skill-group { margin: 0 0 4px 0; font-size: 10.5pt; }
+  .skill-group b { color: var(--accent); margin-right: 4px; }
+  .contact-line {
+    font-size: 10pt;
+    margin: 4px 0 18px 0;
+    color: var(--muted);
+  }
+  .contact-line span:not(:last-child)::after {
+    content: "  •  ";
+    color: #bbbbbb;
+  }
+  h2 {
+    font-size: 12pt;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 3px;
+    margin: 20px 0 8px 0;
+  }
+  h2:first-of-type { margin-top: 0; }
+  p.summary { margin: 0; }
+  ul.skills-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  ul.skills-list li {
+    display: inline-block;
+    background: #eef3f8;
+    color: var(--accent);
+    padding: 2px 9px;
+    border-radius: 3px;
+    margin: 0 6px 6px 0;
+    font-size: 10pt;
+  }
+  .job { margin-bottom: 13px; }
+  .job-header {
+    display: block;
+    font-weight: bold;
+    font-size: 11.5pt;
+    color: var(--text);
+  }
+  .job-company { color: var(--accent); }
+  .job-subheader {
+    display: block;
+    font-size: 10pt;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  .job-dates {
+    font-weight: normal;
+    float: right;
+    color: var(--muted);
+    font-size: 10pt;
+  }
+  ul.bullets {
+    margin: 4px 0 0 0;
+    padding-left: 18px;
+  }
+  ul.bullets li { margin-bottom: 3px; }
+  .edu-entry, .cert-entry { margin-bottom: 8px; }
+  .edu-degree { font-weight: bold; }
+  .edu-school { color: var(--muted); }
+  a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+
+  <h1>{{ name }}</h1>
+  {% if title %}<div class="headline">{{ title }}</div>{% endif %}
+  <div class="contact-line">
+    {% if location %}<span>{{ location }}</span>{% endif %}
+    {% if phone %}<span>{{ phone }}</span>{% endif %}
+    {% if email %}<span>{{ email }}</span>{% endif %}
+    {% if linkedin %}<span>{{ linkedin }}</span>{% endif %}
+    {% if github %}<span>{{ github }}</span>{% endif %}
+    {% if website %}<span>{{ website }}</span>{% endif %}
+  </div>
+
+  {% if summary %}
+  <h2>Summary</h2>
+  <p class="summary">{{ summary }}</p>
+  {% endif %}
+
+  {% if skills_grouped %}
+  <h2>Skills</h2>
+  {% for group in skills_grouped %}
+  <div class="skill-group"><b>{{ group.label }}:</b>{{ group.items | join(", ") }}</div>
+  {% endfor %}
+  {% elif skills %}
+  <h2>Skills</h2>
+  <ul class="skills-list">
+    {% for skill in skills %}
+    <li>{{ skill }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if experience %}
+  <h2>Experience</h2>
+  {% for job in experience %}
+  <div class="job">
+    <span class="job-header">{{ job.title }}{% if job.company %} <span class="job-company">— {{ job.company }}</span>{% endif %}
+      <span class="job-dates">{{ job.start_date }} &ndash; {{ job.end_date }}</span>
+    </span>
+    {% if job.location %}<span class="job-subheader">{{ job.location }}</span>{% endif %}
+    {% if job.bullets %}
+    <ul class="bullets">
+      {% for bullet in job.bullets %}
+      <li>{{ bullet }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+  {% endfor %}
+  {% endif %}
+
+  {% if education %}
+  <h2>Education</h2>
+  {% for edu in education %}
+  <div class="edu-entry">
+    <div><span class="edu-degree">{{ edu.degree }}</span>
+      <span class="job-dates">{{ edu.start_date }} &ndash; {{ edu.end_date }}</span>
+    </div>
+    <div class="edu-school">{{ edu.school }}{% if edu.location %}, {{ edu.location }}{% endif %}</div>
+  </div>
+  {% endfor %}
+  {% endif %}
+
+  {% if projects %}
+  <h2>Projects</h2>
+  {% for proj in projects %}
+  <div class="job">
+    <span class="job-header">{{ proj.name }}
+      <span class="job-dates">{{ proj.start_date }}{% if proj.end_date %} &ndash; {{ proj.end_date }}{% endif %}</span>
+    </span>
+    {% if proj.bullets %}
+    <ul class="bullets">
+      {% for bullet in proj.bullets %}
+      <li>{{ bullet }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+  {% endfor %}
+  {% endif %}
+
+  {% if certifications %}
+  <h2>Certifications</h2>
+  <ul class="bullets">
+    {% for cert in certifications %}
+    <li>{{ cert }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if coursework %}
+  <h2>Relevant Coursework</h2>
+  <p class="summary">{{ coursework | join(" | ") }}</p>
+  {% endif %}
+
+  {% if memberships %}
+  <h2>Memberships &amp; Associations</h2>
+  {% for m in memberships %}
+  <div class="edu-entry">
+    <div><span class="edu-degree">{{ m.name }}</span>
+      <span class="job-dates">{{ m.start_date }}{% if m.end_date %} &ndash; {{ m.end_date }}{% endif %}</span>
+    </div>
+    {% if m.description %}<div class="edu-school">{{ m.description }}</div>{% endif %}
+  </div>
+  {% endfor %}
+  {% endif %}
+
+  {% if publications %}
+  <h2>Publications</h2>
+  <ul class="bullets">
+    {% for pub in publications %}
+    <li>{{ pub }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if achievements %}
+  <h2>Achievements</h2>
+  <ul class="bullets">
+    {% for item in achievements %}
+    <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+</body>
+</html>

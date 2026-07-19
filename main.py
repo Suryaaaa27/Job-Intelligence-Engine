@@ -22,13 +22,13 @@ TARGET_SKILLS = [
 
 def load_jobs():
 
-    with open("data/raw_jobs.json", "r") as file:
+    with open("data/machine_learning_engineer_20260711_200219.json", "r", encoding="utf-8") as file:
         return json.load(file)
 
 
 def save_jobs(jobs):
 
-    with open("data/filtered_jobs.json", "w") as file:
+    with open("data/filtered_jobs.json", "w", encoding="utf-8") as file:
         json.dump(
             jobs,
             file,

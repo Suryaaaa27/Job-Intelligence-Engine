@@ -1,23 +1,22 @@
 from scraper.models import Job
 
 
-def remove_duplicates(jobs: list[Job]):
+def remove_duplicates(jobs: list[dict]):
 
     unique_jobs = []
     seen = set()
 
     for job in jobs:
 
-        # First preference: unique job URL
-        if job.job_url:
-            key = ("url", job.job_url.lower())
+        job_url = job.get("job_url", "")
 
-        # Fallback
+        if job_url:
+            key = ("url", job_url.lower())
         else:
             key = (
-                job.company_name.lower(),
-                job.job_title.lower(),
-                job.location.lower()
+                job.get("company_name", "").lower(),
+                job.get("job_title", "").lower(),
+                job.get("location", "").lower()
             )
 
         if key not in seen:

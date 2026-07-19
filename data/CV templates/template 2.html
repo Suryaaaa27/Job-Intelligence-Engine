@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--
+  ATS TEMPLATE: EXECUTIVE (centered header, horizontal-rule dividers)
+  ----------------------------------------------------------------
+  Still fully ATS-safe: single column, linear order, no tables, no
+  images, no text boxes. The centered header and thin rules are just
+  CSS on ordinary <h1>/<h2>/<p> tags, so parsers read it top-to-bottom
+  exactly like plain text.
+
+  Same data schema as ats_template_classic.html (title, name, contact
+  fields, summary, skills/skills_grouped, experience, projects,
+  education, certifications, coursework, memberships, publications,
+  achievements). See SCHEMA.md / render_resume.py for the full shape.
+  Every section is optional.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>{{ name }} - Resume</title>
+<style>
+  @page { size: letter; margin: 0.6in; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 10.5pt;
+    line-height: 1.45;
+    color: #2d2d2d;
+    max-width: 8.5in;
+    margin: 0 auto;
+    padding: 0.55in 0.8in;
+    background: #ffffff;
+  }
+  .header { text-align: center; margin-bottom: 10px; }
+  h1 {
+    font-family: Georgia, serif;
+    font-size: 24pt;
+    font-weight: normal;
+    letter-spacing: 3px;
+    margin: 0;
+    color: #262626;
+  }
+  .headline {
+    font-style: italic;
+    font-size: 11pt;
+    color: #666666;
+    margin: 4px 0 8px 0;
+  }
+  hr {
+    border: none;
+    border-top: 1px solid #b0b0b0;
+    margin: 8px 0;
+  }
+  .contact-line {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9.5pt;
+    color: #595959;
+  }
+  .contact-line span:not(:last-child)::after {
+    content: "   |   ";
+    color: #b0b0b0;
+  }
+  h2 {
+    font-family: Georgia, serif;
+    font-size: 12pt;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #262626;
+    margin: 18px 0 6px 0;
+  }
+  h2:first-of-type { margin-top: 12px; }
+  p.summary { margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 10.5pt; }
+  ul.skills-list { margin: 0; padding: 0; list-style: none; font-family: Arial, Helvetica, sans-serif; }
+  ul.skills-list li { display: inline; font-size: 10.5pt; }
+  ul.skills-list li:not(:last-child)::after { content: "  •  "; color: #b0b0b0; }
+  .skill-group { margin: 0 0 3px 0; font-family: Arial, Helvetica, sans-serif; font-size: 10.5pt; }
+  .skill-group b { margin-right: 4px; }
+  .job { margin-bottom: 12px; font-family: Arial, Helvetica, sans-serif; }
+  .job-header { display: block; font-weight: bold; font-size: 11pt; color: #262626; }
+  .job-subheader { display: block; font-size: 10pt; font-style: italic; color: #595959; margin-bottom: 4px; }
+  .job-dates { font-weight: normal; font-style: normal; float: right; color: #595959; font-size: 9.5pt; }
+  ul.bullets { margin: 4px 0 0 0; padding-left: 18px; }
+  ul.bullets li { margin-bottom: 3px; }
+  .edu-entry, .cert-entry { margin-bottom: 8px; font-family: Arial, Helvetica, sans-serif; }
+  .edu-degree { font-weight: bold; }
+  .edu-school { font-style: italic; color: #595959; }
+  a { color: #262626; text-decoration: none; }
+</style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>{{ name | upper }}</h1>
+    {% if title %}<div class="headline">{{ title }}</div>{% endif %}
+  </div>
+  <hr>
+  <div class="contact-line">
+    {% if phone %}<span>{{ phone }}</span>{% endif %}
+    {% if email %}<span>{{ email }}</span>{% endif %}
+    {% if location %}<span>{{ location }}</span>{% endif %}
+    {% if linkedin %}<span>{{ linkedin }}</span>{% endif %}
+    {% if github %}<span>{{ github }}</span>{% endif %}
+    {% if website %}<span>{{ website }}</span>{% endif %}
+  </div>
+  <hr>
+
+  {% if summary %}
+  <h2>Professional Overview</h2>
+  <p class="summary">{{ summary }}</p>
+  {% endif %}
+
+  {% if experience %}
+  <h2>Work Experience</h2>
+  {% for job in experience %}
+  <div class="job">
+    <span class="job-header">{{ job.title }}{% if job.company %} | {{ job.company }}{% endif %}{% if job.location %}, {{ job.location }}{% endif %}
+      <span class="job-dates">{{ job.start_date }} &ndash; {{ job.end_date }}</span>
+    </span>
+    {% if job.bullets %}
+    <ul class="bullets">
+      {% for bullet in job.bullets %}
+      <li>{{ bullet }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+  {% endfor %}
+  {% endif %}
+
+  {% if projects %}
+  <h2>Projects</h2>
+  {% for proj in projects %}
+  <div class="job">
+    <span class="job-header">{{ proj.name }}
+      <span class="job-dates">{{ proj.start_date }}{% if proj.end_date %} &ndash; {{ proj.end_date }}{% endif %}</span>
+    </span>
+    {% if proj.bullets %}
+    <ul class="bullets">
+      {% for bullet in proj.bullets %}
+      <li>{{ bullet }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+  {% endfor %}
+  {% endif %}
+
+  {% if education %}
+  <h2>Education</h2>
+  {% for edu in education %}
+  <div class="edu-entry">
+    <div><span class="edu-degree">{{ edu.degree }}</span>{% if edu.school %} | {{ edu.school }}{% endif %}{% if edu.location %}, {{ edu.location }}{% endif %}
+      <span class="job-dates">{{ edu.start_date }} &ndash; {{ edu.end_date }}</span>
+    </div>
+    {% if edu.gpa %}<div class="edu-school">GPA: {{ edu.gpa }}</div>{% endif %}
+  </div>
+  {% endfor %}
+  {% endif %}
+
+  {% if skills_grouped %}
+  <h2>Skills</h2>
+  {% for group in skills_grouped %}
+  <div class="skill-group"><b>{{ group.label }}:</b>{{ group.items | join(", ") }}</div>
+  {% endfor %}
+  {% elif skills %}
+  <h2>Skills</h2>
+  <ul class="skills-list">
+    {% for skill in skills %}
+    <li>{{ skill }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if certifications %}
+  <h2>Certifications</h2>
+  <ul class="bullets">
+    {% for cert in certifications %}
+    <li>{{ cert }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if coursework %}
+  <h2>Relevant Coursework</h2>
+  <p class="summary">{{ coursework | join(" | ") }}</p>
+  {% endif %}
+
+  {% if memberships %}
+  <h2>Memberships &amp; Associations</h2>
+  {% for m in memberships %}
+  <div class="edu-entry">
+    <div><span class="edu-degree">{{ m.name }}</span>
+      <span class="job-dates">{{ m.start_date }}{% if m.end_date %} &ndash; {{ m.end_date }}{% endif %}</span>
+    </div>
+    {% if m.description %}<div class="edu-school">{{ m.description }}</div>{% endif %}
+  </div>
+  {% endfor %}
+  {% endif %}
+
+  {% if publications %}
+  <h2>Publications</h2>
+  <ul class="bullets">
+    {% for pub in publications %}
+    <li>{{ pub }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if achievements %}
+  <h2>Achievements</h2>
+  <ul class="bullets">
+    {% for item in achievements %}
+    <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+</body>
+</html>

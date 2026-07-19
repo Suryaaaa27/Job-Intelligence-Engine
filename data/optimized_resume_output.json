@@ -1,0 +1,395 @@
+{
+  "candidate_name": "KARAN PRATAP SINGH",
+  "original_resume": {
+    "candidate_name": "KARAN PRATAP SINGH",
+    "contact_info": {
+      "full_name": "KARAN PRATAP SINGH",
+      "email": "contact@karanpratapsingh.com",
+      "phone": "(415) 602-9452",
+      "location": null,
+      "linkedin": "linkedin.com/karan99",
+      "github": "github.com/karanpratapsingh",
+      "portfolio": null
+    },
+    "summary": "(415) 602-9452 | San Francisco, CA | contact@karanpratapsingh.com",
+    "skills": [
+      "Programming Golang",
+      "Python",
+      "TypeScript",
+      "JavaScript",
+      "Java",
+      "PostgreSQL",
+      "Redis",
+      "GraphQL",
+      "Frameworks Express.js",
+      "Django",
+      "Flask",
+      "FastAPI",
+      "Spring Boot",
+      "React.js",
+      "Next.js",
+      "DevOps Docker",
+      "Kubernetes",
+      "Terraform",
+      "Pulumi",
+      "Jenkins",
+      "Google Cloud Platform (GCP)",
+      "google cloud",
+      "express",
+      "spring",
+      "golang",
+      "docker",
+      "react",
+      "gcp",
+      "aws"
+    ],
+    "tools_technologies": [
+      "Programming Golang",
+      "Python",
+      "TypeScript",
+      "JavaScript",
+      "Java",
+      "PostgreSQL",
+      "Redis",
+      "GraphQL",
+      "Frameworks Express.js",
+      "Django",
+      "Flask",
+      "FastAPI",
+      "Spring Boot",
+      "React.js",
+      "Next.js",
+      "DevOps Docker",
+      "Kubernetes",
+      "Terraform",
+      "Pulumi",
+      "Jenkins",
+      "Google Cloud Platform (GCP)",
+      "google cloud",
+      "express",
+      "spring",
+      "golang",
+      "docker",
+      "react",
+      "gcp",
+      "aws"
+    ],
+    "experience": [
+      {
+        "title": "Software Engineer 02/",
+        "company": null,
+        "start_date": "05/2024",
+        "end_date": "Present",
+        "bullets": []
+      },
+      {
+        "title": "Apple Inc. Cupertino",
+        "company": "CA",
+        "start_date": null,
+        "end_date": null,
+        "bullets": []
+      },
+      {
+        "title": "Senior Software Engineer 05/03/2023",
+        "company": "01/26/2024",
+        "start_date": null,
+        "end_date": null,
+        "bullets": [
+          "The Guardian Life Insurance Company of America Holmdel, NJ",
+          "Developed features for Guardian Anytime web app leveraging React.js and Node.js serving over 4M users.",
+          "Migrated legacy Java SOAP APIs to RESTful APIs using Spring Boot ensuring robust code quality.",
+          "Improved reliability and maintainability of React.js application by increasing test coverage by 12%."
+        ]
+      },
+      {
+        "title": "Senior Engineer 12/07/2020",
+        "company": "05/13/2023",
+        "start_date": null,
+        "end_date": null,
+        "bullets": []
+      },
+      {
+        "title": "Curebase San Francisco",
+        "company": "CA",
+        "start_date": null,
+        "end_date": null,
+        "bullets": [
+          "Designed scalable REST and GraphQL APIs using TypeScript, Node.js, Redis, and PostgreSQL.",
+          "Led initiative for codebase migration to TypeScript, reducing cost and API latency by 50%.",
+          "Builtfault-tolerant, horizontallyscalablemulti-tenancyforcoreSaaSproductleveragingAWS(ALB,",
+          "ECS, S3, RDS, SQS, DynamoDB) with a focus on security, GDPR, and HIPAA compliance.",
+          "Utilized Golang, Python, and Terraform to develop business-critical internal tools and simplify SDLC."
+        ]
+      },
+      {
+        "title": "Software Developer 05/26/2020",
+        "company": "01/31/2021",
+        "start_date": null,
+        "end_date": null,
+        "bullets": []
+      },
+      {
+        "title": "Quotient Inc. Maryland",
+        "company": "USA (Remote)",
+        "start_date": null,
+        "end_date": null,
+        "bullets": [
+          "Created a digital asset management platform using React, TypeScript, Node.js, and GraphQL.",
+          "Implementedterabyte-scaledataingestionandstreamingwithNode.jsforover150millionartifacts.",
+          "Designed end-to-end GraphQL data layer and client-side enterprise search solution with React.",
+          "Optimized production CI/CD pipeline using Docker multi-stage builds, reducing container size by 80%."
+        ]
+      },
+      {
+        "title": "Software Developer 08/17/2019",
+        "company": "06/07/2020",
+        "start_date": null,
+        "end_date": null,
+        "bullets": []
+      },
+      {
+        "title": "Stewards London",
+        "company": "UK (Remote)",
+        "start_date": null,
+        "end_date": null,
+        "bullets": [
+          "Implemented event-driven food delivery mobile application with React Native.",
+          "Consolidated internal sales and custom B2B integrations with React and Node.js.",
+          "Edge-optimized GraphQL API utilizing Google Cloud CDN, increasing customer retention by 60%.",
+          "PUBLICATIONS",
+          "Manas Singh, Karan Pratap Singh et al. \u201cSystem and method for defense in depth of one or more",
+          "software delivery pipelines\u201d. US Patent Application No. 18373596. Filed September 27, 2023.",
+          "Manas Singh, Karan Pratap Singh et al. \u201cSystem and method for continuous automated threat"
+        ]
+      },
+      {
+        "title": "modeling\u201d. US Patent Application No. 18230253. Filed August 4",
+        "company": "2023.",
+        "start_date": null,
+        "end_date": null,
+        "bullets": [
+          "\u201cLearn Go\u201d, Published Jan 2023, ISBN 979-8-9883975-4-0.",
+          "\u201cSystem Design\u201d, Published Aug 2022, ISBN 979-8-9883975-8-8.",
+          "ACHIEVEMENTS",
+          "Co-authored U.S. patents, contributing novel solutions in software security and delivery pipelines.",
+          "Author and maintainer of \u201cSystem Design\u201d, ranked amongst GitHub\u2019s top 500 global repositories with",
+          "over 38K stars and 40K monthly views.",
+          "Published 50+ technical articles on software engineering topics such as distributed systems, microservices,",
+          "software architecture, and DevOps on Medium and Dev.to, reaching over 2 million views.",
+          "Created and managed a YouTube channel on software engineering, producing educational tutorials",
+          "that have reached 70K+ developers globally.",
+          "Published technical books on \u201cSystem Design\u201d and \u201cLearn Go\u201d, contributing practical guidance and",
+          "insights to the software engineering community.",
+          "Contributed to open-source projects, acknowledged in React Native v0.60 by Meta."
+        ]
+      }
+    ],
+    "projects": [],
+    "education": [
+      {
+        "degree": "Bachelors of Technology, Computer Science and Engineering",
+        "institution": "SRM Institute of Science and Technology, Delhi NCR, India",
+        "start_date": "2017",
+        "end_date": "2021"
+      }
+    ],
+    "certifications": [],
+    "total_experience_years": null,
+    "raw_text": "(415) 602-9452 | San Francisco, CA | contact@karanpratapsingh.com Bachelors of Technology Computer Science and En gineering 2017 2021 Bachelors of Technology, Computer Science and Engineering 2017 - 2021\nSRM Institute of Science and Technology Delhi NCR, India"
+  },
+  "target_job": {
+    "job_id": "https://boards.greenhouse.io/reddit/jobs/8029120",
+    "title": "Machine Learning Engineer, Ads Optimization",
+    "company": "Reddit",
+    "location": "Remote - United States",
+    "employment_type": "",
+    "salary_range": "",
+    "required_skills": [
+      "python",
+      "java",
+      "go",
+      "redis",
+      "spark",
+      "rest",
+      "machine learning",
+      "data science",
+      "airflow",
+      "kafka"
+    ],
+    "preferred_skills": [
+      "sre",
+      "monitoring"
+    ],
+    "tools_technologies": [
+      "python",
+      "java",
+      "go",
+      "redis",
+      "spark",
+      "rest",
+      "machine learning",
+      "data science",
+      "airflow",
+      "kafka",
+      "sre",
+      "monitoring"
+    ],
+    "certifications": [],
+    "min_experience_years": null,
+    "education_requirements": [
+      "phd",
+      "degree"
+    ],
+    "responsibilities": [],
+    "qualifications": [],
+    "raw_text": "Machine Learning Engineer, Ads Optimization\nReddit\n<div class=\"content-intro\"><div class=\"c-message_kit__blocks c-message_kit__blocks--rich_text\"> <div class=\"c-message__message_blocks c-message__message_blocks--rich_text\" data-qa=\"message-text\"> <div class=\"p-block_kit_renderer\" data-qa=\"block-kit-renderer\"> <div class=\"p-block_kit_renderer__block_wrapper p-block_kit_renderer__block_wrapper--first\"> <div class=\"p-rich_text_block\"> <div class=\"p-rich_text_section\">Reddit is a community of communities. It\u2019s built on shared interests, passion, and trust, and is home to the most open and authentic conversations on the internet. Every day, Reddit users submit, vote, and comment on the topics they care most about. With 100,000+ active communities and approximately 126 million daily active unique visitors, Reddit is one of the internet\u2019s largest sources of information. For more information, visit <a class=\"c-link\" href=\"http://www.redditinc.com/\" target=\"_blank\" data-stringify-link=\"http://redditinc.com\" data-sk=\"tooltip_parent\">www.redditinc.com</a>.</div> </div> </div> </div> </div> </div></div><h2>Team Description</h2> <p>This role sits in the <strong>Ads Optimization </strong>organizations, which are responsible for the health and performance of Reddit\u2019s ads marketplace. We focus on:</p> <ul> <li>Designing the <strong>auction and bidding mechanisms</strong> that decide which ads show to which users and at what price.</li> <li>Building <strong>optimization systems</strong> that help advertisers achieve their goals (e.g., conversions, ROAS) under budget and delivery constraints.</li> <li>Ensuring <strong>marketplace quality</strong> by improving user experience with ads, fighting ad blindness, and increasing valuable ad opportunities on the platform.</li> </ul> <p>You\u2019ll join a set of tight-knit engineers working on high-impact, internet-scale problems at the core of Reddit\u2019s revenue engine, collaborating closely with Product, Data Science, and Infra partners across Reddit Ads.<br><br></p> <h2>Role Description</h2> <p>We are hiring <strong>Machine Learning Engineers (IC4)</strong> to build and evolve the <strong>auction, bidding and budgeting</strong> systems that power Reddit Ads.</p> <p>In this role, you will:</p> <ul> <li>Design and implement <strong>optimization algorithms</strong> for auctions, bidding strategies, and pacing that balance advertiser performance, user experience, and marketplace efficiency.</li> <li>Own systems end-to-end: from problem formulation and algorithm design to experimentation, production deployment, and ongoing iteration.</li> <li>Work across <strong>Ads Optimization</strong> (bid strategies, budget optimization, pacing) to deliver measurable wins for advertisers and Redditors.</li> </ul> <p>We are hiring a Senior (IC4)&nbsp; level:</p> <ul> <li><strong>IC4</strong> MLEs lead more complex or multi-quarter initiatives, set technical direction for key parts of the bidding/auction/pacing stack, and mentor other engineers while remaining hands-on.</li> </ul> <h2>Responsibilities</h2> <h3>Auction, Bidding, and Pacing Systems</h3> <ul> <li>Design and implement models and policies that:</li> <ul> <li>Compute bids for different optimization objectives (e.g., CPC, CPA, ROAS-based strategies).</li> <li>Pace budgets smoothly over time across accounts, campaigns, and ad groups while preventing overspend or underspend.</li> <li>Allocate spend and auction participation intelligently across segments, surfaces, and time zones.</li> </ul> <li>Translate product and marketplace goals into concrete optimization problems and constraints (e.g., ROI, revenue, delivery smoothness, fairness, and user experience).</li> </ul> <h2>Required Qualifications</h2> <p><em>(Level will be determined during the interview process; IC4 expectations assume deeper experience and broader scope.)</em></p> <ul> <li><strong>3\u20135+ years</strong> of experience building, deploying, and operating machine learning systems in production (for IC4, typically 5+ years).</li> <li>Strong programming skills in <strong>Python</strong>, <strong>Java</strong>, <strong>Go</strong>, or similar languages, with solid software engineering fundamentals.</li> <li>Experience designing scalable data processing systems (e.g., Spark, Kafka, Airflow, BigQuery, Redis).</li> <li>Demonstrated ability to translate ambiguous product or business problems into solutions and to improve measurable metrics.</li> </ul> <h4>&nbsp;</h4> <p><strong>Additional expectations for strong bidding/auction candidates:</strong></p> <ul> <li>Evidence of stronger <strong>math and optimization skills</strong> than a generic MLE, such as:</li> <ul> <li>Degree or equivalent background in a quantitative field (math, physics, quantitative finance, economics, operations research, or similar).</li> <li>Work experience in optimization-heavy domains (e.g., bidding/auctions, pacing, pricing, logistics optimization, quantitative finance).</li> </ul> <li>Comfort reasoning about and implementing custom optimization logic (e.g., gradient-based methods, constraint handling), not just applying black-box tooling.</li> </ul> <h2>Preferred Qualifications</h2> <ul> <li>Experience with <strong>advertising/auction systems</strong>, online marketplaces, or search/ranking systems at scale, particularly in:</li> <ul> <li>Bidding, pacing, or budget optimization</li> <li>Auction design, mechanism design, or marketplace quality</li> <li>Campaign performance optimization (e.g., CTR/CVR, CPA, ROAS)</li> </ul> <li>Familiarity with large-scale, <strong>real-time decision systems</strong> and low-latency production environments.</li> <li>Background in feature engineering, model optimization, and production monitoring for ML systems.</li> <li>Experience collaborating with cross-functional partners (Product, DS, Eng) in Ads or marketplace contexts and leading projects from design through rollout.</li> <li>Advanced degree (MS or PhD) in Computer Science, Machine Learning, Operations Research, Applied Math, or a related quantitative field.</li> </ul> <h2>Potential Teams</h2> <ul> <li><strong>Ads Optimization</strong> (bid strategies, conversion/ROAS optimization, pacing and budget allocation)<br><br></li> </ul> <h2><strong>Benefits:</strong></h2> <ul> <li>Comprehensive Healthcare Benefits and Income Replacement Programs</li> <li>401k with Employer Match</li> <li>Global Benefit programs that fit your lifestyle, from workspace to professional development to caregiving support</li> <li>Family Planning Support</li> <li>Gender-Affirming Care</li> <li>Mental Health &amp; Coaching Benefits</li> <li>Flexible Vacation &amp; Paid Volunteer Time Off</li> <li>Generous Paid Parental Leave&nbsp;</li> </ul><div class=\"content-pay-transparency\"><div class=\"pay-input\"><div class=\"description\"><p><strong>Pay Transparency:</strong></p> <p>This job posting may span more than one career level.</p> <p>In addition to base salary, this job is eligible to receive equity in the form of restricted stock units, and depending on the position offered, it may also be eligible to receive a commission. Additionally, Reddit offers a wide range of benefits to U.S.-based employees, including medical, dental, and vision insurance, 401(k) program with employer match, generous time off for vacation, and parental leave. To learn more, please visit <a href=\"https://www.redditinc.com/careers/\" target=\"_blank\">https://www.redditinc.com/careers/</a>.</p> <p>To provide greater transparency to candidates, we share base salary ranges for all US-based job postings regardless of state. We set standard base pay ranges for all roles based on function, level, and country location, benchmarked against similar stage growth companies. Final offer amounts are determined by multiple factors including, skills, depth of work experience and relevant licenses/credentials, and may vary from the amounts listed below.</p></div><div class=\"title\">The base salary range for this position is:</div><div class=\"pay-range\"><span>$216,700</span><span class=\"divider\">&mdash;</span><span>$303,400 USD</span></div></div></div><div class=\"content-conclusion\"><p>In select roles and locations, the interviews will be recorded, transcribed and summarized by artificial intelligence (AI). You will have the opportunity to opt out of recording, transcription and summarization prior to any scheduled interviews.</p> <p><span style=\"font-weight: 400;\">During the interview, we will collect the following categories of personal information: Identifiers, Professional and Employment-Related Information, Sensory Information (audio/video recording), and any other categories of personal information you choose to share with us. We will use this information to evaluate your application for employment or an independent contractor role, as applicable.&nbsp; We will not sell your personal information or disclose it to any third party for their marketing purposes.&nbsp; We will delete any recording of your interview promptly after making a hiring decision.&nbsp; For more information about how we will handle your personal information, including our retention of it, please refer to our <a href=\"https://redditinc.com/policies/candidate-privacy-policy\">Candidate Privacy Policy for Potential Employees and Contractors</a>.</span></p> <p><em><span style=\"font-weight: 400;\">Reddit is proud to be an equal opportunity employer, and is committed to building a workforce representative of the diverse communities we serve.&nbsp; Reddit is committed to providing reasonable accommodations for qualified individuals with disabilities and disabled veterans in our job application procedures. If, due to a disability, you need an accommodation during the interview process, please let your recruiter know.</span></em></p></div>"
+  },
+  "match_result": {
+    "match_score": 52.9,
+    "matched_required_skills": [
+      "python",
+      "java",
+      "go",
+      "redis",
+      "rest"
+    ],
+    "matched_preferred_skills": [],
+    "missing_required_skills": [
+      "spark",
+      "machine learning",
+      "data science",
+      "airflow",
+      "kafka"
+    ],
+    "missing_preferred_skills": [
+      "sre",
+      "monitoring"
+    ],
+    "missing_education": [
+      "phd",
+      "degree"
+    ],
+    "missing_certifications": [],
+    "experience_gap_years": null,
+    "skills_score": 37.5,
+    "experience_score": 100.0,
+    "education_score": 0.0,
+    "certification_score": 100.0,
+    "keyword_score": 100.0,
+    "semantic_score": 10.7,
+    "skill_gaps": [
+      {
+        "skill": "spark",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "machine learning",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "data science",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "airflow",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "kafka",
+        "importance": "required",
+        "present_in_resume": false
+      },
+      {
+        "skill": "sre",
+        "importance": "preferred",
+        "present_in_resume": false
+      },
+      {
+        "skill": "monitoring",
+        "importance": "preferred",
+        "present_in_resume": false
+      }
+    ]
+  },
+  "ats_report": {
+    "overall_score": 85.0,
+    "skills_score": 100.0,
+    "experience_score": 100.0,
+    "project_score": 100.0,
+    "education_score": 0.0,
+    "certification_score": 100.0,
+    "missing_skills": [
+      "spark",
+      "machine learning",
+      "data science",
+      "airflow",
+      "kafka",
+      "sre",
+      "monitoring"
+    ],
+    "missing_keywords": [],
+    "weak_sections": [
+      "projects"
+    ],
+    "formatting_issues": []
+  },
+  "optimization_suggestions": [
+    {
+      "category": "bullet_rewrite",
+      "suggestion": "Rewrite the data ingestion bullet to highlight Kafka and Spark for high-throughput data processing: 'Implemented terabyte-scale data ingestion and streaming pipelines using Apache Kafka and Apache Spark for over 150 million artifacts, optimizing throughput and data availability.'",
+      "priority": "high"
+    },
+    {
+      "category": "bullet_rewrite",
+      "suggestion": "Incorporate Airflow, Machine Learning, and Data Science keywords into your Python/SDLC bullet: 'Utilized Python, Golang, and Apache Airflow to build robust data pipelines, orchestrating workflows for machine learning and data science applications.'",
+      "priority": "high"
+    },
+    {
+      "category": "bullet_rewrite",
+      "suggestion": "Introduce SRE and monitoring practices to your infrastructure and CI/CD bullets: 'Optimized production CI/CD pipelines and established SRE best practices, integrating proactive monitoring and alerting systems to ensure 99.9% system availability.'",
+      "priority": "medium"
+    },
+    {
+      "category": "structure",
+      "suggestion": "Fix severe text concatenation and spacing errors in your experience section, specifically: 'Builtfault-tolerant, horizontallyscalablemulti-tenancyforcoreSaaSproductleveragingAWS' and 'Implementedterabyte-scaledataingestionandstreamingwithNode.js'. Ensure all words are separated by spaces to pass ATS parsing checks.",
+      "priority": "low"
+    }
+  ],
+  "optimized_summary": "Highly accomplished Senior Software Engineer with extensive experience building high-throughput distributed systems, scalable data pipelines, and robust APIs. Strong proficiency in backend engineering with Python, Java, Go, and Redis. Proven track record of optimizing data ingestion streaming systems at a terabyte scale. Published author on System Design and Go, seeking to apply deep expertise in high-performance computing, data flow optimization, and distributed infrastructure to scale machine learning and data science workloads.",
+  "optimized_bullets": {
+    "Senior Software Engineer 05/03/2023": [
+      "Migrated legacy Java SOAP APIs to high-performance, robust RESTful APIs using Spring Boot, significantly improving backend service efficiency.",
+      "Developed and optimized core features for web applications serving over 4M users using Node.js, ensuring high availability and seamless data flow.",
+      "Enhanced system reliability and maintainability by increasing test coverage by 12% across critical application pathways."
+    ],
+    "Curebase San Francisco": [
+      "Designed and implemented highly scalable REST and GraphQL APIs using Node.js, Redis, and PostgreSQL to handle high-concurrency client demands.",
+      "Utilized Python, Golang (Go), and Terraform to develop business-critical internal tools, automating workflows and optimizing the software development lifecycle.",
+      "Built fault-tolerant, horizontally scalable multi-tenant architectures leveraging AWS cloud services (ALB, ECS, S3, RDS, SQS, DynamoDB) with a focus on data security.",
+      "Led codebase migrations and performance optimizations that reduced API latency and operational infrastructure costs by 50%."
+    ],
+    "Quotient Inc. Maryland": [
+      "Architected and implemented terabyte-scale data ingestion and streaming pipelines handling over 150 million artifacts with high throughput.",
+      "Designed robust, end-to-end GraphQL data layers and efficient client-side enterprise search solutions.",
+      "Optimized production CI/CD deployment pipelines using Docker multi-stage builds, reducing container footprint by 80% for streamlined cloud deployments.",
+      "Created highly interactive digital asset management platforms using Node.js, TypeScript, and React."
+    ],
+    "Stewards London": [
+      "Engineered high-performance, event-driven backend systems and mobile applications utilizing modern JavaScript frameworks.",
+      "Edge-optimized distributed GraphQL APIs utilizing Google Cloud CDN, enhancing response times and increasing customer retention by 60%.",
+      "Consolidated internal data flows, sales tracking, and custom B2B integrations to improve operational workflows."
+    ],
+    "System and method for continuous automated threat": [
+      "Published widely recognized technical books including 'Learn Go' and 'System Design' to assist developers with distributed systems and modern languages.",
+      "Co-authored U.S. patents detailing novel, highly secure automated delivery pipelines and defensive software architectures.",
+      "Created and maintained 'System Design', ranked among GitHub's top 500 global repositories with over 38K stars and 40K monthly views.",
+      "Contributed to prominent open-source projects including Meta's React Native v0.60, and reached over 2 million readers via technical articles on distributed systems and microservices."
+    ]
+  },
+  "generated_for_job_id": "https://boards.greenhouse.io/reddit/jobs/8029120",
+  "generated_for_job_title": "Machine Learning Engineer, Ads Optimization"
+}

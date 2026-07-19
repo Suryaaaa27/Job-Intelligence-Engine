@@ -1,1 +1,5 @@
 pandas
+pydantic
+google-genai
+Jinja2
+playwright
