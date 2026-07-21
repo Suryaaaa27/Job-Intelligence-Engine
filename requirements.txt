@@ -2,3 +2,8 @@ fastapi
 uvicorn
 playwright
 pydantic
+pandas
+google-genai
+Jinja2
+pdfplumber
+python-docx
