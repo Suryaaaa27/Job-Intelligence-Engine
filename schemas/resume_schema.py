@@ -12,7 +12,7 @@ the same.
 """
 
 from __future__ import annotations
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ConfigDict
 from typing import Optional
 
 
@@ -90,16 +90,66 @@ class MatchResult(BaseModel):
 
 
 class ATSReport(BaseModel):
-    overall_score: float
-    skills_score: float
-    experience_score: float
-    project_score: float
-    education_score: float
-    certification_score: float
+    model_config = ConfigDict(extra="forbid")
+
+    overall_score: float = Field(ge=0, le=100)
+    skills_score: float = Field(ge=0, le=100)
+    experience_score: float = Field(ge=0, le=100)
+    project_score: float = Field(ge=0, le=100)
+    education_score: float = Field(ge=0, le=100)
+    certification_score: float = Field(ge=0, le=100)
+
+    action_verb_score: float = Field(ge=0, le=100)
+    impact_score: float = Field(ge=0, le=100)
+    keyword_density_score: float = Field(ge=0, le=100)
+    formatting_score: float = Field(ge=0, le=100)
+    readability_score: float = Field(ge=0, le=100)
+
     missing_skills: list[str] = Field(default_factory=list)
     missing_keywords: list[str] = Field(default_factory=list)
+
     weak_sections: list[str] = Field(default_factory=list)
     formatting_issues: list[str] = Field(default_factory=list)
+
+    strengths: list[str] = Field(default_factory=list)
+    recommendations: list[str] = Field(default_factory=list)
+
+
+class ResumeOptimization(BaseModel):
+    """
+    Suggestions generated for improving a resume
+    against a specific Job Description.
+    """
+
+    summary: list[str] = Field(default_factory=list)
+
+    experience: list[str] = Field(default_factory=list)
+
+    projects: list[str] = Field(default_factory=list)
+
+    skills: list[str] = Field(default_factory=list)
+
+    education: list[str] = Field(default_factory=list)
+
+    certifications: list[str] = Field(default_factory=list)
+
+    formatting: list[str] = Field(default_factory=list)
+
+    priority_actions: list[str] = Field(default_factory=list)
+    
+    
+class ResumeAnalysisResult(BaseModel):
+    """
+    Final output of the Resume Intelligence Engine.
+    """
+
+    resume: StructuredResume
+
+    match_result: MatchResult
+
+    ats_report: ATSReport
+
+    optimization: ResumeOptimization
 
 
 class OptimizationSuggestion(BaseModel):

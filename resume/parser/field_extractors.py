@@ -17,6 +17,25 @@ LINKEDIN_RE = re.compile(r"(https?://)?(www\.)?linkedin\.com/\S+", re.IGNORECASE
 GITHUB_RE = re.compile(r"(https?://)?(www\.)?github\.com/\S+", re.IGNORECASE)
 GENERIC_URL_RE = re.compile(r"(https?://)?(www\.)?[a-zA-Z0-9-]+\.[a-zA-Z]{2,}(\/\S*)?")
 
+ROLE_WORDS = {
+    "engineer",
+    "developer",
+    "scientist",
+    "analyst",
+    "manager",
+    "intern",
+    "student",
+    "architect",
+    "consultant",
+    "specialist",
+    "associate",
+    "lead",
+    "director",
+    "ai",
+    "ml",
+    "aiml",
+}
+
 DATE_RANGE_RE = re.compile(
     r"(?P<start>(?:[A-Za-z]{3,9}\.??\s+\d{4})|\d{1,2}/\d{4}|\d{4})"
     r"\s*(?:-|–|—|to)\s*"
@@ -26,6 +45,7 @@ DATE_RANGE_RE = re.compile(
 
 
 def extract_contact_info(preamble_lines: list) -> ContactInfo:
+    
     contact = ContactInfo()
     full_text = " ".join(preamble_lines)
 
@@ -45,14 +65,29 @@ def extract_contact_info(preamble_lines: list) -> ContactInfo:
     if github_match:
         contact.github = github_match.group(0)
 
-    for line in preamble_lines[:3]:
-        if EMAIL_RE.search(line) or PHONE_RE.search(line):
+    for line in preamble_lines[:5]:
+        cleaned = EMAIL_RE.sub("", line)
+        cleaned = PHONE_RE.sub("", cleaned)
+        cleaned = LINKEDIN_RE.sub("", cleaned)
+        cleaned = GITHUB_RE.sub("", cleaned)
+
+        cleaned = cleaned.strip(" ,|-")
+        cleaned = re.sub(r"\s+", " ", cleaned)
+
+        if not cleaned:
             continue
-        if LINKEDIN_RE.search(line) or GITHUB_RE.search(line):
+
+        tokens = cleaned.split()
+
+        if any(token.lower() in ROLE_WORDS for token in tokens):
             continue
-        words = line.split()
-        if 1 <= len(words) <= 5 and all(w[0].isupper() or not w[0].isalpha() for w in words if w):
-            contact.full_name = line.strip()
+
+        if (
+            2 <= len(tokens) <= 4
+            and all(token.replace("-", "").isalpha() for token in tokens)
+            and all(token[0].isupper() for token in tokens)
+        ):
+            contact.full_name = cleaned
             break
 
     for line in preamble_lines[:6]:

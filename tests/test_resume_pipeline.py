@@ -1,32 +1,85 @@
 from pipeline.resume_pipeline import ResumePipeline
+from pipeline.matching_pipeline import MatchingPipeline
+
+from services.ats_analyzer import ATSAnalyzer
+from services.resume_optimizer import ResumeOptimizer
+
+from schemas.resume_schema import StructuredJD
 
 resume = ResumePipeline.execute("data/resume.pdf")
 
-print("=" * 60)
-print("Candidate Name :", resume.candidate_name)
-print("Summary Exists :", bool(resume.summary))
-print("Skills         :", len(resume.skills))
-print("Experience     :", len(resume.experience))
-print("Projects       :", len(resume.projects))
-print("Education      :", len(resume.education))
-print("Certifications :", len(resume.certifications))
-print("=" * 60)
+jd = StructuredJD(
+    job_id="TEST-001",
+    title="Machine Learning Engineer",
 
-print("\nTop 10 Skills:")
-for skill in resume.skills[:10]:
-    print("-", skill)
+    company="OpenAI",
+    location="Remote",
 
-print("\nExperience:")
-for exp in resume.experience:
-    print(f"- {exp.title} @ {exp.company}")
+    required_skills=[
+        "Python",
+        "Machine Learning",
+        "FastAPI",
+        "Git",
+    ],
 
-print("\n")
-print("=" * 60)
-print("FULL STRUCTURED RESUME JSON")
-print("=" * 60)
+    preferred_skills=[
+        "Docker",
+        "MongoDB",
+    ],
 
-# Pydantic v2
-print(resume.model_dump_json(indent=2))
+    tools_technologies=[
+        "VS Code",
+    ],
 
-# If you're on Pydantic v1, use this instead:
-# print(resume.json(indent=2))
+    certifications=[],
+
+    min_experience_years=1,
+
+    education_requirements=[
+        "Bachelor's Degree",
+    ],
+
+    responsibilities=[
+        "Develop APIs",
+        "Build ML models",
+    ],
+
+    qualifications=[
+        "Problem Solving",
+    ],
+)
+
+match = MatchingPipeline.execute(
+    resume,
+    jd,
+)
+
+ats_analyzer = ATSAnalyzer()
+
+ats = ats_analyzer.analyze(
+    resume,
+    jd,
+    match,
+)
+
+optimizer = ResumeOptimizer()
+
+optimization = optimizer.optimize(
+    resume,
+    jd,
+    match,
+    ats,
+)
+
+print("=" * 80)
+print("MATCH SCORE:", match.match_score)
+print("ATS SCORE:", ats.overall_score)
+print("=" * 80)
+
+print("\nRecommendations:")
+for r in ats.recommendations:
+    print("-", r)
+
+print("\nPriority Actions:")
+for p in optimization.priority_actions:
+    print("-", p)
